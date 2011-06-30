@@ -1,11 +1,17 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
+gem 'nifty-generators', '>= 0.4.0'
+gem 'annotate'
+gem 'paperclip'
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,3 +35,4 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test

@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   end
 
   def privacy
+    @title = "Privacy"
+    @body_class = "content"
   end
 
   def contact

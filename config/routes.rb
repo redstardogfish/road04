@@ -8,9 +8,9 @@ Road04::Application.routes.draw do
   root :to => "pages#home"
 
   resources :people
-  
-  match 'contact-us' => 'pages#contact'
 
+  match 'contact-us' => 'pages#contact'
+  match 'privacy' => 'pages#privacy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

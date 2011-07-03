@@ -16,6 +16,7 @@
   <script type="text/javascript">!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>')</script>
   <%= javascript_include_tag "/js/modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
+  <%= javascript_include_tag 'scripts', 'people' %>
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 
@@ -29,7 +30,7 @@
   <li><a href="/what-we-do/">What We Do</a><ul></ul>
   </li>
   <li class="whoWeAre parent"><a href="/who-we-are/">Who We Are</a><ul>
-      <li><a href="/who-we-are/our-community/">Our Community</a></li>
+      <li><%= link_to "Our Community", '/our-community' %></li>
       <li><a href="/who-we-are/our-dna/">Our DNA</a></li>
 
     </ul>
@@ -65,11 +66,11 @@
     <input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$txt" type="text" id="ContentPlaceHolderDefault_SearchBox_2_txt" onfocus="this.value=&#39;&#39;" onkeydown="if ((event.which &amp;&amp; event.which == 13) || (event.keyCode &amp;&amp; event.keyCode == 13)) {__doPostBack(&#39;ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn&#39;,&#39;&#39;);return false;} else return true;" />
     <input type="image" name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn" id="ContentPlaceHolderDefault_SearchBox_2_btn" class="search-submit" Text="" src="/images/sbutton.gif" />
 </fieldset>
-</footer></form>
+</footer>
 <script type="text/javascript" src="/js/scripts.js"></script>
 
 <script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
-<script type="text/javascript">$(function () {var wrapperWidth = parseInt($('#content').width()) + parseInt($('#extras').width()) + parseInt($('#promos').width());$('#wrapper').css('width', wrapperWidth);$("body, html").mousewheel(function (event, delta) {this.scrollLeft -= (delta * 55);event.preventDefault();});});</script>
+
 
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 </body></html>

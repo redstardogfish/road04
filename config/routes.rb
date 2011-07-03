@@ -1,16 +1,30 @@
 Road04::Application.routes.draw do
+  resources :people  
+  resources :portraits
+  resources :headshots
+  
+
   get "pages/home"
 
   get "pages/privacy"
 
   get "pages/contact"
   
+  get "pages/dna"
+  
+  
   root :to => "pages#home"
-
-  resources :people
 
   match 'contact-us' => 'pages#contact'
   match 'privacy' => 'pages#privacy'
+  match 'our-dna' => 'pages#dna'
+  
+  match 'our-community' => 'people#index'
+
+ 
+  match 'people/display/:id' => 'people#display'
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

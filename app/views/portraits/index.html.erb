@@ -1,0 +1,17 @@
+<% title "Portraits" %>
+
+<table>
+  <tr>
+    <th>Use</th>
+  </tr>
+  <% for portrait in @portraits %>
+    <tr>
+      <td><%= portrait.use %></td>
+      <td><%= link_to "Show", portrait %></td>
+      <td><%= link_to "Edit", edit_portrait_path(portrait) %></td>
+      <td><%= link_to "Destroy", portrait, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Portrait", new_portrait_path %></p>

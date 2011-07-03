@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
   def index
     @people = Person.all
+    @title = "Our Community"
+    @body_class = 'peopleListing'
   end
 
   def show
@@ -38,4 +40,14 @@ class PeopleController < ApplicationController
     @person.destroy
     redirect_to people_url, :notice => "Successfully destroyed person."
   end
+  
+  
+  def display
+    @person = Person.find(params[:id])
+    @title = @person.name
+    @body_class = "people-detail"
+  end
+  
+  
+  
 end

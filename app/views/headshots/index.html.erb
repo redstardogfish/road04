@@ -1,0 +1,17 @@
+<% title "Headshots" %>
+
+<table>
+  <tr>
+    <th>Use</th>
+  </tr>
+  <% for headshot in @headshots %>
+    <tr>
+      <td><%= headshot.use %></td>
+      <td><%= link_to "Show", headshot %></td>
+      <td><%= link_to "Edit", edit_headshot_path(headshot) %></td>
+      <td><%= link_to "Destroy", headshot, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Headshot", new_headshot_path %></p>

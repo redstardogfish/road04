@@ -1,0 +1,12 @@
+<% title "Portrait" %>
+
+<p>
+  <strong>Use:</strong>
+  <%= @portrait.use %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_portrait_path(@portrait) %> |
+  <%= link_to "Destroy", @portrait, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", portraits_path %>
+</p>

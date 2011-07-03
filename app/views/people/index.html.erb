@@ -1,23 +1,66 @@
-<% title "People" %>
+<% content_for :head do %>
+<script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript">$(function () { umbpageid = 1104;var cwid = $("#content").width();var lwid = $("#communityProfiles").width();var wrapperWidth = cwid + lwid + 940;$('#wrapper').css('width', wrapperWidth);$("body, html").mousewheel(function (event, delta) {this.scrollLeft -= (delta * 55); event.preventDefault();});});</script>
+<% end %>
 
-<table>
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Role</th>
-    <th>Bio</th>
-  </tr>
-  <% for person in @people %>
-    <tr>
-      <td><%= person.first_name %></td>
-      <td><%= person.last_name %></td>
-      <td><%= person.role %></td>
-      <td><%= simple_format person.bio %></td>
-      <td><%= link_to "Show", person %></td>
-      <td><%= link_to "Edit", edit_person_path(person) %></td>
-      <td><%= link_to "Destroy", person, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+<div id="content">
+  <a class="viewToggle">VIEW AS LIST</a>
+  <h1>Our Community</h1>
+  <div class="wysiwyg">
+	<p><span><span>We're an eclectic bunch: rhetoricians and designers,
+      pragmatists and theorists, consultants and educators. Our
+      real-world experiences, collaborative spirit and deep practice in
+      the methods of design and conversation inform our
+      approach.</span></span></p>
+
+    <p><span><span>At Second Road we share</span> <span>a love for the
+      creative process, and a belief in the power<br />
+      of thinking together.</span></span></p>
+  </div>
+  <div class="wysiwyg">
+	<p><span><span>We are a</span> <strong>STRATEGY + INNOVATION</strong> <span>firm<br />
+      with a big difference. We are unashamedly working to enable organizations not only<br />to be smarter - but more human.</span></span></p>
+
+    <p><span><span>Everything we do is about unlocking and empowering imagination and intelligence<br />within organizations.</span></span></p>
+  </div>
+</div>
+<div id="communityProfiles">
+  <img alt="" src="/images/articleListing/diag-shape.png" class="diagShape" />
+    
+  <ul class="communityList">
+	</li>
+	<% for person in @people %>
+	  <li><%= link_to person.name.upcase, person %></li>
+	<% end %>
+
+    <li><a class="articleClose">CLOSE</a></li>
+  </ul>
+  <div class='theBoss'> 
+	<img src='/media/39460/tonygs.jpg' width='180' height='180' alt='Tony Golsby-Smith' />
+	<a href='/who-we-are/our-community/tony-golsby-smith' class='overlay'><span class='memberName'>Co-founder and Chairman</span></a>
+  </div>
+
+  <% members = @people.reverse %>
+  <% while members.length > 0 %>
+    <div class = "membersBox">
+      <% 6.times do %>
+        <% if members.length > 0 %>
+          <% member = members.pop %>
+          <div class = "member">
+            <%= image_tag member.headshot.url(:listing), :alt=> member.name, :size => "180x180" %>
+            <% link_to "#", :class=> "overlay" do %>
+	          <span class= 'memberName'><%= member.name %></span>
+            <% end %>
+		  </div>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
-</table>
 
-<p><%= link_to "New Person", new_person_path %></p>
+
+
+    <div id="promos"></div>
+</div>
+
+  
+ <div id="overlayLeft" style="display: block"><a></a></div><div id="overlayRight" style="display: block"><a></a></div>

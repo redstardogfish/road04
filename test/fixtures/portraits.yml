@@ -1,0 +1,16 @@
+one:
+  use: false
+
+two:
+  use: false
+
+# == Schema Information
+#
+# Table name: portraits
+#
+#  id         :integer         not null, primary key
+#  use        :boolean
+#  created_at :datetime
+#  updated_at :datetime
+#
+

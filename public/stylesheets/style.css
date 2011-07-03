@@ -298,7 +298,7 @@ TOC - SECOND ROAD CSS
 			width: 180px;
 		}
 		.pCheckers a {
-			background: url('../images/content/promoLink.jpg') no-repeat;
+			background: url('../images/content/promoLink.png') no-repeat;
 			bottom: 0;
 			color: #FFFFFF;
 			font-size: 13px;
@@ -717,7 +717,7 @@ TOC - SECOND ROAD CSS
 		top: 0;
 	}
 	.peopleListing .overlay {
-		background: url('../images/content/promoLink.jpg') no-repeat;
+		background: url('../images/content/promoLink.png') no-repeat;
 		color: #fff;
 		display: none;
 		height: 180px;
@@ -1644,7 +1644,7 @@ TOC - SECOND ROAD CSS
 		top: 60px;
 	}
 	.whatWeDo .clientList {
-	    background: url("../images/content/promoLink.jpg") no-repeat scroll 0 0 transparent;
+	    background: url("../images/content/promoLink.png") no-repeat scroll 0 0 transparent;
 	    color: #FFFFFF;
 	    float: left;
 	    font-size: 14px;

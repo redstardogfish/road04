@@ -10,13 +10,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110630065241) do
+ActiveRecord::Schema.define(:version => 20110702094735) do
+
+  create_table "headshots", :force => true do |t|
+    t.boolean  "use"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "role"
     t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "headshot_file_name"
+    t.string   "headshot_content_type"
+    t.integer  "headshot_file_size"
+    t.datetime "headshot_updated_at"
+    t.string   "portrait_file_name"
+    t.string   "portrait_content_type"
+    t.integer  "portrait_file_size"
+    t.datetime "portrait_updated_at"
+  end
+
+  create_table "portraits", :force => true do |t|
+    t.boolean  "use"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

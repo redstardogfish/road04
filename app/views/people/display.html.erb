@@ -1,0 +1,38 @@
+<%= render :partial => "person_display_header", :locals => {:person => @person}  %>
+
+<h1><%= @person.name %></h1>
+<div id="ContentPlaceHolderDefault_BodyContent_quotebox" class="diag-box">
+  <span class="quote">"There is no need to be put out by uncertainty; in fact, there is creative potential in allowing mystery and doubt to exist alongside fact and reason."</span>
+</div>
+<div id="content">
+  <p class="intro"><%= @person.role %></p>
+  <div class="wysiwyg">
+	<p><%= simple_format @person.bio %></p>
+  </div>
+<!-- second column here -->
+  <div class="wysiwyg">
+	<p><%= simple_format @person.bio %></p>
+  </div>
+  <section id="ContentPlaceHolderDefault_BodyContent_contactinfo" class="contact-info">
+    <ul>
+      <li id="ContentPlaceHolderDefault_BodyContent_liEmail">
+	    e: <a href='mailto:brad.graham@secondroad.com.au'><%= "#{@person.first_name.downcase}.#{@person.last_name.downcase}@secondroad.com.au" %></a>
+	  </li>
+	</ul>
+  </section>
+
+  <div class="people-image">
+    <%= image_tag @person.portrait.url(:display),:size => "295x648",:alt => '', :id => "people-image" %>
+  </div>
+</div>
+<div id="promos">
+    
+    
+</div>
+
+
+<div id="overlayLeft" style="display: block"><a></a></div><div id="overlayRight" style="display: block"><a></a></div>
+
+
+<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+</body></html>

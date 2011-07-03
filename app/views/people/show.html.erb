@@ -16,6 +16,13 @@
   <strong>Bio:</strong>
   <%= simple_format @person.bio %>
 </p>
+<p>
+  <%= image_tag @person.headshot.url(:listing) %>
+</p>
+<p>
+  <%= image_tag @person.portrait.url(:display) %>
+</p>
+
 
 <p>
   <%= link_to "Edit", edit_person_path(@person) %> |

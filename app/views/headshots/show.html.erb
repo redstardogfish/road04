@@ -1,0 +1,12 @@
+<% title "Headshot" %>
+
+<p>
+  <strong>Use:</strong>
+  <%= @headshot.use %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_headshot_path(@headshot) %> |
+  <%= link_to "Destroy", @headshot, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", headshots_path %>
+</p>

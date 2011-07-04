@@ -1,0 +1,48 @@
+<div id="content">
+  <h1>Blog</h1>
+  <a class="filter">FILTER</a>
+  <a class="rss" href="blog-rss-feed/" target="_blank">SUBSCRIBE TO RSS</a>
+  <div class="filterBox">
+    <section class="topics">
+      <h2>TOPICS</h2>
+      <ul>
+	    <li><a href="?topic=Conversation">CONVERSATION</a></li>
+	    <li><a href="?topic=Heuristics">HEURISTICS</a></li>
+	    <li><a href="?topic=Innovation">INNOVATION</a></li>
+	    <li><a href="?topic=Strategy">STRATEGY</a></li>
+	    <li><a href="?topic=Visualisation">VISUALISATION</a></li>
+	    <li><a href="?topic=Wicked Problems">WICKED PROBLEMS</a></li>
+	  </ul>
+    </section>
+    <section class="topics">
+      <h2>AUTHORS</h2>
+      <ul>
+	    <li><a href="?author=Tony Golsby-Smith">TONY GOLSBY-SMITH</a></li>
+	    <li><a href="?author=Tony Weir">TONY WEIR</a></li>
+	  </ul>
+    </section>
+    <a class="closeIt">CLOSE</a>
+  </div>
+  <div class="blogListItems">
+    <% for blogpost in @blogposts %>
+      <%= link_to blogpost, :class => "blogItem"  do %>
+        <h2><%= blogpost.title %></h2>
+        <p class = "postDetails">By <span class = "postAuthor"><%= blogpost.author %></span>, <span class = "postDate"><%= display_date(blogpost.date) %></span></p>
+        <%= image_tag blogpost.image.url(:thumb), :alt => blogpost.title %>
+        <p class = "postSummary"><%= blogpost.teaser %></p>
+        <p class = "postTags"><%= blogpost.tags %></p>
+	    <p class="readMore">read more</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+  
+
+<div id="overlayLeft" style="display: block"><a></a></div><div id="overlayRight" style="display: block"><a></a></div>
+
+
+<% content_for :footer do %>
+ <script type="text/javascript">$(function () {
+	var wrapperWidth = parseInt($('#content').width()) + parseInt($('#articleItems').width());$('#wrapper').css('width', wrapperWidth);$("body, html").mousewheel(function (event, delta) {this.scrollLeft -= (delta * 55);event.preventDefault();});});</script>
+<% end %>

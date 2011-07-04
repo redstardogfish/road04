@@ -15,6 +15,11 @@
   <%= image_tag @article.article_image.url(:display) %>
 </p>
 <p>
+  <strong>Publication:</strong>
+  <%= @article.publication %>
+</p>
+
+<p>
   <strong>Intro Para:</strong>
   <%= @article.intro_para %>
 </p>
@@ -74,6 +79,11 @@
   <strong>Display:</strong>
   <%= @article.display %>
 </p>
+<p>
+  <%= image_tag @article.pdf.url %>
+</p>
+
+
 
 <p>
   <%= link_to "Edit", edit_article_path(@article) %> |

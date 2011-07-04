@@ -1,4 +1,6 @@
 Road04::Application.routes.draw do
+  resources :blogposts
+
   resources :articles
 
   resources :people  

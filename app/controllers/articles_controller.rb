@@ -44,6 +44,6 @@ class ArticlesController < ApplicationController
   def display
     @article = Article.find(params[:id])
     @title = @article.title
-    @body_class = "people-detail"
+    @body_class = "content"
   end
 end

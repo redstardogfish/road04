@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110704002636) do
+ActiveRecord::Schema.define(:version => 20110704100606) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -43,6 +43,34 @@ ActiveRecord::Schema.define(:version => 20110704002636) do
     t.string   "promo_image_content_type"
     t.integer  "promo_image_file_size"
     t.datetime "promo_image_updated_at"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.string   "publication"
+  end
+
+  create_table "blogposts", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "category"
+    t.date     "date"
+    t.text     "teaser"
+    t.text     "content"
+    t.text     "quote"
+    t.string   "quote_author"
+    t.string   "tags"
+    t.string   "keywords"
+    t.text     "description"
+    t.date     "publish_at"
+    t.date     "remove_at"
+    t.boolean  "enable_comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "headshots", :force => true do |t|

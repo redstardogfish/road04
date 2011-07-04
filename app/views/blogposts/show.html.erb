@@ -1,0 +1,73 @@
+<% title "Blogpost" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blogpost.title %>
+</p>
+<p>
+  <strong>Author:</strong>
+  <%= @blogpost.author %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @blogpost.image.url(:display) %>	
+</p>
+<p>
+  <strong>Thumbnail:</strong>
+  <%= image_tag @blogpost.image.url(:thumb) %>	
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @blogpost.category %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @blogpost.date %>
+</p>
+<p>
+  <strong>Teaser:</strong>
+  <%= @blogpost.teaser %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @blogpost.content %>
+</p>
+<p>
+  <strong>Quote:</strong>
+  <%= @blogpost.quote %>
+</p>
+<p>
+  <strong>Quote Author:</strong>
+  <%= @blogpost.quote_author %>
+</p>
+<p>
+  <strong>Tags:</strong>
+  <%= @blogpost.tags %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%= @blogpost.keywords %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @blogpost.description %>
+</p>
+<p>
+  <strong>Publish At:</strong>
+  <%= @blogpost.publish_at %>
+</p>
+<p>
+  <strong>Remove At:</strong>
+  <%= @blogpost.remove_at %>
+</p>
+<p>
+  <strong>Enable Comments:</strong>
+  <%= @blogpost.enable_comments %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_blogpost_path(@blogpost) %> |
+  <%= link_to "Destroy", @blogpost, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", blogposts_path %>
+</p>

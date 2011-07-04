@@ -1,11 +1,18 @@
 class Article < ActiveRecord::Base
-  attr_accessible :title, :author, :intro_para, :body, :para_quote, :para_quote_author, 
+  attr_accessible :title, :author, :publication, :intro_para, :body, :para_quote, :para_quote_author, 
     :topic, :keywords, :meta_description, :image_quote, :promo_link_text, :promo_link_url, 
-    :published_date, :publish_at, :remove_at, :display, :image_thumb, :article_image, :promo_image
+    :published_date, :publish_at, :remove_at, :display, :image_thumb, :article_image, :promo_image, :pdf
+
+
 
   has_attached_file :image_thumb, :styles => { :display => "270x180#" }
   has_attached_file :article_image, :styles => {:display => "360x360#"}
   has_attached_file :promo_image, :styles => {:display => "180x180#"}
+  has_attached_file :pdf
+
+
+
+private
 
 end
 

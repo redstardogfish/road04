@@ -17,6 +17,11 @@
     <%= f.text_field :image_quote %>
   </p>
 
+  <p>
+    <%= f.label :publication %><br />
+    <%= f.text_field :publication %>
+  </p>
+
 
 
   <p>
@@ -81,6 +86,12 @@
     <%= f.label "... and until..." %><br />
     <%= f.date_select :remove_at %>
   </p>
+
+  <p>
+	<%= f.label "Attach a pdf:" %><br />
+  	<%= f.file_field :pdf %>
+  </p>
+
 
   <p><%= f.submit %></p>
 <% end %>

@@ -48,7 +48,7 @@
           <% member = members.pop %>
           <div class = "member">
             <%= image_tag member.headshot.url(:listing), :alt=> member.name, :size => "180x180" %>
-            <% link_to "#", :class=> "overlay" do %>
+            <% link_to "people/display/#{member.id}", :class=> "overlay" do %>
 	          <span class= 'memberName'><%= member.name %></span>
             <% end %>
 		  </div>

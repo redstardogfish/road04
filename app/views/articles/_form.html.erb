@@ -1,0 +1,86 @@
+<%= form_for @article, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+	<%= f.label :author_photo %><br />
+  	<%= f.file_field :article_image %>
+  </p>
+  <p>
+    <%= f.label "Pull out quote from author" %><br />
+    <%= f.text_field :image_quote %>
+  </p>
+
+
+
+  <p>
+    <%= f.label "Introduction teaser" %><br />
+    <%= f.text_area :intro_para %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+	<%= f.label :front_page_thumbnail %><br />
+  	<%= f.file_field :image_thumb %>
+  </p>
+
+
+  <p>
+    <%= f.label "Pull out quote" %><br />
+    <%= f.text_area :para_quote %>
+  </p>
+  <p>
+    <%= f.label :para_quote_author %><br />
+    <%= f.text_field :para_quote_author %>
+  </p>
+
+
+  <p>
+    <%= f.label :topic %><br />
+    <%= f.text_field :topic %>
+  </p>
+  <p>
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </p>
+  <p>
+    <%= f.label :meta_description %><br />
+    <%= f.text_field :meta_description %>
+  </p>
+
+  <p>
+	<%= f.label "Cross promotion image" %><br />
+  	<%= f.file_field :promo_image %>
+  </p>
+
+  <p>
+    <%= f.label "Cross promotion text" %><br />
+    <%= f.text_field :promo_link_text %>
+  </p>
+  <p>
+    <%= f.label "Cross promotion url" %><br />
+    <%= f.text_field :promo_link_url %>
+  </p>
+  <p>
+    <%= f.label "Date of publication" %><br />
+    <%= f.date_select :published_date %>
+  </p>
+  <p>
+    <%= f.label "Publish this article from..." %><br />
+    <%= f.date_select :publish_at %>
+  </p>
+  <p>
+    <%= f.label "... and until..." %><br />
+    <%= f.date_select :remove_at %>
+  </p>
+
+  <p><%= f.submit %></p>
+<% end %>

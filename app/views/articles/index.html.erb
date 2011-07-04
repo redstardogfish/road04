@@ -1,0 +1,54 @@
+
+<div id="content">
+  <h1>Articles</h1>
+  <a class="filter">FILTER</a>
+  <a class="rss" href="article-rss-feed/" target="_blank">SUBSCRIBE TO RSS</a>
+
+  <div id="articleItems">
+    <div class="filterBox">
+      <section class="topics">
+        <h2>TOPICS</h2>
+        <ul>
+          <li><a href="?topic=Design">DESIGN</a></li>
+          <li><a href="?topic=Leadership">LEADERSHIP</a>
+	      </li><li><a href="?topic=Innovation">INNOVATION</a></li>
+	      <li><a href="?topic=Management">MANAGEMENT</a></li>
+	      <li><a href="?topic=Strategy">STRATEGY</a></li>
+	    </ul>
+      </section>
+      <section class="topics topics-wider">
+        <h2>AUTHORS</h2>
+        <ul>
+	      <li><a href="?author=Tony Golsby-Smith">TONY GOLSBY-SMITH</a></li>
+	      <li><a href="?author=Julian Jenkins">JULIAN JENKINS</a></li>
+	      <li><a href="?author=Maureen Thurston">MAUREEN THURSTON</a></li>
+	      <li><a href="?author=Brad Graham">BRAD GRAHAM</a></li> 
+        </ul>
+      </section>
+      <section class="topics" style="display:none">
+        <h2>PUBLICATION</h2>
+        <ul></ul>
+      </section>
+      <section class="topics">
+        <h2>YEAR</h2>
+        <ul></ul>
+      </section>
+      <a class="articleClose">CLOSE</a>
+    </div> <!-- /filterBox -->
+  </div> <!-- /articleItems -->
+  <div class="blogListItems">
+
+	<% for article in @articles %>
+	  <% link_to "articles/display/#{article.id}", :class=> "blogItem" do %>
+    	<h2><%= article.title %></h2>
+		<p class="postDetails">By <span class="postAuthor"><%= article.author %></span>, <span class="postDate"><%= article.published_date %></span></p>
+		<%= image_tag article.image_thumb.url(:display), :alt => article.title %>
+		<p class="postSummary"><%= simple_format article.intro_para %></p>
+		<p class="readMore">read more</p>
+	  <% end %>	    
+	<% end %>
+
+  </div>
+</div>
+<div id="promos"></div>
+<div id="overlayLeft" style="display: block"><a></a></div><div id="overlayRight" style="display: block"><a></a></div>

@@ -1,4 +1,6 @@
 Road04::Application.routes.draw do
+  resources :articles
+
   resources :people  
   resources :portraits
   resources :headshots
@@ -23,6 +25,8 @@ Road04::Application.routes.draw do
 
  
   match 'people/display/:id' => 'people#display'
+  
+  match 'articles/display/:id' => 'articles#display'
   
   
   # The priority is based upon order of creation:

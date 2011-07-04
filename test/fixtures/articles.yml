@@ -1,0 +1,61 @@
+one:
+  title: MyString
+  author: MyString
+  intro_para: MyText
+  body: MyText
+  para_quote: MyText
+  para_quote_author: MyString
+  topic: MyString
+  keywords: MyString
+  meta_description: MyString
+  image_quote: MyString
+  promo_link_text: MyString
+  promo_link_url: MyString
+  published_date: 2011-07-04
+  publish_at: 2011-07-04
+  remove_at: 2011-07-04
+  display: false
+
+two:
+  title: MyString
+  author: MyString
+  intro_para: MyText
+  body: MyText
+  para_quote: MyText
+  para_quote_author: MyString
+  topic: MyString
+  keywords: MyString
+  meta_description: MyString
+  image_quote: MyString
+  promo_link_text: MyString
+  promo_link_url: MyString
+  published_date: 2011-07-04
+  publish_at: 2011-07-04
+  remove_at: 2011-07-04
+  display: false
+
+# == Schema Information
+#
+# Table name: articles
+#
+#  id                :integer         not null, primary key
+#  title             :string(255)
+#  author            :string(255)
+#  intro_para        :text
+#  body              :text
+#  para_quote        :text
+#  para_quote_author :string(255)
+#  topic             :string(255)
+#  keywords          :string(255)
+#  meta_description  :string(255)
+#  image_quote       :string(255)
+#  promo_link_text   :string(255)
+#  promo_link_url    :string(255)
+#  published_date    :date
+#  publish_at        :date
+#  remove_at         :date
+#  display           :boolean
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+

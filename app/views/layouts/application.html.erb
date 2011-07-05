@@ -26,24 +26,32 @@
 <%= body_tag_with_class  %>
 <header>
   <%= link_to (image_tag "logo2.png", :alt=>"Second Road", :size => "223x210", :title => "Second Road"), root_path, :id=> "logo" %>
-  <nav class="mainNav"><ul>
-  <li><a href="/what-we-do/">What We Do</a><ul></ul>
-  </li>
-  <li class="whoWeAre parent"><a href="/who-we-are/">Who We Are</a><ul>
-      <li><%= link_to "Our Community", '/our-community' %></li>
-      <li><a href="/our-dna">Our DNA</a></li>
-
+  <nav class="mainNav">
+	<ul>
+      <li>
+	    <a href="/what-we-do/">What We Do</a>
+	    <ul></ul>
+      </li>
+      <li class="whoWeAre parent">
+	    <a href="/who-we-are/">Who We Are</a>
+	    <ul>
+          <li><%= link_to "Our Community", '/our-community' %></li>
+          <li><%= link_to "Our DNA", "/our-dna" %></li>
+        </ul>
+      </li>
+      <li class="whatsNew parent">
+	    <a href="/what's-new/">What's New</a>
+	    <ul>
+          <li><%= link_to "Articles", articles_path %></li>
+          <li><%= link_to "Blog", blogposts_path %></li>
+        </ul>
+      </li>
+      <li>
+        <%= link_to "Contact Us", "/contact-us" %>
+	    <ul></ul>
+      </li>
     </ul>
-  </li>
-  <li class="whatsNew parent"><a href="/what's-new/">What's New</a><ul>
-      <li><%= link_to "Articles", articles_path %></li>
-      <li><%= link_to "Blog", blogposts_path %></li>
-    </ul>
-  </li>
-
-  <li><%= link_to "Contact Us", "/contact-us" %><ul></ul>
-  </li>
-</ul></nav>
+</nav>
 </header>
 <div id="wrapper">
   

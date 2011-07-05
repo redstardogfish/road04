@@ -29,7 +29,7 @@ Road04::Application.routes.draw do
   match 'people/display/:id' => 'people#display'
   
   match 'articles/display/:id' => 'articles#display'
-  
+  match 'blog/display/:id' => 'blogposts#display'  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,114 @@
+<div id="content">
+  <%= image_tag @blogpost.image.url(:display), :alt => '', :size => "720x360" %>
+  <div class="blogArticle">
+    <h1 class="title"><%= @blogpost.title %></h1>
+    <p class="postDetails">By <span class="postAuthor"><%= @blogpost.author %></span>, <span class="postDate"><%= display_date(@blogpost.date) %></span><br /> <span class="tags"><%= @blogpost.tags %></span></p>
+    <p class="introPara"></p>
+    <div class="topContent"><%= simple_format @blogpost.content %> </div>
+    
+    <!--
+    <a target="_blank" href='http://twitter.com/share?text=I’m struck again by the great power in this really simple act of making the topic of discussion into a visual artefact – into a thing we can discuss.'>Tweet</a>
+    <a target="_blank" href='http://www.facebook.com/sharer.php?u=http://www.secondroad.com.au/what's-new/blog/making-it-visual/&t=I’m struck again by the great power in this really simple act of making the topic of discussion into a visual artefact – into a thing we can discuss.'>Share on Facebook</a>
+    -->
+
+  </div>
+  <div class="blogDetailExtras">
+    <div class="shareArticle">
+      <script type="text/javascript">var addthis_pub = "2876dadf-99f2-4147-aa3e-7e7ca8ac86e8";var addthis_options = 'twitter, facebook, email';</script> 
+      <a class="lnk-share shareHover" onclick="return addthis_sendto()" onmouseout="addthis_close()" 
+        onmouseover="return addthis_open(this, '', '[url]', '[TITLE]')" href="http://www.addthis.com/bookmark.php?v=20">SHARE THIS ARTICLE</a>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+    </div>
+
+  </div>
+
+  <div class="articleComments">
+    <h3>Comments</h3>
+    <ul></ul>
+
+	<h3>Discuss</h3>
+    
+    <div id="ContentPlaceHolderDefault_BodyContent_comments_6_pnlForm">	
+	  <fieldset class="commentEntry">
+        <label for="name">Name*</label>
+        <input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$Name" type="text"
+            id="ContentPlaceHolderDefault_BodyContent_comments_6_Name" class="firstName" />
+		<label for="email">Email*</label>
+		<input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$Email" type="text" 
+		    id="ContentPlaceHolderDefault_BodyContent_comments_6_Email" class="email" />
+		<label for="company">Company</label> 
+		<input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$Company" type="text" 
+		    id="ContentPlaceHolderDefault_BodyContent_comments_6_Company" class="company" />
+        <label for="comment">Comment*</label>
+        <textarea name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$Comment" rows="2" cols="20" 
+            id="ContentPlaceHolderDefault_BodyContent_comments_6_Comment" class="message"></textarea>
+        <input type="submit" name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$btnSearch" value="ADD YOUR COMMENT" 
+            id="ContentPlaceHolderDefault_BodyContent_comments_6_btnSearch" class="submit" />
+
+        <span id="ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1" InitialValue="" style="display:none;"></span>
+        <span id="ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3" style="display:none;"></span>
+        <span id="ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2" style="display:none;"></span>
+      </fieldset>
+    </div>  
+  </div>
+</div>
+<div id="extras"></div>
+ 
+
+<% content_for :footer do %>
+  <script type="text/javascript">
+    //<![CDATA[
+    var Page_Validators =  new Array(document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1"),
+    document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3"),
+    document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2"));
+    //]]>
+  </script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1 = document.all ? document.all["ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1"] : document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1");
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.controltovalidate = "ContentPlaceHolderDefault_BodyContent_comments_6_Email";
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.errormessage = "Email Address Incorrect Format";
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.display = "None";
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.validationGroup = "contact";
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_BodyContent_comments_6_RegularExpressionValidator1.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+var ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3 = document.all ? document.all["ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3"] : document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3");
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.controltovalidate = "ContentPlaceHolderDefault_BodyContent_comments_6_Name";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.errormessage = "Please enter a first name";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.display = "None";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.validationGroup = "contact";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3.initialvalue = "";
+var ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2 = document.all ? document.all["ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2"] : document.getElementById("ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2");
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.controltovalidate = "ContentPlaceHolderDefault_BodyContent_comments_6_Comment";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.errormessage = "Please enter a comment";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.display = "None";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.validationGroup = "contact";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2.initialvalue = "";
+//]]>
+  </script>
+
+
+  <script type="text/javascript">
+  //<![CDATA[
+
+    var Page_ValidationActive = false;
+    if (typeof(ValidatorOnLoad) == "function") {
+      ValidatorOnLoad();
+    }
+
+    function ValidatorOnSubmit() {
+      if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+      }
+      else {
+        return true;
+      }
+    }
+        //]]>
+  </script>
+
+  <script type="text/javascript">$(function () {var wrapperWidth = $("#content").width() + $("#extras").width();$("#wrapper").width(wrapperWidth);});</script>
+<% end %>

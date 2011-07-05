@@ -40,4 +40,11 @@ class BlogpostsController < ApplicationController
     @blogpost.destroy
     redirect_to blogposts_url, :notice => "Successfully destroyed blogpost."
   end
+  
+  
+  def display
+    @blogpost = Blogpost.find(params[:id])
+    @title = @blogpost.title
+    @body_class = "blogDetail"
+  end
 end

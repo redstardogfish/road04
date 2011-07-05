@@ -4,6 +4,7 @@
   <a class="rss" href="blog-rss-feed/" target="_blank">SUBSCRIBE TO RSS</a>
   <div class="filterBox">
     <section class="topics">
+      
       <h2>TOPICS</h2>
       <ul>
 	    <li><a href="?topic=Conversation">CONVERSATION</a></li>
@@ -25,7 +26,7 @@
   </div>
   <div class="blogListItems">
     <% for blogpost in @blogposts %>
-      <%= link_to blogpost, :class => "blogItem"  do %>
+      <%= link_to "blog/display/#{blogpost.id}", :class => "blogItem"  do %>
         <h2><%= blogpost.title %></h2>
         <p class = "postDetails">By <span class = "postAuthor"><%= blogpost.author %></span>, <span class = "postDate"><%= display_date(blogpost.date) %></span></p>
         <%= image_tag blogpost.image.url(:thumb), :alt => blogpost.title %>

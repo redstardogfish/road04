@@ -18,6 +18,7 @@ Road04::Application.routes.draw do
   
   get "pages/what_we_do"
   
+  get "pages/accordion"
   
   root :to => "pages#home"
 

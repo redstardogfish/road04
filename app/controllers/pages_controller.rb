@@ -23,5 +23,8 @@ class PagesController < ApplicationController
     @title = "What We Do"
   end
   
+  def accordion
+    render :layout => false 
+  end
   
 end

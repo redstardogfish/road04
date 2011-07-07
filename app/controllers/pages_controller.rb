@@ -18,4 +18,10 @@ class PagesController < ApplicationController
     @title = "Our DNA"
     @body_class = "contentWhatWeDo"
   end
+  
+  def what_we_do
+    @title = "What We Do"
+  end
+  
+  
 end

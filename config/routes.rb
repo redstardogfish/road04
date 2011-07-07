@@ -16,6 +16,8 @@ Road04::Application.routes.draw do
   
   get "pages/dna"
   
+  get "pages/what_we_do"
+  
   
   root :to => "pages#home"
 

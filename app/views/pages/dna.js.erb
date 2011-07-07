@@ -1,0 +1,3 @@
+$("body").removeClass().addClass("<%= escape_javascript(@body_class) %>");
+$(".active").removeClass("active");$(".dna").addClass("active");
+$("#wrapper").html("<%= escape_javascript(render('dna')).html_safe %>");

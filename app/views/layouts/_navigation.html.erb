@@ -1,0 +1,39 @@
+  <nav class="mainNav">
+	<ul>
+      <li><a class = 'parent'>What We Do</a>
+	    <ul class = 'subnav'>	
+          <li><%= link_to "Strategize", '#' %></li>
+          <li><%= link_to "Innovate", '#' %></li>
+          <li><%= link_to "Engage", '#' %></li>
+          <li><%= link_to "Empower", '#' %></li>
+          <li><%= link_to "Learn", '#' %></li>
+          <li><%= link_to "Lead", '#' %></li>
+        </ul>
+
+      </li>
+      <li><a class="whoWeAre parent">Who We Are</a>
+	    <ul class = 'subnav'>
+		  <%= content_tag :li, :class => ("active" if @title == "Our Community") do -%>
+		    <%= link_to "Our Community", "/our-community", :class => ("active" if @title == "Our Community")%>
+		  <% end -%>
+		  <%= content_tag :li, :class => (@title == "Our DNA"? "dna active" : "dna") do -%>
+		    <%= link_to "Our DNA", "/our-dna", :class => ("active" if @title == "Our DNA") %>
+		  <% end -%>
+        </ul>
+      </li>
+      <li><a class="whatsNew parent">What's New</a>
+	    <ul class = 'subnav'>
+		  <%= content_tag :li, :class => ("active" if @title == "Articles") do -%>
+		    <%= link_to "Articles", articles_path, :class => ("active" if @title == "Articles")  %>
+		  <% end %>	
+		  <%= content_tag :li, :class => ("active" if @title == "Blog") do -%>
+		    <%= link_to "Blog", blogposts_path, :class => ("active" if @title == "Blog")  %>	
+		  <% end %>	
+
+        </ul>
+      </li>
+      <li><%= link_to "Contact Us", "/contact-us" %>
+	    <ul class = 'subnav'></ul>
+      </li>
+    </ul>
+</nav>

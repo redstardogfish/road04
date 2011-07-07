@@ -1,0 +1,337 @@
+/* 14.0 New elements - Mar 11*/
+
+/* DIVS FOR LITTLE SQUARES IN HORIZONTAL DISPLAY*/
+
+.one_col{
+	width:180px;height:540px;
+	float:left;
+}
+
+.two_col{
+	width:360px;height:540px;
+	float:left;	
+}
+.three_col{
+	width:540px;height:540px;
+	float:left;	
+}
+.four_col{
+	width:720px;height:540px;
+	float:left;
+}
+.five_col{
+	width:900px;height:540px;
+	float:left;	
+}
+.six_col{
+	width:1080px;height:540px;
+	float:left;	
+}
+
+.box_element{
+	width:180px; height:180px;
+	float:left;
+}
+
+.thin_vertical{
+	width:60px; height:540px;
+	float:left; overflow:none;
+}
+
+
+
+.menu_trigger:hover{cursor:pointer;}
+
+
+.push_reveal a.closeIt {
+	background: url(../images/blogListing/closeIt.png) no-repeat;
+	cursor: pointer;
+	height:22px;
+	position:absolute;
+	float:right;;
+	text-indent:-9999px;
+	top:0;
+	width:22px;
+}
+.push_reveal a.closeIt:hover {
+	background-position: 0 -22px;
+}
+
+
+
+/* New styles for static page*/
+.home_sliding_box {
+	width:1080px;height:540px;display:none;float:left;
+}
+
+.home_text {
+	width:540px;height: 540px;background:#f7f6f2;float:left;
+}
+   
+.home_text h1{
+	clear: both;
+	display: block;
+	width: 450px;
+	color: #E4701E;
+	float: left;
+	font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+	font-size: 24px;
+	font-weight: normal;
+	letter-spacing: -0.7px;
+	margin: 34px 0 0 42px;
+	min-width: 180px;
+}
+.home_text p {
+	color: #747474;
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 0 !important;
+	margin-bottom: 17px;
+}
+.home_text ul {
+	margin-bottom: 17px;
+}
+.home_text li {
+	color: #747474;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 0 !important;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	
+}
+.home_text a.closeIt {
+	background: url(../images/blogListing/closeIt.png) no-repeat;
+	cursor: pointer;
+	height:22px;
+	position:absolute;
+    float:right;
+	text-indent:-9999px;
+	top:0;
+	width:22px;
+}
+.home_text a.closeIt:hover {
+	background-position: 0 -22px;
+}
+
+.home_text div.closeIt {
+	background: url(../images/blogListing/closeIt.png) no-repeat;
+	cursor: pointer;
+	height:22px;width:22px;
+	text-indent:-9999px;
+	float:right;
+}
+
+.home_text div.closeIt:hover {
+	background-position: 0 -22px;
+}
+
+.case_study_display{
+	width:540px;height:540px;background:#f7f6f2;float:left;
+}
+.large_image180{float:left;height:180px;}
+.large_image360{float:left;height:360px;}
+.large_image540{float:left;height:540px;}
+
+.case_study_link{
+		width:180px; height:180px;
+		float:left;
+}
+.tall_thin{
+	width:180px;height:540px;float:left;
+}
+
+
+/* the openIt pair to the above...*/
+.openIt{
+	height:180px;
+	width:180px;
+	cursor:pointer;
+}
+
+.col360{ width:360px;
+		 float: left;
+		 line-height: 21px;
+		 padding: 30px 0 30px 43px;
+				
+}
+
+
+.col450{ width:450px;
+		 float: left;
+	     line-height: 21px;
+	     padding: 0px 0 30px 43px;
+}
+
+.captionBox {width:180px; height:20px; background:#3b3b3b;}
+
+.domainServices {
+	background: #e8e5de;
+	border-left: 1px solid #fff;
+	float: left;
+	height: 180px;
+	width: 179px;
+}
+.domainServices a {
+	float: left;
+	height: 180px;
+	width: 179px;
+}
+.domainServices h3 {
+	float:left;
+	font-size:15px;
+	margin: 34px 0 0 21px;
+}
+.domainServices a:hover {
+	background: url('../images/promoLink.jpg') no-repeat 0 -180px;
+	text-decoration: none !important;
+}
+.domainServices a:hover p {
+	color: #ffecde;
+}
+.domainServices a:hover h3 {
+	color: #fff;
+}
+.domainServices p {
+	clear: both;
+	color: #9a9894;
+	float: left;
+	font-family: 'Georgia','Times New Roman','Times','serif';
+	font-size: 14px;
+	font-style: italic;
+	margin: 11px 0 0 21px;
+	width: 125px;
+}
+
+.caseStudyLink {
+	float: left;
+	height: 180px;
+	width: 180px;
+	position: relative;
+	cursor:pointer;
+}
+.darkSquare{
+	background: #e8e5e1;
+}
+.lightSquare {
+	background: #f3f1f0;
+}
+
+.caseStudyLink  p{
+	color: #e5632a;
+	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 16px;
+	font-weight: 100;
+	left: 0;
+	line-height: 30px;
+	position:absolute;
+    padding-top:30px;
+	padding-left: 20px;
+	padding-right:20px;
+
+}
+
+.caseStudy{
+	width:540px; height:540px;
+	display:none;
+	float:left;
+	background:#fff;
+	position:absolute;
+	z-index:500;	
+}
+.caseStudy p {
+	margin: 40px;
+	
+}
+
+.caseStudy a.caseStudyClose {
+	background: url(../images/blogListing/closeIt.png) no-repeat;
+	cursor: pointer;
+	height:22px;
+	position:absolute;
+    float:right;
+	text-indent:-9999px;
+	top:0;
+	width:22px;
+}
+.caseStudy a.caseStudyClose:hover {
+	background-position: 0 -22px;
+}
+
+.caseStudy div.caseStudyClose {
+	background: url(../images/blogListing/closeIt.png) no-repeat;
+	cursor: pointer;
+	height:22px;width:22px;
+	text-indent:-9999px;
+	float:right;
+}
+
+
+/* To get What we do meun item to scroll to closed menu box*/
+#whatHeader {
+	cursor:pointer;
+}
+
+#openingPanel {
+	background:  url(../images/placeholders/strategy_and_innovation.png) no-repeat;;
+}
+#openingPanelQuestion {
+	margin-top: 400px; width: 300px; float:right; cursor:pointer;
+}
+
+
+#openingPanelAnswer{
+	width:540px; height:540px;
+	display:none;
+	float:left;
+	background:#fff;
+	position:absolute;
+}
+
+
+.fadeInPanelContent {
+		margin: 40px;
+}
+
+li.active{
+	background: url("../images/orangeArrow.png") no-repeat scroll 0 9px transparent !important;
+}
+
+
+
+/**/
+
+/* the box that contains the slideshow*/
+#slideshow {position:relative; width: 1620px;height:540px;float:left; overflow:hidden;} 
+/* the slideshow itself - width is the width of an open description plus all the anchors (1080 + 180*anchors)*/
+#slides { position:absolute; top: 0px; left: 0; width: 1620px; height: 540px; overflow: hidden; }
+#slides li{list-style: none;}
+/*the width for a slide is the content (540+540 plus the anchor (180)= 1260)*/
+#slides .slide { position: absolute; top: 0px; width: 1260px; }
+/* the position for the image is put to the side, with room for the anchor*/
+#slides .slide img { position: absolute; top: 0px; right: 0px; }
+
+#slides .slide .slidebutton { display: block; position: absolute; top: 0px; left: 0px; height: 540px; width: 180px; background: #693d5e;}
+#slides .active .slidebutton { background: #55354a; }
+
+/* Manually place slides to begin */
+#slide-1 { position: absolute; top: 0; left: 360px; z-index: 203; }
+#slide-2 { position: absolute; top: 0; left: 180px; z-index: 202; }
+#slide-3 { position: absolute; top: 0; left: 0px; z-index: 201; }
+
+
+.slide_box {width:1080px;height:540px;position: absolute; top: 0px; right: 0px;}
+.slide_box_text {width: 540px; height: 540px; float:left;}
+.slide_case_study {width:540px;height:540px;background:#f7f6f2;float:left;}
+.slide_case_study img {position: relative !important;}
+
+
+.slidebuttonBox {
+	height: 180px;
+	width: 179px;
+	margin-top:360px;
+	float:left;
+	background: #e8e5de;
+	border-left: 1px solid #fff;
+
+}

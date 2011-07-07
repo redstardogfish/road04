@@ -11,47 +11,31 @@
   <%= stylesheet_link_tag "reset" %>
   <%= stylesheet_link_tag "style" %>
   <%= stylesheet_link_tag "print", :media => "print"%>
+  <%= stylesheet_link_tag "whatWeDo"%>
+
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" %>
+  <%= javascript_include_tag "jquery.rails" %>
 
   <script type="text/javascript">!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>')</script>
   <%= javascript_include_tag "/js/modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
-  <%= javascript_include_tag 'scripts', 'people' %>
+  <%= javascript_include_tag 'scripts', 'people', 'application', 'whatWeDo' %>
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 
-  <%= csrf_meta_tag %>
+  
+
   <%= yield(:head) %>
+  <%= csrf_meta_tag %>
+
+
+
 </head>
 <%= body_tag_with_class  %>
 <header>
   <%= link_to (image_tag "logo2.png", :alt=>"Second Road", :size => "223x210", :title => "Second Road"), root_path, :id=> "logo" %>
-  <nav class="mainNav">
-	<ul>
-      <li>
-	    <a href="/what-we-do/">What We Do</a>
-	    <ul></ul>
-      </li>
-      <li class="whoWeAre parent">
-	    <a href="/who-we-are/">Who We Are</a>
-	    <ul>
-          <li><%= link_to "Our Community", '/our-community' %></li>
-          <li><%= link_to "Our DNA", "/our-dna" %></li>
-        </ul>
-      </li>
-      <li class="whatsNew parent">
-	    <a href="/what's-new/">What's New</a>
-	    <ul>
-          <li><%= link_to "Articles", articles_path %></li>
-          <li><%= link_to "Blog", blogposts_path %></li>
-        </ul>
-      </li>
-      <li>
-        <%= link_to "Contact Us", "/contact-us" %>
-	    <ul></ul>
-      </li>
-    </ul>
-</nav>
+  <%= render :partial => 'layouts/navigation' %>
+  <%= yield(:nav) %>
 </header>
 <div id="wrapper">
   
@@ -82,7 +66,12 @@
 <%= yield(:footer) %>
 
 <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
-</body></html>
+
+
+
+</body>
+
+</html>
 
 
 	

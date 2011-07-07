@@ -1,2 +1,12 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(function() {
+	
+  // menu open/close 
+  $('.parent').click(function(){
+	$(this).parent().parent().contents().find('ul.subnav').slideUp();
+	$(this).parent().children().slideDown();
+  });
+
+});
+
+
+

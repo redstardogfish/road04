@@ -4,11 +4,5 @@
 <script type="text/javascript">$(function () {$('#wrapper').width($('#content').width() + $('#promos').width() + 400); 
 $("body, html").mousewheel(function (event, delta) { this.scrollLeft -= (delta * 55); event.preventDefault(); });});</script>
 <script type="text/javascript">//$(function () {var wrapperWidth = $("#content").outerWidth() + $("#promos").outerWidth(); $("#wrapper").width(wrapperWidth + 400);$("body, html").mousewheel(function (event, delta) { this.scrollLeft -= (delta * 55); event.preventDefault(); });});</script>
-<script type="text/javascript">
-$(function () {
-	var $content = $(".wysiwyg");
-	var contentWidth = $content.length * $content.width();
-	$("#content").width(contentWidth + $(".people-image").width() + 100);
-});
-</script>
+
 <% end %>

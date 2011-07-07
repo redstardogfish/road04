@@ -44,7 +44,7 @@ class PeopleController < ApplicationController
   
   def display
     @person = Person.find(params[:id])
-    @title = @person.name
+    @title = "Our Community"
     @body_class = "people-detail"
   end
   

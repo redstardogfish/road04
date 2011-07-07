@@ -33,7 +33,7 @@
 
 <style type="text/css" media="screen">
     ul {list-style:none;}
-	#slides { position: absolute; top: 20px; left: 20px; width: 1080px; height: 540px; overflow: hidden; }
+	#slides { position: absolute; top: 20px; left: 20px; width: 1620px; height: 540px; overflow: hidden; }
 	#slides .slide { position: absolute; top: 0px; width: 720px;height:540px; }
 	#slides .slide img { position: absolute; top: 0px; left: 180px; }
 	#slides .slide .slidebutton { display: block; position: absolute; top: 0px; left: 0px; height: 540px; width: 180px; background: #693d5e; text-decoration: none; }
@@ -43,6 +43,9 @@
 	#slide-1 { position: absolute; top: 0; left: 0px; z-index: 1; }
 	#slide-2 { position: absolute; top: 0; left: 180px; z-index: 2; }
 	#slide-3 { position: absolute; top: 0; left: 360px; z-index: 3; }
+	#slide-4 { position: absolute; top: 0; left: 540px; z-index: 4; }
+	#slide-5 { position: absolute; top: 0; left: 720px; z-index: 5; }
+	#slide-6 { position: absolute; top: 0; left: 900px; z-index: 6; }
 	
 </style>
 
@@ -61,6 +64,24 @@
 		  <%= image_tag 'green.gif', :size=>"540x540" %>
 		</li>
 		<li class="slide open" id="slide-3">
+		  <a class="slidebutton" href="javascript:void(0);">
+			<div style="width:180px;height:540px;background:#999"></div>
+		  </a>
+		  <%= image_tag 'orange.gif', :size=>"540x540" %>
+		</li>
+		<li class="slide open " id="slide-4">
+		  <a class="slidebutton" href="javascript:void(0);">
+		    <div style="width:180px;height:540px;background:#333"></div>
+		  </a>
+	      <%= image_tag 'blue.gif', :size=>"540x540" %>
+		</li>
+		<li class="slide open" id="slide-5">
+		  <a class="slidebutton" href="javascript:void(0);">
+			<div style="width:180px;height:540px;background:#666"></div>
+		  </a>
+		  <%= image_tag 'green.gif', :size=>"540x540" %>
+		</li>
+		<li class="slide open" id="slide-6">
 		  <a class="slidebutton" href="javascript:void(0);">
 			<div style="width:180px;height:540px;background:#999"></div>
 		  </a>

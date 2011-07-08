@@ -1,0 +1,23 @@
+<% title "Casestudies" %>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Headline</th>
+    <th>Strapline</th>
+    <th>Story</th>
+  </tr>
+  <% for casestudy in @casestudies %>
+    <tr>
+      <td><%= casestudy.question %></td>
+      <td><%= casestudy.headline %></td>
+      <td><%= casestudy.strapline %></td>
+      <td><%= casestudy.story %></td>
+      <td><%= link_to "Show", casestudy %></td>
+      <td><%= link_to "Edit", edit_casestudy_path(casestudy) %></td>
+      <td><%= link_to "Destroy", casestudy, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Casestudy", new_casestudy_path %></p>

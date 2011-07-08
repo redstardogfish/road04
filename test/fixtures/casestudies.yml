@@ -1,0 +1,11 @@
+one:
+  question: MyString
+  headline: MyString
+  strapline: MyString
+  story: MyText
+
+two:
+  question: MyString
+  headline: MyString
+  strapline: MyString
+  story: MyText

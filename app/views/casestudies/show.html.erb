@@ -1,0 +1,24 @@
+<% title "Casestudy" %>
+
+<p>
+  <strong>Question:</strong>
+  <%= @casestudy.question %>
+</p>
+<p>
+  <strong>Headline:</strong>
+  <%= @casestudy.headline %>
+</p>
+<p>
+  <strong>Strapline:</strong>
+  <%= @casestudy.strapline %>
+</p>
+<p>
+  <strong>Story:</strong>
+  <%= @casestudy.story %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_casestudy_path(@casestudy) %> |
+  <%= link_to "Destroy", @casestudy, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", casestudies_path %>
+</p>

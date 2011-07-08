@@ -41,6 +41,13 @@ $('.slide')
 	  $(this).scrollMenu();
 	});
 
+// Triggering from the menu
+  $('.menu_trigger').click(function() {
+	var target_id = '#slide-'+ $(this).attr('id')
+	$('#slides').find(target_id).trigger('open');
+	$(this).scrollMenu();
+  });
+
 
 
 });

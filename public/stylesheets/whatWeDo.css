@@ -299,39 +299,3 @@ li.active{
 
 
 
-/**/
-
-/* the box that contains the slideshow*/
-#slideshow {position:relative; width: 1620px;height:540px;float:left; overflow:hidden;} 
-/* the slideshow itself - width is the width of an open description plus all the anchors (1080 + 180*anchors)*/
-#slides { position:absolute; top: 0px; left: 0; width: 1620px; height: 540px; overflow: hidden; }
-#slides li{list-style: none;}
-/*the width for a slide is the content (540+540 plus the anchor (180)= 1260)*/
-#slides .slide { position: absolute; top: 0px; width: 1260px; }
-/* the position for the image is put to the side, with room for the anchor*/
-#slides .slide img { position: absolute; top: 0px; right: 0px; }
-
-#slides .slide .slidebutton { display: block; position: absolute; top: 0px; left: 0px; height: 540px; width: 180px; background: #693d5e;}
-#slides .active .slidebutton { background: #55354a; }
-
-/* Manually place slides to begin */
-#slide-1 { position: absolute; top: 0; left: 360px; z-index: 203; }
-#slide-2 { position: absolute; top: 0; left: 180px; z-index: 202; }
-#slide-3 { position: absolute; top: 0; left: 0px; z-index: 201; }
-
-
-.slide_box {width:1080px;height:540px;position: absolute; top: 0px; right: 0px;}
-.slide_box_text {width: 540px; height: 540px; float:left;}
-.slide_case_study {width:540px;height:540px;background:#f7f6f2;float:left;}
-.slide_case_study img {position: relative !important;}
-
-
-.slidebuttonBox {
-	height: 180px;
-	width: 179px;
-	margin-top:360px;
-	float:left;
-	background: #e8e5de;
-	border-left: 1px solid #fff;
-
-}

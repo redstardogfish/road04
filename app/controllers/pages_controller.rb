@@ -21,10 +21,11 @@ class PagesController < ApplicationController
   
   def what_we_do
     @title = "What We Do"
+    @body_class = "what"
   end
   
   def accordion
-    render :layout => false 
+  
   end
   
 end

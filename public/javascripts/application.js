@@ -7,6 +7,7 @@ $(function() {
 	    $(this).parent().children().slideDown();
   });
 
+  $('.what_we_do').parent().children('ul').slideDown();
 
 // accordion
 /* Binding Events to the slides */
@@ -38,6 +39,7 @@ $('.slide')
 	$('.slidebutton').click(function() {
 	  var trig = $(this);
       $(this).parent().trigger('open');
+
 	  $(this).scrollMenu();
 	});
 
@@ -57,7 +59,7 @@ $.fn.scrollMenu = function() {
 	//all slides left of the open slide also have class 'open'. this was the easiest way to locate the proper opening place
     var open_slides = ($('#slides').find('.open').length)
 	$('html,body').animate(
-		{scrollLeft: (open_slides*180 - 180+21)},
+		{scrollLeft: (open_slides*180 - 180)},
 		 300);
 };
 

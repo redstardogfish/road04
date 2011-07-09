@@ -27,14 +27,17 @@ Road04::Application.routes.draw do
   match 'contact-us' => 'pages#contact'
   match 'privacy' => 'pages#privacy'
   match 'our-dna' => 'pages#dna'
+  match 'what-we-do' => 'pages#what_we_do'
   
   match 'our-community' => 'people#index'
+  
 
  
   match 'people/display/:id' => 'people#display'
   
   match 'articles/display/:id' => 'articles#display'
   match 'blog/display/:id' => 'blogposts#display'  
+  match 'casestudies/display/:id' => 'casestudies#display'  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

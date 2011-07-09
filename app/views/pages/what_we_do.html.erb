@@ -4,10 +4,12 @@
 	<div id="slides">
 		<div class="slide open active" id="slide-1">
 		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_1.png', :class => "slide_image" %>
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_1.png' %>
+	        </div>
 	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">STRATEGIZE</h3>
-		        <p style = "padding:20px 20px 0 20px">Define direction in an age of uncertainty.</p>
+		      	<h3>STRATEGIZE</h3>
+		        <p>Define direction in an age of uncertainty.</p>
 		    </div>
 		  </div>
 	      <div class = "panelOpening">	
@@ -39,72 +41,160 @@
 		    </div>
 		    <div class = "panelCase">
 		    	<div class = "large_image180"><%= image_tag("homeImages/lead_top.jpg", :size => "540x180" ) %></div>
-			    <div class = "caseStudyLink darkSquare"><p>How do you engage all stakeholders?</p></div>
-			    <div class = "caseStudyLink lightSquare"><p>How do you influence with wisdom?</p></div>
-			    <div class = "caseStudyLink darkSquare"><p>How do you kindle the brilliance in a team?</p></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you engage all stakeholders?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you influence with wisdom?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you kindle the brilliance in a team?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 			    <div class = "large_image180"><%= image_tag("homeImages/lead_bottom.jpg", :size => "540x180" ) %></div>
 		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-2">
 		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_2.png', :class => "slide_image" %>
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_2.png' %>
+	        </div>
 	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">INNOVATE</h3>
-		        <p style = "padding:20px 20px 0 20px">Discover new opportunities to invent groundbreaking solutions.</p>
+		      	<h3>INNOVATE</h3>
+		        <p>Discover new opportunities to invent groundbreaking solutions.</p>
+		    </div>
+		  </div>
+	      <div class = "panelOpening">	
+		    <div class = "panelText">	
+			  <h1>	Innovate - discover new opportunities to invent groundbreaking solutions</h1>
+			  <div class="col450">
+			 	<p>Brilliant ideas that deliver a competitive edge come from a mindset and process of design. Second Road works with clients to:</p> 
+				<ul>	
+				  <li>create exceptional experiences for customers and employees</li>
+				  <li>discover new, unmet customer needs</li>
+				  <li>embed a creative disposition into the firm’s culture.</li>
+				</ul>
+			  </div>
+			  <div class = "col450">	
+				<p>	We have used the power of imagination, design and innovation to help leaders:	</p>
+				<ul>
+				  <li>Build a culture of creativity</li>
+				  <li>Bring the user experience to life</li>
+				  <li>Capture and create new customer value.</li>
+				</ul>
+			  </div>	
+		    
+		    </div>
+		    <div class = "panelCase">
+		      <div class = "caseStudyLink darkSquare" id = "innovate1"><%= link_to "How do you sponsor a culture of creativity?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			  <div class = "large_image180"><%= image_tag("homeImages/innovate_top_right.jpg", :size => "360x180" ) %></div>
+
+			  <div class = "box_element"><%= image_tag("homeImages/innovate_middle_left.jpg", :size => "180x180" )%></div>	
+			  <div class = "caseStudyLink lightSquare"><%= link_to "How do you use the user experience to life?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			  <div class = "box_element"><%= image_tag("homeImages/innovate_middle_right.jpg", :size => "180x180") %></div>
+
+			  <div class = "large_image180"><%= image_tag("homeImages/innovate_bottom_left.jpg", :size => "360x180" ) %></div>
+			  <div class = "caseStudyLink darkSquare" id = "innovate3"><%= link_to "Who is the real client and how do we accommodate their needs?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    
+		    </div>
+	      </div>
+		</div>
+		<div class="slide open" id="slide-3">
+		  <div class="slidebutton" href="javascript:void(0);">			
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_3.png' %>
+	        </div>
+	        <div class = "slideTrigger">
+		      	<h3>ENGAGE</h3>
+		        <p>Inspire communities toward action.</p>
+		    </div>
+		  </div>
+	      <div class = "panelOpening">	
+		    <div class = "panelText">
+		      <h1>	Engage - inspire communities toward action</h1>
+			  <div class="col450">
+			 	<p>Let’s be honest, few people like change. Even the most well-intentioned organisational change campaign stalls when inertia sets in. But when leaders learn to truly engage employees in building a shared future, everyone helps to drive change.</p> 
+			  </div>
+			  <div class = "col450">	
+				<p>We have used the power of story, inquiry and conversation to help leaders:</p>
+				<ul>
+				  <li>Make a corporate change mandate relevant, meaningful and significant for all employees</li>
+				  <li>Co-design a shared vision to help coalesce the community after a merger</li>
+				  <li>Cultivate a culture of change in a CEO's first 100 days.</li>
+				</ul>
+			  </div>
+		    </div>
+		    <div class = "panelCase">
+		      <div class = "caseStudyLink darkSquare"><p>How do you bring change that is relevant for all employees?</p></div>
+		      <div class = "caseStudyLink lightSquare"><p>How do you co-design a shared vision?</p></div>
+		      <div class = "caseStudyLink darkSquare" id = "engage3"><p>How does a new CEO create a culture of change in the first 100 days?</p></div>
+		      <div class = "large_image360"><%= image_tag("homeImages/engage_bottom.jpg", :size => "540x360" ) %></div>
+		    </div>
+	      </div>
+		</div>
+		<div class="slide open" id="slide-4">
+		  <div class="slidebutton" href="javascript:void(0);">			
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_4.png' %>
+	        </div>
+	        <div class = "slideTrigger">
+		      	<h3>EMPOWER</h3>
+		        <p>Harness the intellectual horsepower of an organization.</p>
+		    </div>
+		  </div>
+	      <div class = "panelOpening">	
+		    <div class = "panelText">
+			    <h1>	Clarify - turn volumes of information into useful knowledge</h1>
+			    <div class="col450">
+				  <p>Your people need to make more informed decisions, faster. To do this, they must:</p> 
+				  <ul>	
+				    <li>learn to think more clearly</li>
+				    <li>demystify complexity</li>
+				    <li>extract insights, significance and meaning</li>
+				    <li>decipher relevance in data-drenched documents</li>
+				    <li>convert information into content that enables good decisions.</li>
+				  </ul>
+			    </div>
+			    <div class = "col450">	
+				  <p>We have used the power of language, conversation and design to help leaders:	</p>
+				  <ul>
+				    <li>Revolutionise reporting to bring focus to essential questions and answers</li>
+				    <li>Transform jargon into content that customers understand</li>
+				    <li>Bring clarity of intent and meaning to compliance documents.</li>
+				  </ul>
+			    </div>
+		    </div>
+		    <div class = "panelCase">
+		    	<div class = "large_image180"><%= image_tag("homeImages/clarify_top.jpg", :size => "540x180" ) %></div>
+			    <div class = "caseStudyLink darkSquare" id = "clarify1"><p>How do you make sense out of 400 page board report?</p></div>
+			    <div class = "caseStudyLink lightSquare"><p>How do you balance customer expectations with the dictates of our legal department?</p></div>
+			    <div class = "caseStudyLink darkSquare" id = "clarify3"><p>How do you shift from compliance to clarity of intent?</p></div>
+			    <div class = "large_image180"><%= image_tag("homeImages/clarify_bottom.jpg", :size => "540x180" ) %></div>
+		    </div>
+	      </div>
+		</div>
+		<div class="slide open" id="slide-5">
+		  <div class="slidebutton" href="javascript:void(0);">			
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_5.png' %>
+	        </div>
+	        <div class = "slideTrigger">
+		      	<h3>LEARN</h3>
+		        <p>Build a mindset of reflection.</p>
+		    </div>
+		  </div>
+	      <div class = "panelOpening">	
+		    <div class = "panelText"></div>
+		    <div class = "panelCase"></div>		
+	      </div>
+		</div>
+		<div class="slide open" id="slide-6">
+		  <div class="slidebutton" href="javascript:void(0);">			
+            <div class = "slide_image">
+	      	  <%= image_tag 'home_6.png' %>
+	        </div>
+	        <div class = "slideTrigger">
+		      	<h3>LEAD</h3>
+		        <p>Lead with wisdom.</p>
 		    </div>
 		  </div>
 	      <div class = "panelOpening">	
 		    <div class = "panelText"></div>
 		    <div class = "panelCase"></div>
-	      </div>
-		</div>
-		<div class="slide open" id="slide-3">
-		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_3.png', :class => "slide_image" %>
-	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">ENGAGE</h3>
-		        <p style = "padding:20px 20px 0 20px">Inspire communities toward action.</p>
-		    </div>
-		  </div>
-	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
-	      </div>
-		</div>
-		<div class="slide open" id="slide-4">
-		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_4.png', :class => "slide_image" %>
-	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">EMPOWER</h3>
-		        <p style = "padding:20px 20px 0 20px">Harness the intellectual horsepower of an organization.</p>
-		    </div>
-		  </div>
-	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
-	      </div>
-		</div>
-		<div class="slide open" id="slide-5">
-		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_5.png', :class => "slide_image" %>
-	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">LEARN</h3>
-		        <p style = "padding:20px 20px 0 20px">Build a mindset of reflection.</p>
-		    </div>
-		  </div>
-	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
-	      </div>
-		</div>
-		<div class="slide open" id="slide-6">
-		  <div class="slidebutton" href="javascript:void(0);">			
-	      	<%= image_tag 'home_6.png', :class => "slide_image" %>
-	        <div class = "slideTrigger">
-		      	<h3 style = "padding:20px 0 0 0">LEAD</h3>
-		        <p style = "padding:20px 20px 0 20px">Lead with wisdom.</p>
-		    </div>
-		  </div>
-	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-7">

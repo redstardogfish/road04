@@ -1,6 +1,6 @@
   <nav class="mainNav">
 	<ul>
-      <li><a class = 'parent'>What We Do</a>
+      <li><%= link_to "What We Do", "/what-we-do", :class => ("what_we_do" if @title == "What We Do") %>
 	    <ul class = 'subnav'>	
           <li><%= link_to "Strategize", '#', :class => "menu_trigger" , :id => "1"  %></li>
           <li><%= link_to "Innovate", '#', :class => "menu_trigger", :id => "2" %></li>

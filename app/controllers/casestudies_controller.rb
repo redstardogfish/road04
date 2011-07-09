@@ -38,4 +38,13 @@ class CasestudiesController < ApplicationController
     @casestudy.destroy
     redirect_to casestudies_url, :notice => "Successfully destroyed casestudy."
   end
+  
+  def display
+    @casestudy = Casestudy.find(params[:id])
+    render :layout => false
+    
+  end
+  
+  
+  
 end

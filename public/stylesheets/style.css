@@ -1532,12 +1532,12 @@ TOC - SECOND ROAD CSS
 /* 12.0: WHAT WE DO
 ****************************************/
 	body.what {
-		background: none;
+		background: #E2DFD8;
 		width: 4000px;
 	}
 
 
-    #slides { position: absolute; top: 20px; left: 20px; width: 2340px; height: 540px; overflow: hidden; }
+    #slides { position: absolute; width: 2340px; height: 540px; overflow: hidden; }
 
     #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; }
     #slides .slide .slidebutton { display: block;float:left; height: 540px; width: 180px; text-decoration: none; cursor:pointer;}
@@ -1551,13 +1551,32 @@ TOC - SECOND ROAD CSS
 	#slide-7 { position: absolute; top: 0; left: 1080px; z-index: 7; }
 
   .slideTrigger {
-	width:180px;height:180px;float:left;background:#000;text-align:center
-  }
+	width:179px;height:180px;float:left;background: none repeat scroll 0 0 #E8E5DE;border-left: 1px solid #FFFFFF;
+}
+.slideTrigger h3 {
+    float: left;
+    font-size: 15px;
+    margin: 34px 0 0 21px;
+    color:#E4701E;
+}
+.slideTrigger p {
+    clear: both;
+    color: #9A9894;
+    float: left;
+    font-family: 'Georgia','Times New Roman','Times','serif';
+    font-size: 14px;
+    font-style: italic;
+    margin: 11px 0 0 21px;
+    width: 125px;
+}
+
+  .slide_image {width:180px;height:360px;}
 
   .panelOpening {
 	float:left;
 	width:1080px;height:540px;left-margin:180px; background: #f3e9f2;
   }
+
 
   .panelText {width:540px;height: 540px;background:#f7f6f2;float:left;
 	
@@ -1622,17 +1641,21 @@ TOC - SECOND ROAD CSS
 	height: 180px;
 	width: 180px;
 	position: relative;
-	cursor:pointer;
 }
 .darkSquare{
-	background: #e8e5e1;
+	background: #E4701E;
 }
 .lightSquare {
-	background: #f3f1f0;
+	background: #DCAD83;
+}
+.box_element{
+	width:180px; height:180px;
+	float:left;
 }
 
-.caseStudyLink  p{
-	color: #e5632a;
+
+.caseStudyLink  a {
+	color: #E8E5DE;
 	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
 	font-size: 16px;
 	font-weight: 100;
@@ -1642,22 +1665,29 @@ TOC - SECOND ROAD CSS
     padding-top:30px;
 	padding-left: 20px;
 	padding-right:20px;
-
+    text-decoration:none;
 }
 
 .caseStudy{
-	width:540px; height:540px;
-	display:none;
-	float:left;
-	background:#fff;
+	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 12px;
+	font-weight: 100;
+	left: 0;
+	line-height: 16px;
 	position:absolute;
-	z-index:500;	
-}
-.caseStudy p {
-	margin: 40px;
-	
+    padding:0px 20px 20px;
 }
 
+.caseStudy h1 {
+    color: #E4701E;
+    display: block;
+    float: left;
+    font-family: 'Georgia','Times New Roman','Times','serif';
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: -0.7px;
+    margin: 0;
+}
 
 
 

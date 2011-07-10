@@ -1824,3 +1824,11 @@ h3 {
 
 }
 
+
+/* login/logout sessions information*/
+
+#user_nav {
+	color: #595755;
+	font-size: 12px;
+}
+

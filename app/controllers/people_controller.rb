@@ -1,4 +1,6 @@
 class PeopleController < ApplicationController
+  before_filter :authenticate, :except => [:index, :display]
+  
   def index
     @people = Person.all
     @title = "Our Community"

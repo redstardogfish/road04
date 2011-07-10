@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.9)
     annotate (2.4.0)
     arel (2.0.10)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -79,6 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bcrypt-ruby
   mocha
   nifty-generators (>= 0.4.0)
   paperclip (~> 2.3)

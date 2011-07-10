@@ -1,4 +1,11 @@
 Road04::Application.routes.draw do
+  get "login" => "sessions#new", :as => "login"
+  get "logout" => "sessions#destroy", :as => "logout"
+
+  get "sign_up" => "users#new", :as => "sign_up"
+
+  resources :users
+  resources :sessions
   resources :casestudies
 
   resources :blogposts

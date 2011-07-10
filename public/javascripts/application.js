@@ -16,7 +16,7 @@ $('.slide')
 		if(! $(this).hasClass('open')){
 			$(this).prev().trigger('open');
 			$(this).addClass('open');
-			$(this).animate({left: "-=1080px"});
+			$(this).animate({left: "-=1080px"}, 1000);
 		}
 		else{
 			$(this).next().trigger('close');
@@ -28,7 +28,7 @@ $('.slide')
 	.bind('close', function(){
 		if($(this).hasClass('open')){
 			$(this).removeClass('open');
-			$(this).animate({left: "+=1080px"});
+			$(this).animate({left: "+=1080px"}, 1000);
 			$(this).next().trigger('close');
 		}
 	});
@@ -60,7 +60,7 @@ $.fn.scrollMenu = function() {
     var open_slides = ($('#slides').find('.open').length)
 	$('html,body').animate(
 		{scrollLeft: (open_slides*180 - 180)},
-		 300);
+		 1000);
 };
 
 

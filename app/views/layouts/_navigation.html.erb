@@ -29,11 +29,17 @@
 		  <%= content_tag :li, :class => ("active" if @title == "Blog") do -%>
 		    <%= link_to "Blog", blogposts_path, :class => ("active" if @title == "Blog")  %>	
 		  <% end %>	
-
         </ul>
       </li>
       <li><%= link_to "Contact Us", "/contact-us" %>
 	    <ul class = 'subnav'></ul>
       </li>
+
+	  <% if admin? %>
+      <li><%= link_to "User list", users_path %></li>
+	  <% end %>  
+
+
+
     </ul>
 </nav>

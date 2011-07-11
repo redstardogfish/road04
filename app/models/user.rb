@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :admin
   
   attr_accessor :password
   before_save :encrypt_password
@@ -25,4 +25,18 @@ class User < ActiveRecord::Base
     end
   end
 end
+
+
+# == Schema Information
+#
+# Table name: users
+#
+#  id            :integer         not null, primary key
+#  email         :string(255)
+#  password_hash :string(255)
+#  password_salt :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#  admin         :boolean
+#
 

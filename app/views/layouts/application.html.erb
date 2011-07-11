@@ -36,6 +36,8 @@
 <header>
   <%= link_to (image_tag "logo2.png", :alt=>"Second Road", :size => "223x210", :title => "Second Road"), root_path, :id=> "logo" %>
   <%= render :partial => 'layouts/navigation' %>
+
+
   <%= yield(:nav) %>
 
 

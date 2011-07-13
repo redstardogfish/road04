@@ -1,8 +1,11 @@
 <% title "Edit Person" %>
+<div class = 'person_edit'>
+	<%= render 'form' %>
+	<div class = "person_menu">
+		<p>
+		  <%= link_to "Show", @person %> |
+		  <%= link_to "View All", people_path %>
+		</p>
 
-<%= render 'form' %>
-
-<p>
-  <%= link_to "Show", @person %> |
-  <%= link_to "View All", people_path %>
-</p>
+	</div>
+</div>

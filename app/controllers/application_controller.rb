@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   
   private
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= Person.find(session[:user_id]) if session[:user_id]
   end
   
   def admin?
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   def fetch_logged_user
 
     unless session[:user_id].blank?
-      @logged_user = User.find(session[:user_id])
+      @logged_user = Person.find(session[:user_id])
     end
 
   rescue ActiveRecord::RecordNotFound

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110711115435) do
+ActiveRecord::Schema.define(:version => 20110712031549) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -103,6 +103,12 @@ ActiveRecord::Schema.define(:version => 20110711115435) do
     t.string   "portrait_content_type"
     t.integer  "portrait_file_size"
     t.datetime "portrait_updated_at"
+    t.integer  "user_id"
+    t.boolean  "display"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.boolean  "admin"
   end
 
   create_table "portraits", :force => true do |t|

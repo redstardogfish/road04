@@ -3,19 +3,12 @@ Road04::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
 
   get "sign_up" => "users#new", :as => "sign_up"
-
-  resources :users
-  resources :sessions
-  resources :casestudies
-
-  resources :blogposts
-
-  resources :articles
-
-  resources :people  
-  resources :portraits
-  resources :headshots
   
+  get "people_list"  => "people#listing", :as => "people_list"
+  
+  match "people/display_box/:id"  => "people#display_box"
+
+
 
   get "pages/home"
 
@@ -45,6 +38,19 @@ Road04::Application.routes.draw do
   match 'articles/display/:id' => 'articles#display'
   match 'blog/display/:id' => 'blogposts#display'  
   match 'casestudies/display/:id' => 'casestudies#display'  
+  
+  resources :users
+  resources :sessions
+  resources :casestudies
+
+  resources :blogposts
+
+  resources :articles
+
+  resources :people  
+  resources :portraits
+  resources :headshots
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

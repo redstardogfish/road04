@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "style" %>
+  
+</head>
+<body class = "display_box">
+
+	  <div class="people-image">
+	    <%= image_tag @person.portrait.url(:display),:width => "200px",:alt => '', :id => "people-image" %>
+	  </div>
+
+
+
+	<h1><%= @person.name %></h1>
+
+	  	<% if @logged_user && (@person.id == @logged_user.id || @logged_user.admin) %>
+	      <div class = "hidden_edit">	
+		    <%= link_to "Edit profile", edit_person_path(@person) %>  
+	      </div>
+		<% end %>
+
+	<div id="content">
+	  <p class="intro"><%= @person.role %></p>
+	  <p><%= simple_format @person.bio %></p>
+	  <section id="ContentPlaceHolderDefault_BodyContent_contactinfo" class="contact-info">
+	    <ul>
+	      <li id="ContentPlaceHolderDefault_BodyContent_liEmail">
+		    e: <a '#'><%= mail_to @person.email, nil, :encode => "javascript" %></a>
+		  </li>
+		</ul>
+	  </section>
+
+	</div>
+
+
+
+</body>
+</html>
+
+
+
+

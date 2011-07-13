@@ -1,8 +1,8 @@
 class PeopleController < ApplicationController
-  before_filter :authenticate, :except => [:index, :display]
+  before_filter :authenticate, :except => [:index, :display, :display_box]
   
   def index
-    @people = Person.all
+    @people = Person.where(:display => true )
     @title = "Our Community"
     @body_class = 'peopleListing'
   end
@@ -31,7 +31,7 @@ class PeopleController < ApplicationController
   def update
     @person = Person.find(params[:id])
     if @person.update_attributes(params[:person])
-      redirect_to @person, :notice  => "Successfully updated person."
+      redirect_to people_list_path, :notice  => "Successfully updated person."
     else
       render :action => 'edit'
     end
@@ -44,10 +44,21 @@ class PeopleController < ApplicationController
   end
   
   
+  def listing
+    @people = Person.all
+
+  end
+  
+  
   def display
     @person = Person.find(params[:id])
-    @title = "Our Community"
+    @title = "People listing"
     @body_class = "people-detail"
+  end
+  def display_box
+    @person = Person.find(params[:id])
+    render :layout => false
+    
   end
   
   

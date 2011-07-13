@@ -1828,7 +1828,177 @@ h3 {
 /* login/logout sessions information*/
 
 #user_nav {
-	color: #595755;
+	color: #437499;
 	font-size: 12px;
 }
+#user_nav a {
+	color: #437499;	
+	cursor:default;
+	
+}
+
+.admin_link a {
+	color: #437499;
+}
+
+.person_edit {
+	width: 800px;
+}
+
+.person_form {
+	width: 400px; height: 750px;
+	float:left;
+}
+
+.person_menu {
+
+}
+
+
+
+
+/* Display in thickbox for people */
+.display_box{
+	
+}
+
+
+.display_box .hidden_edit {
+    color: #ED741F;
+    font-family: georgia;
+    font-size: 12px;
+    font-weight: normal;
+    left: 190px;
+    position: absolute;
+    top: 84px;
+}
+/* the div in which the image sits*/
+.display_box .people-image {
+	float: left;
+	height: 1%;
+	position: relative;
+	top: 0px
+	left: 10px;
+	width: 200px;		
+}
+/* the image itself */
+.display_box #people-image {
+	position: absolute;
+    left: 0px;
+	width: 200px;
+	top: 0px;
+}
+
+
+.display_box h1 {
+	color: #ED741F;
+    font-family: georgia;
+    font-size: 42px;
+    font-weight: normal;
+    left: 190px;
+    letter-spacing: -0.75px;
+    position: absolute;
+    top: 34px;
+    width: 600px;
+}
+
+.display_box #content {
+	position:absolute;
+	width: 600px;
+	height: 400px;
+	left: 190px;
+	top: 110px;
+	
+}
+
+
+.display_box #content p.intro {
+	color: #393939;
+	font-family: georgia;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 21px;
+	margin: 5px 0 22px 5px;
+	width: 75%;
+}
+
+.display_box #content p {
+	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 12px;
+	line-height: 18px;
+	margin: 20px;
+}
+
+.display_box .contact-info {
+	background: #f7f6f2 url(../images/peopleDetail/background-contact.png) no-repeat 0 10px;
+	left: 45px;
+	padding: 22px 0 10px;
+	position: absolute;
+	top: 328px;
+	width: 300px;	
+}
+.display_box .contact-info ul {
+	margin: 0;
+}
+.display_box .contact-info li {
+	background: none;
+	font-family: Georgia;
+	font-style: italic;
+	list-style: none;
+	padding-left: 0;
+}
+.display_box .contact-info a {
+	color:#747474;
+}
+
+
+
+
+
+/* 13.0: PEOPLE DETAIL
+****************************************/
+
+
+
+
+	.people-detail #promos {
+		float: left;
+		margin: 180px 0 0 0;
+		min-height: 426px;
+	}
+	.people-detail ul.relatedInfo li {
+		color: #3b3b3b;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.people-detail ul.relatedInfo li a {
+	    color: #747474;
+	    font-size: 12px;
+	    font-weight: normal;
+	}
+	.people-detail .diag-box {
+		background: url("../images/peopleDetail/diag-box.png") no-repeat scroll 0 0 transparent;
+	    height: 78px;
+	    left: 792px;
+	    padding: 51px 130px;
+	    position: absolute;
+	    width: 225px;
+	}
+	.people-detail .diag-box .quote {
+		color: #3b3b3b;
+		display: block;
+		font-family: 'georgia';
+		font-size: 16px;
+		font-style: italic;
+		line-height: 21px;
+		margin: 0 0 5px;
+	}
+	.people-detail .diag-box .author {
+		color: #928f8b;
+		display: block;
+		font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+		font-size: 10px;
+	}
+
+
 

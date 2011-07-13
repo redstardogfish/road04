@@ -1,6 +1,12 @@
 <%= render :partial => "person_display_header", :locals => {:person => @person}  %>
 
 <h1><%= @person.name %></h1>
+<div class = "hidden_edit">
+  	<% if @person.id == @logged_user.id || @logged_user.admin %>
+	  <%= link_to "Edit profile", edit_person_path(@person) %>  
+	<% end %>
+</div>
+
 <div id="ContentPlaceHolderDefault_BodyContent_quotebox" class="diag-box">
   <span class="quote">"There is no need to be put out by uncertainty; in fact, there is creative potential in allowing mystery and doubt to exist alongside fact and reason."</span>
 </div>
@@ -16,7 +22,7 @@
   <section id="ContentPlaceHolderDefault_BodyContent_contactinfo" class="contact-info">
     <ul>
       <li id="ContentPlaceHolderDefault_BodyContent_liEmail">
-	    e: <a href='mailto:brad.graham@secondroad.com.au'><%= "#{@person.first_name.downcase}.#{@person.last_name.downcase}@secondroad.com.au" %></a>
+	    e: <a '#'><%= mail_to @person.email, nil, :encode => "javascript" %></a>
 	  </li>
 	</ul>
   </section>
@@ -26,8 +32,7 @@
   </div>
 </div>
 <div id="promos">
-    
-    
+
 </div>
 
 

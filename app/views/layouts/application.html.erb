@@ -20,27 +20,12 @@
   <script type="text/javascript">!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>')</script>
   <%= javascript_include_tag "/js/modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
-  <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed' %>
+  <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages' %>
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
   <script type="text/javascript" charset="utf-8">
-  	(function($) {
-	  var cache = [];
-	  // Arguments are image paths relative to the current page.
-	  $.preLoadImages = function() {
-	    var args_len = arguments.length;
-	    for (var i = args_len; i--;) {
-	      var cacheImage = document.createElement('img');
-	      cacheImage.src = arguments[i];
-	      cache.push(cacheImage);
-	    }
-	  }
-	})(jQuery)
+  	$.preloadImages(['images/home_1.jpg','images/home_2.jpg','images/home_3.jpg','images/home_4.jpg','images/home_5.jpg','images/home_6.jpg',]);
   </script>
-  <script type="text/javascript" charset="utf-8">
-  	jQuery.preLoadImages("images/home_1.png","images/home_2.png","images/home_3.png","images/home_4.png","images/home_5.png","images/home_6.png",);
-  </script>
-  
 
   <%= yield(:head) %>
   <%= csrf_meta_tag %>
@@ -56,8 +41,10 @@
 
   <%= yield(:nav) %>
 
-
+<div id = "indicator"></div>
+<div id = "full-screen"></div>
 </header>
+
 <div id="wrapper">
   
   

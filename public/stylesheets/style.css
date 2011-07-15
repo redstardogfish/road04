@@ -1539,7 +1539,7 @@ TOC - SECOND ROAD CSS
 
     #slides { position: absolute; width: 2340px; height: 540px; overflow: hidden; }
 
-    #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; }
+    #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; background:white;}
     #slides .slide .slidebutton { display: block;float:left; height: 540px; width: 180px; text-decoration: none; cursor:pointer;}
 
 	#slide-1 { position: absolute; top: 0; left: 0px; z-index: 1; }

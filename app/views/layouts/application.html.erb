@@ -23,7 +23,23 @@
   <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed' %>
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
-
+  <script type="text/javascript" charset="utf-8">
+  	(function($) {
+	  var cache = [];
+	  // Arguments are image paths relative to the current page.
+	  $.preLoadImages = function() {
+	    var args_len = arguments.length;
+	    for (var i = args_len; i--;) {
+	      var cacheImage = document.createElement('img');
+	      cacheImage.src = arguments[i];
+	      cache.push(cacheImage);
+	    }
+	  }
+	})(jQuery)
+  </script>
+  <script type="text/javascript" charset="utf-8">
+  	jQuery.preLoadImages("images/home_1.png","images/home_2.png","images/home_3.png","images/home_4.png","images/home_5.png","images/home_6.png",);
+  </script>
   
 
   <%= yield(:head) %>

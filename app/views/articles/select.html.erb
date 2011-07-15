@@ -1,0 +1,26 @@
+
+<div id="content">
+  <h1>Articles</h1>
+
+  <div class="blogListItems">
+
+	<% for article in @articles %>
+	  <% link_to "articles/display/#{article.id}", :class=> "blogItem" do %>
+    	<h2><%= article.title %></h2>
+		<p class="postDetails">By <span class="postAuthor"><%= article.author %></span>, <span class="postDate"><%= article.published_date %></span></p>
+		<%= image_tag article.image_thumb.url(:display), :alt => article.title %>
+		<p class="postSummary"><%= simple_format article.intro_para %></p>
+		<p class="readMore">read more</p>
+	  <% end %>	    
+	<% end %>
+
+  </div>
+</div>
+<div id="promos"></div>
+<div id="overlayLeft" style="display: block"><a></a></div><div id="overlayRight" style="display: block"><a></a></div>
+
+
+<% content_for :footer do %>
+  <script type="text/javascript">$(function () {
+	var wrapperWidth = parseInt($('#content').width()) + parseInt($('#extras').width()) + parseInt($('#promos').width());$('#wrapper').css('width', wrapperWidth);});</script>  
+<% end %>

@@ -7,7 +7,7 @@ Road04::Application.routes.draw do
   get "people_list"  => "people#listing", :as => "people_list"
   
   match "people/display_box/:id"  => "people#display_box"
-
+  get "article_select" => "articles#select", :as => "article_select"
 
 
   get "pages/home"

@@ -46,4 +46,12 @@ class ArticlesController < ApplicationController
     @title = @article.title
     @body_class = "content"
   end
+  
+  def select
+    @articles = Article.all
+    @title = "Articles"
+    @body_class = "blogListing"
+  end
+
+
 end

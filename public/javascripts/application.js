@@ -37,10 +37,14 @@ $('.slide')
 /* Triggering from the buttons */
 
 	$('.slidebutton').click(function() {
-	  var trig = $(this);
-      $(this).parent().trigger('open');
+      if($(this).parent().hasClass('active')){
+		 $('#slide-7').trigger('open');
+      }
+      else {
+	     $(this).parent().trigger('open');
+		 $(this).scrollMenu();	
+      };
 
-	  $(this).scrollMenu();
 	});
 
 // Triggering from the menu

@@ -1,0 +1,29 @@
+#select {
+	position:relative; width: 2000px;height: 540px;;margin-top: 180px;left: 40px;
+}
+
+.select_image {
+	position: relative;vertical-align:top;
+}
+
+
+a.info{
+    position:relative; /*this is the key*/
+    text-decoration:none}
+
+
+a.info:hover{}
+
+a.info span{display: none}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    top:0em; left:2em; width:300px;height: 100px;
+    border:1px solid #000;
+    background-color:#999999; color:#000;
+    text-align: center;
+	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 18px;
+	font-weight: 100;
+	z-index: 500;}

@@ -1,0 +1,15 @@
+<% if !@articles.blank? %>
+  <ul>
+    <% for article in @articles %>
+      <li><%= image_tag article.image_thumb.url(:display), :width => "80px" %>
+	      <%= article.title %>
+          <%= link_to "Edit", edit_article_path(article) %> | 
+          <%= link_to "Destroy", article, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  
+<% end %>
+<%= link_to "New article", new_article_path %>
+

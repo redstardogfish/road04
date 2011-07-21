@@ -5,6 +5,7 @@ Road04::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   
   get "people_list"  => "people#listing", :as => "people_list"
+  get "articles_list"  => "articles#listing", :as => "articles_list"
   
   match "people/display_box/:id"  => "people#display_box"
   get "article_select" => "articles#select", :as => "article_select"

@@ -22,13 +22,9 @@
 
   </div>
 
-  <div class="articleComments">
-    <h3>Comments</h3>
-    <ul></ul>
-
-	<h3>Discuss</h3>
+  <div style= 'margin:0 44px; clear:both; padding-top: 10px'>
     
-    <div id="ContentPlaceHolderDefault_BodyContent_comments_6_pnlForm">	
+    <!-- <div id="ContentPlaceHolderDefault_BodyContent_comments_6_pnlForm">	
 	  <fieldset class="commentEntry">
         <label for="name">Name*</label>
         <input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$BodyContent$comments_6$Name" type="text"
@@ -49,7 +45,31 @@
         <span id="ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator3" style="display:none;"></span>
         <span id="ContentPlaceHolderDefault_BodyContent_comments_6_RequiredFieldValidator2" style="display:none;"></span>
       </fieldset>
-    </div>  
+    </div>   -->
+
+	<div id="disqus_thread" style='margin-top:50px'></div>
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	    var disqus_shortname = '2rtest'; // required: replace example with your forum shortname
+
+	    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+	     var disqus_identifier = 'unique_dynamic_id_1234';
+	     var disqus_url = 'http://example.com/permalink-to-page.html';
+
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
   </div>
 </div>
 <div id="extras"></div>

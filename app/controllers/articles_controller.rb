@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_filter :authenticate, :except => [:index, :display] 
+  
   def index
     @articles = Article.all
     @title = "Articles"
@@ -16,7 +18,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
     if @article.save
-      redirect_to @article, :notice => "Successfully created article."
+      redirect_to articles_list_path, :notice => "Successfully created article."
     else
       render :action => 'new'
     end
@@ -29,7 +31,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update_attributes(params[:article])
-      redirect_to @article, :notice  => "Successfully updated article."
+      redirect_to articles_list_path, :notice  => "Successfully updated article."
     else
       render :action => 'edit'
     end
@@ -49,9 +51,14 @@ class ArticlesController < ApplicationController
   
   def select
     @articles = Article.all
+    @people = Person.all
     @title = "Articles"
     @body_class = "blogListing"
   end
+  
+  def listing
+    @articles = Article.all
 
+  end
 
 end

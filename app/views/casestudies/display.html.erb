@@ -5,25 +5,22 @@
   <%= stylesheet_link_tag "style" %>
   
 </head>
-<body class = "caseStudy">
-<div>
-
-<h1>
-  <%= @casestudy.headline %>
-</h1>
-<p>
-  <%= @casestudy.strapline %>
-</p>
-<p>
-  <strong>Story:</strong>
-  <%= @casestudy.story %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_casestudy_path(@casestudy) %> |
-  <%= link_to "Destroy", @casestudy, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", casestudies_path %>
-</p>
-</div>	
+<body class = "case_study_display_box">
+	<h1>
+	  <%= @casestudy.headline %>
+	</h1>
+	<h3>
+	  <%= @casestudy.strapline %>
+	</h3>
+	<div id = "content">
+		<p>
+		  <%= simple_format @casestudy.story %>
+		</p>
+	  	<% if @logged_user && (@logged_user.admin) %>		
+		<p>
+		  <%= link_to "Edit", edit_casestudy_path(@casestudy) %>
+		</p>
+		<% end %>
+	</div>	
 </body>
 </html>

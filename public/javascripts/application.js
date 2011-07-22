@@ -38,9 +38,14 @@ $('.slide')
 
 	$('.slidebutton').click(function() {
       if($(this).parent().hasClass('active')){
-		 $('#slide-7').trigger('open');
+		$('#slide-7').trigger('open');
+		$('.menu_trigger').parent().removeClass('active');
+		$('html,body').animate({scrollLeft: 0},2000);
       }
       else {
+	     var menu_id = "#"+$(this).attr('id').substr(0,1);
+	     $('.menu_trigger').parent().removeClass('active');
+	     $(menu_id).parent().addClass('active');
 	     $(this).parent().trigger('open');
 		 $(this).scrollMenu();	
       };
@@ -51,6 +56,8 @@ $('.slide')
   $('.menu_trigger').click(function() {
 	var target_id = '#slide-'+ $(this).attr('id')
 	$('#slides').find(target_id).trigger('open');
+	$('.menu_trigger').parent().removeClass('active');
+	$(this).parent().addClass('active');
 	$(this).scrollMenu();
   });
 
@@ -63,7 +70,7 @@ $.fn.scrollMenu = function() {
 	//all slides left of the open slide also have class 'open'. this was the easiest way to locate the proper opening place
     var open_slides = ($('#slides').find('.open').length)
 	$('html,body').animate(
-		{scrollLeft: (open_slides*180 - 180)},
+		{scrollLeft: (open_slides*180 )},
 		 1000);
 };
 

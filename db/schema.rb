@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110712031549) do
+ActiveRecord::Schema.define(:version => 20110721231658) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20110712031549) do
     t.integer  "pdf_file_size"
     t.datetime "pdf_updated_at"
     t.string   "publication"
+    t.integer  "paper_id"
+    t.integer  "category_id"
   end
 
   create_table "blogposts", :force => true do |t|
@@ -82,8 +84,21 @@ ActiveRecord::Schema.define(:version => 20110712031549) do
     t.datetime "updated_at"
   end
 
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "headshots", :force => true do |t|
     t.boolean  "use"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "papers", :force => true do |t|
+    t.integer  "article_id"
+    t.integer  "person_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -109,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20110712031549) do
     t.string   "password_hash"
     t.string   "password_salt"
     t.boolean  "admin"
+    t.integer  "paper_id"
   end
 
   create_table "portraits", :force => true do |t|

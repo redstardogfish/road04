@@ -7,6 +7,7 @@ class ArticleTest < ActiveSupport::TestCase
 end
 
 
+
 # == Schema Information
 #
 # Table name: articles
@@ -47,5 +48,7 @@ end
 #  pdf_file_size              :integer
 #  pdf_updated_at             :datetime
 #  publication                :string(255)
+#  paper_id                   :integer
+#  category_id                :integer
 #
 

@@ -11,7 +11,7 @@
         </ul>
 
       </li>
-      <li><a class="whoWeAre parent">Who We Are</a>
+      <li><%= link_to "Who We Are", "/our-community", :class => "whoWeAre parent" %>
 	    <ul class = 'subnav'>
 		  <%= content_tag :li, :class => ("active" if @title == "Our Community") do -%>
 		    <%= link_to "Our Community", "/our-community", :class => ("active" if @title == "Our Community")%>

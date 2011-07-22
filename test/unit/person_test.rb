@@ -7,6 +7,7 @@ class PersonTest < ActiveSupport::TestCase
 end
 
 
+
 # == Schema Information
 #
 # Table name: people
@@ -26,5 +27,12 @@ end
 #  portrait_content_type :string(255)
 #  portrait_file_size    :integer
 #  portrait_updated_at   :datetime
+#  user_id               :integer
+#  display               :boolean
+#  email                 :string(255)
+#  password_hash         :string(255)
+#  password_salt         :string(255)
+#  admin                 :boolean
+#  paper_id              :integer
 #
 

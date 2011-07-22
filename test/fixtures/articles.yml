@@ -35,6 +35,7 @@ two:
   display: false
 
 
+
 # == Schema Information
 #
 # Table name: articles
@@ -75,5 +76,7 @@ two:
 #  pdf_file_size              :integer
 #  pdf_updated_at             :datetime
 #  publication                :string(255)
+#  paper_id                   :integer
+#  category_id                :integer
 #
 

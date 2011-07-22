@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -38,5 +39,6 @@ end
 #  created_at    :datetime
 #  updated_at    :datetime
 #  admin         :boolean
+#  person_id     :integer
 #
 

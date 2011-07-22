@@ -6,7 +6,7 @@ gem 'annotate'
 gem "paperclip", "~> 2.3"
 gem "bcrypt-ruby", :require => "bcrypt"
 
-
+gem 'hpricot'
 
 
 # Bundle edge Rails instead:

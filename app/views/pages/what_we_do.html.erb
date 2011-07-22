@@ -8,7 +8,7 @@
 <div id="slideshow">
 	<div id="slides">
 		<div class="slide open" id="slide-1">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "1trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_1.jpg', :alt => "" %>
 	        </div>
@@ -45,16 +45,16 @@
 			    </div>
 		    </div>
 		    <div class = "panelCase">
-		    	<div class = "large_image180"><%= image_tag("homeImages/lead_top.jpg", :size => "540x180" ) %></div>
-			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you engage all stakeholders?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you influence with wisdom?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you kindle the brilliance in a team?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-			    <div class = "large_image180"><%= image_tag("homeImages/lead_bottom.jpg", :size => "540x180" ) %></div>
+		    	<div class = "large_image180"><%= image_tag("homeImages/strategize_top.jpg", :size => "540x180" ) %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you rethink an industry?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you shift a deeply bureaucratic enterprise?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you transform opportunities into new value?", "/casestudies/display/2?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "large_image180"><%= image_tag("homeImages/strategize_bottom.jpg", :size => "540x180" ) %></div>
 		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-2">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "2trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_2.jpg', :alt => ""  %>
 	        </div>
@@ -65,7 +65,7 @@
 		  </div>
 	      <div class = "panelOpening">	
 		    <div class = "panelText">	
-			  <h1>	Innovate - discover new opportunities to invent groundbreaking solutions</h1>
+			  <h1>	Innovate</h1>
 			  <div class="col450">
 			 	<p>Brilliant ideas that deliver a competitive edge come from a mindset and process of design. Second Road works with clients to:</p> 
 				<ul>	
@@ -85,21 +85,21 @@
 		    
 		    </div>
 		    <div class = "panelCase">
-		      <div class = "caseStudyLink darkSquare" id = "innovate1"><%= link_to "How do you sponsor a culture of creativity?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+		      <div class = "caseStudyLink darkSquare" id = "innovate1"><%= link_to "How do you sponsor a culture of creativity?", "/casestudies/display/3?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 			  <div class = "large_image180"><%= image_tag("homeImages/innovate_top_right.jpg", :size => "360x180" ) %></div>
 
 			  <div class = "box_element"><%= image_tag("homeImages/innovate_middle_left.jpg", :size => "180x180" )%></div>	
-			  <div class = "caseStudyLink lightSquare"><%= link_to "How do you use the user experience to life?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			  <div class = "caseStudyLink lightSquare"><%= link_to "How do you shift from good service to great experience?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 			  <div class = "box_element"><%= image_tag("homeImages/innovate_middle_right.jpg", :size => "180x180") %></div>
 
 			  <div class = "large_image180"><%= image_tag("homeImages/innovate_bottom_left.jpg", :size => "360x180" ) %></div>
-			  <div class = "caseStudyLink darkSquare" id = "innovate3"><%= link_to "Who is the real client and how do we accommodate their needs?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			  <div class = "caseStudyLink darkSquare" id = "innovate3"><%= link_to "How do you design a customer experience strategy?", "/casestudies/display/4?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 			    
 		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-3">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "3trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_3.jpg', :alt => ""  %>
 	        </div>
@@ -124,15 +124,15 @@
 			  </div>
 		    </div>
 		    <div class = "panelCase">
-		      <div class = "caseStudyLink darkSquare"><%= link_to "How do you bring change that is relevant for all employees?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-		      <div class = "caseStudyLink lightSquare"><%= link_to "How do you co-design a shared vision?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-		      <div class = "caseStudyLink darkSquare" id = "engage3"><%= link_to "How does a new CEO create a culture of change in the first 100 days?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+		      <div class = "caseStudyLink darkSquare"><%= link_to "How do you create change that employees will embrace?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+		      <div class = "caseStudyLink lightSquare"><%= link_to "How do you create, share and cohere around a new vision?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+		      <div class = "caseStudyLink darkSquare" id = "engage3"><%= link_to "How does a new leader create a culture of change in the first 100 days?", "/casestudies/display/5?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 		      <div class = "large_image360"><%= image_tag("homeImages/engage_bottom.jpg", :size => "540x360" ) %></div>
 		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-4">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "4trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_4.jpg', :alt => ""  %>
 	        </div>
@@ -143,52 +143,91 @@
 		  </div>
 	      <div class = "panelOpening">	
 		    <div class = "panelText">
-			    <h1>	Clarify - turn volumes of information into useful knowledge</h1>
-			    <div class="col450">
-				  <p>Your people need to make more informed decisions, faster. To do this, they must:</p> 
-				  <ul>	
-				    <li>learn to think more clearly</li>
-				    <li>demystify complexity</li>
-				    <li>extract insights, significance and meaning</li>
-				    <li>decipher relevance in data-drenched documents</li>
-				    <li>convert information into content that enables good decisions.</li>
-				  </ul>
-			    </div>
-			    <div class = "col450">	
-				  <p>We have used the power of language, conversation and design to help leaders:	</p>
-				  <ul>
-				    <li>Revolutionise reporting to bring focus to essential questions and answers</li>
-				    <li>Transform jargon into content that customers understand</li>
-				    <li>Bring clarity of intent and meaning to compliance documents.</li>
-				  </ul>
-			    </div>
+	            <h1>Empower</h1>
+
+	            <div class="col450">
+	              <p>	Any organization must be well designed to unlock the full range of people's ability  to contribute.	This means:</p> 
+	              <ul>  
+	                  <li>articulating and promoting the intent behind bureaucratic processes</li>
+
+	                  <li>bringing clarity and elegance to systems of information</li>
+	                  <li>transforming command-and-control structures into systems that authorize local decision and action</li>
+	                  <li>infusing planning and reporting with both rigor and simplicity.</li>
+
+	              </ul>
+	            </div>
+	            <div class="col450">  
+	              <p>We have used the power of design and conversation to help leaders:  </p>
+
+	              <ul>
+	                  <li>Revolutionize reporting to bring focus to essential questions and answers</li>
+	                  <li>Free project teams from a hobbling mindset of compliance to deliver above and beyond mere specifications</li>
+	                  <li>Build organisational systems that set staff free to contribute in innovative ways.</li>
+
+	              </ul>
+	            </div>  
 		    </div>
 		    <div class = "panelCase">
 		    	<div class = "large_image180"><%= image_tag("homeImages/clarify_top.jpg", :size => "540x180" ) %></div>
-			    <div class = "caseStudyLink darkSquare" id = "clarify1"><%= link_to "How do you make sense out of 400 page board report?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you balance customer expectations with the dictates of our legal department?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
-			    <div class = "caseStudyLink darkSquare" id = "clarify3"><%= link_to "How do you shift from compliance to clarity of intent?", "/casestudies/display/1?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink darkSquare" id = "clarify1"><%= link_to "How do you give local discretion without losing control?", "/casestudies/display/6?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you report the essentials without losing critical details?", "/casestudies/display/7?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink darkSquare" id = "clarify3"><%= link_to "How do you move a group beyond a mindset of compliance?", "/casestudies/display/8?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
 			    <div class = "large_image180"><%= image_tag("homeImages/clarify_bottom.jpg", :size => "540x180" ) %></div>
 		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-5">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "5trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_5.jpg', :alt => ""  %>
 	        </div>
 	        <div class = "slideTrigger">
 		      	<h3>LEARN</h3>
-		        <p>Build a mindset of reflection.</p>
+		        <p>Build an inquiring mindset.</p>
 		    </div>
 		  </div>
 	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
-		    <div class = "panelCase"></div>		
+		    <div class = "panelText">
+		        <h1>Learn</h1>
+
+	            <div class="col450">
+	                <p>Designing the future requires a willingness to learn and an instinct for sense-making and storytelling. Your people need skills to face the future with creativity and a spirit of enterprise. We work with clients to build those capabilities. Our courses help individuals and systems:</p> 
+	                <ul>
+	                    <li>awaken imagination</li>
+
+	                    <li>master complexity</li>
+
+	                    <li>instil an innovative mindset</li>
+	                    <li>influence and guide the thinking of others.</li>
+
+	                </ul>
+	                <p>We teach people from front-line positions to board level executives. We make sure that you have time to absorb, reflect and discuss how each element can be applied to your professional context.</p> 
+	            </div>
+	            <div class="col450">  
+	                <p>We have used the power of reflective learning and learning-by-doing to help leaders:</p>
+
+	                <ul>
+	                    <li>Build rigorous thinking into critical business systems</li>
+	                    <li>Encourage thinking for innovation throughout the organization</li>
+
+	                    <li>Equip key people with new skills in leading group thinking processes.</li>
+	                </ul>
+	            </div>
+		    </div>
+		    <div class = "panelCase">
+			    <div class="box_element"><%= image_tag "homeImages/learn_top_left.jpg", :alt => "", :size => "180x180" %></div>
+			    <div class = "caseStudyLink lightSquare"><%= link_to "Workshops to foster design thinking.", "/casestudies/display/9?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+	            <div class="box_element"><%= image_tag "homeImages/learn_top_right.jpg", :alt => "", :size => "180x180" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "Bite-sized sessions to build serious thinking skills.", "/casestudies/display/10?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+	            <div class="box_element"><%= image_tag "homeImages/learn_middle.jpg", :alt => "", :size => "180x180" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "Courses to create leaders in strategic thinking for groups.", "/casestudies/display/11?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+	            <div class="large_image180"><%= image_tag "homeImages/learn_bottom.jpg", :alt => "", :size => "540x180" %></div>
+		
+		    </div>		
 	      </div>
 		</div>
 		<div class="slide open" id="slide-6">
-		  <div class="slidebutton" href="javascript:void(0);">			
+		  <div class="slidebutton" href="javascript:void(0);" id = "6trigger">			
             <div class = "slide_image">
 	      	  <%= image_tag 'home_6.jpg', :alt => ""  %>
 	        </div>
@@ -198,8 +237,46 @@
 		    </div>
 		  </div>
 	      <div class = "panelOpening">	
-		    <div class = "panelText"></div>
-		    <div class = "panelCase"></div>
+		    <div class = "panelText">
+			    <h1>Lead</h1>
+			    <div class="col450">
+
+			      <p>Leaders face complexity and the unknown. They take on the responsibility of equipping individuals and organisations with the will to make things different and to realize potential. Designing genuinely better futures requires depth - the mindset and skill to lead with wisdom:</p> 
+			    <ul>
+
+			    <li>understanding how language shapes reality</li>
+			    <li>revitalizing and sustaining core conversations</li>
+			    <li>framing compelling arguments for change</li>
+			    <li>inspiring confidence and courage to co-design.</li>
+			    </ul>
+
+			    </div>
+
+			  <div class="col450">  
+			    <p>We have used the power of language, conversation and presence to help leaders:  </p>
+			    <ul>
+			      <li>Lead from their own strengths</li>
+			      <li>Draw out the brilliance in their teams</li>
+			      <li>Frame compelling arguments</li>
+			      <li>Face complexity and chaos</li>
+
+			      <li>Engage their people in co-design.</li>
+			    </ul>
+			    </div>  
+
+		    	
+		
+		    </div>
+		    <div class = "panelCase">
+			    <div class="large_image180"><%= image_tag "homeImages/lead_top.jpg", :alt => "", :size => "540x180" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you sustain a strong intent for change?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink lightSquare"><%= link_to "How do you write a new chapter for an organization?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class = "caseStudyLink darkSquare"><%= link_to "How do you kindle the brilliance in a team?", "/casestudies/display/12?KeepThis=true&TB_iframe=true&height=400&width=600", :class => "thickbox" %></div>
+			    <div class="large_image180"><%= image_tag "homeImages/lead_bottom.jpg", :alt => "", :size => "540x180" %></div>
+
+	    	
+		
+		    </div>
 	      </div>
 		</div>
 		<div class="slide open" id="slide-7">

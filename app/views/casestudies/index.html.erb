@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+	<th>Id</th>
     <th>Question</th>
     <th>Headline</th>
     <th>Strapline</th>
@@ -9,6 +10,7 @@
   </tr>
   <% for casestudy in @casestudies %>
     <tr>
+	  <td><%= casestudy.id %></td>
       <td><%= casestudy.question %></td>
       <td><%= casestudy.headline %></td>
       <td><%= casestudy.strapline %></td>

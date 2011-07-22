@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
     :topic, :keywords, :meta_description, :image_quote, :promo_link_text, :promo_link_url, 
     :published_date, :publish_at, :remove_at, :display, :image_thumb, :article_image, :promo_image, :pdf
 
+  has_many :papers
+  has_many :people, :through => :papers 
 
 
   has_attached_file :image_thumb, :styles => { :display => "270x180#" }
@@ -15,6 +17,7 @@ class Article < ActiveRecord::Base
 private
 
 end
+
 
 
 # == Schema Information
@@ -57,5 +60,7 @@ end
 #  pdf_file_size              :integer
 #  pdf_updated_at             :datetime
 #  publication                :string(255)
+#  paper_id                   :integer
+#  category_id                :integer
 #
 

@@ -4,6 +4,9 @@ class Person < ActiveRecord::Base
   has_attached_file :headshot, :styles => { :listing => "180x180#", :thumb => "90x90#" }
   has_attached_file :portrait, :styles => {:display => "295x648#"}
   
+  has_many :papers
+  has_many :articles, :through => :papers
+  
   def name
    "#{first_name} #{last_name}"
   end
@@ -38,6 +41,7 @@ class Person < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: people
@@ -57,5 +61,12 @@ end
 #  portrait_content_type :string(255)
 #  portrait_file_size    :integer
 #  portrait_updated_at   :datetime
+#  user_id               :integer
+#  display               :boolean
+#  email                 :string(255)
+#  password_hash         :string(255)
+#  password_salt         :string(255)
+#  admin                 :boolean
+#  paper_id              :integer
 #
 

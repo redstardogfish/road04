@@ -1537,7 +1537,7 @@ TOC - SECOND ROAD CSS
 	}
 
 
-    #slides { position: absolute; width: 2340px; height: 540px; overflow: hidden; }
+    #slides { position: absolute; width: 2160px; height: 540px; overflow: hidden; }
 
     #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; background:#E8E5DE;}
     #slides .slide .slidebutton { display: block;float:left; height: 540px; width: 180px; text-decoration: none; cursor:pointer;}
@@ -1951,6 +1951,71 @@ h3 {
 	color:#747474;
 }
 
+/* Display in thickbox for case studies */
+
+.case_study_display_box{
+}
+
+
+.case_study_display_box .hidden_edit {
+    color: #ED741F;
+    font-family: georgia;
+    font-size: 12px;
+    font-weight: normal;
+    left: 190px;
+    position: absolute;
+    top: 84px;
+}
+
+.case_study_display_box h1 {
+	color: #ED741F;
+    font-family: georgia;
+    font-size: 22px;
+    font-weight: normal;
+    left: 40px;
+    letter-spacing: -0.75px;
+    position: absolute;
+    top: 0px;
+    width: 400px;
+}
+.case_study_display_box h3 {
+	color: #3B3B3B;
+    font-family: georgia;
+    font-size: 16px;
+    font-weight: normal;
+    left: 40px;
+    letter-spacing: -0.75px;
+    position: absolute;
+    top: 30px;
+    width: 500px;
+}
+
+.case_study_display_box #content {
+	position:absolute;
+	width: 520px;
+	height: 400px;
+	left: 40px;
+	top: 50px;
+	
+}
+
+
+.case_study_display_box #content p.intro {
+	color: #393939;
+	font-family: georgia;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 21px;
+	margin: 5px 0 22px 5px;
+	width: 75%;
+}
+
+.case_study_display_box #content p {
+	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
+	font-size: 10px;
+	line-height: 12px;
+	margin: 20px;
+}
 
 
 

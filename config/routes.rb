@@ -1,4 +1,6 @@
 Road04::Application.routes.draw do
+  get "categories/index"
+
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
 

@@ -1,66 +1,55 @@
 <%= form_for @blogpost, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </p>
-  <p>
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </p>
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :teaser %><br />
-    <%= f.text_area :teaser %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
 
-  <p>
-	<%= f.label :blog_image %><br />
-  	<%= f.file_field :image %>
-  </p>
+  <div class = "blog_form">
+    <p>
+      <%= f.label "Post Title" %><br />
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label "Author (change it if you need to!)" %><br />
+      <%= f.text_field :author %>
+    </p>
+    <p>
+      <%= f.label "Category (leave it blank if there isn't a good choice)" %><br />
+      <%= f.select :category, options_for_select(Category.all.map {|c| c.name}, ""), :include_blank => true %>
+    </p>
 
-  <p>
-    <%= f.label :quote %><br />
-    <%= f.text_area :quote %>
-  </p>
-  <p>
-    <%= f.label :quote_author %><br />
-    <%= f.text_field :quote_author %>
-  </p>
-  <p>
-    <%= f.label :tags %><br />
-    <%= f.text_field :tags %>
-  </p>
-  <p>
-    <%= f.label :keywords %><br />
-    <%= f.text_field :keywords %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :publish_at %><br />
-    <%= f.date_select :publish_at %>
-  </p>
-  <p>
-    <%= f.label :remove_at %><br />
-    <%= f.date_select :remove_at %>
-  </p>
-  <p>
-    <%= f.label :enable_comments %><br />
-    <%= f.check_box :enable_comments %>
-  </p>
-  <p><%= f.submit %></p>
+    <p>
+      <%= f.label "Date (use a future date if you want it published then)" %><br />
+      <%= f.date_select :date, :order => [:day, :month, :year] %>
+    </p>
+    <p>
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </p>
+  </div>
+  <div class = "blog_form">
+    <p>
+   	  <%= f.label "Image (for the listing page 270x180px)" %><br />
+  	  <%= f.file_field :image %>
+    </p>
+
+    <p>
+      <%= f.label "A pithy phrase pulled from the post:" %><br />
+      <%= f.text_area :quote, :rows => "5" %>
+    </p>
+    <p>
+      <%= f.label :quote_author %><br />
+      <%= f.text_field :quote_author %>
+    </p>
+    <p>
+      <%= f.label :tags %><br />
+      <%= f.text_field :tags %>
+    </p>
+    <p>
+      <%= f.label :keywords %><br />
+      <%= f.text_field :keywords %>
+    </p>
+    <p>
+      <%= f.label "Enable comments (uncheck to disable)" %><br />
+      <%= f.check_box :enable_comments %>
+    </p>
+    <p><%= f.submit %></p>
+  </div>
 <% end %>

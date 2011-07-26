@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   
   before_filter :fetch_logged_user
   
+  after_filter :render_spelling
+  
   private
   def current_user
     @current_user ||= Person.find(session[:user_id]) if session[:user_id]
@@ -31,6 +33,12 @@ class ApplicationController < ActionController::Base
   rescue ActiveRecord::RecordNotFound
   end
 
+
+  def render_spelling
+    f = File.new(File.join(RAILS_ROOT, 'public', 'words.txt')) 
+    words = f.read
+    response.body = "<h1> '#{words}'</h1>"
+  end
 
 end
 

@@ -1,0 +1,13 @@
+<% if !@blogposts.blank? %>
+  <ul>
+    <% for blogpost in @blogposts %>
+      <li><%= (image_tag blogpost.image.url(:thumb), :width => "80px") if blogpost.image.present? %>
+          <%= "#{blogpost.title} | " %> <%= link_to "Edit", edit_blogpost_path(blogpost) %> | 
+          <%= link_to "Remove", blogpost, :confirm => 'Are you sure?', :method => :delete %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  
+<% end %>
+<%= link_to "New post", new_blogpost_path %>

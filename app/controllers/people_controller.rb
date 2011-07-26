@@ -2,7 +2,8 @@ class PeopleController < ApplicationController
   before_filter :authenticate, :except => [:index, :display, :display_box]
   
   def index
-    @people = Person.where(:display => true )
+    @people = Person.order(:last_name).where(:display => true)
+    @tgs = Person.where(:first_name => "Tony", :last_name => "Golsby-Smith").first
     @title = "Our Community"
     @body_class = 'peopleListing'
   end
@@ -46,7 +47,7 @@ class PeopleController < ApplicationController
   
   def listing
     @people = Person.all
-
+    @body_class = 'admin'
   end
   
   

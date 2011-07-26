@@ -266,7 +266,7 @@ TOC - SECOND ROAD CSS
 			font-style: italic;
 			line-height: 24px;
 			margin: 25px 0 0 21px;
-			width: 215px;
+			width: 300px;
 		}
 		.pImageQuote p.quoteBy, .pOnlyQuote .quoteBy {
 			clear: both;
@@ -1112,6 +1112,22 @@ TOC - SECOND ROAD CSS
 	    margin: 0 0 20px;
 	}
 	
+/* 9.5 Blog posting form and admin	*/
+	.blog_form {
+		width: 400px; height: 750px;
+		float:left;
+	}
+	.blog_form select, textarea, input {
+	    margin-bottom: 4px;
+	}
+	#blogpost_submit {margin-top: 10px;}
+	.new_blogpost .error_messages {
+		color:red; margin-bottom: 20px;
+	}
+	
+	
+	
+	
 
 /* 10.0: BLOG + EVENTS LISTING
 ****************************************/
@@ -1533,14 +1549,15 @@ TOC - SECOND ROAD CSS
 ****************************************/
 	body.what {
 		background: #E2DFD8;
-		width: 4000px;
+		width: 2340px;
 	}
 
 
-    #slides { position: absolute; width: 2160px; height: 540px; overflow: hidden; }
+    #slides { position: absolute; width: 1080px; height: 540px; overflow: hidden; }
 
-    #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; background:#E8E5DE;}
+    #slides .slide { position: absolute; top: 0px; width: 1260px;height:540px; background:#E2DFD8;}
     #slides .slide .slidebutton { display: block;float:left; height: 540px; width: 180px; text-decoration: none; cursor:pointer;}
+    #slides .slide .deadbutton { display: block;float:left; height: 540px; width: 180px; text-decoration: none; cursor:default;}
 
 	#slide-1 { position: absolute; top: 0; left: 0px; z-index: 1; }
 	#slide-2 { position: absolute; top: 0; left: 180px; z-index: 2; }
@@ -1578,10 +1595,10 @@ TOC - SECOND ROAD CSS
   }
 
 
-  .panelText {width:540px;height: 540px;background:#f7f6f2;float:left;
+  .panelText {width:540px;height: 540px;background:#E2DFD8;float:left;
 	
   }
-  .panelCase{width:540px;height: 540px;background:#342559;float:left;
+  .panelCase{width:540px;height: 540px;background:#E2DFD8;float:left;
 }
 
 
@@ -1602,7 +1619,7 @@ TOC - SECOND ROAD CSS
 	font-size: 24px;
 	font-weight: normal;
 	letter-spacing: -0.7px;
-	margin: 34px 0 0 42px;
+	margin: 34px 0 30px 42px;
 	min-width: 180px;
 }
 .panelText p {
@@ -2064,6 +2081,14 @@ h3 {
 		font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
 		font-size: 10px;
 	}
+
+
+
+/* Admin sections */
+.admin #wrapper {
+
+}
+
 
 
 

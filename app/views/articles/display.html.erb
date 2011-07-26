@@ -14,18 +14,19 @@
 
 <div id="extras"></div>
 <div id="promos">
-  <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pImageQuote" class="pImageQuote">
-    <%= image_tag @article.article_image(:display), :alt => "", :size => ("360x360"), :id =>""  %>
-    <p class="quote"><%= "'#{@article.image_quote}'" %></p>
-  </div>
-  <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pOnlyQuote" class="pOnlyQuote">
+    <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pImageQuote" class="pImageQuote">
+      <%= (image_tag @article.article_image(:display), :alt => "", :size => ("360x360"), :id =>"") if @article.article_image.present?  %>
+      <p class="quote"><%= @article.image_quote %></p>
+    </div>
+
+  <!-- <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pOnlyQuote" class="pOnlyQuote">
     <p class="quote"><%= "'#{@article.para_quote}'" %></p>
-    <p class="quoteBy"><span class="name"><%= @article.para_quote_author %></span> <span class="date"></span></p>
-  </div>
-  <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pCheckers" class="pCheckers">
+    <p class="quoteBy"><span class="name"><%= @article.para_quote_author %></span></p>
+  </div> -->
+  <!-- <div id="ContentPlaceHolderDefault_ExtrasPromotions2_pCheckers" class="pCheckers">
     <%= image_tag @article.promo_image.url(:display), :alt => "", :size => "180x180", :id => "" %>
     <%= link_to @article.promo_link_text.upcase, @article.promo_link_url %>
-  </div>
+  </div> -->
 </div>
 
 <% content_for :footer do %>

@@ -1,4 +1,6 @@
 class BlogpostsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :display] 
+  
   def index
     @blogposts = Blogpost.all
     @title = "Blog"
@@ -11,10 +13,13 @@ class BlogpostsController < ApplicationController
 
   def new
     @blogpost = Blogpost.new
+    @blogpost.author = current_user.name
+    @blogpost.enable_comments = true
   end
 
   def create
     @blogpost = Blogpost.new(params[:blogpost])
+    @blogpost.teaser = @blogpost.content[1..250] + "..."
     if @blogpost.save
       redirect_to @blogpost, :notice => "Successfully created blogpost."
     else
@@ -38,9 +43,11 @@ class BlogpostsController < ApplicationController
   def destroy
     @blogpost = Blogpost.find(params[:id])
     @blogpost.destroy
-    redirect_to blogposts_url, :notice => "Successfully destroyed blogpost."
+    redirect_to blogposts_list, :notice => "Successfully destroyed blogpost."
   end
-  
+  def listing
+    @blogposts = Blogpost.all
+  end
   
   def display
     @blogpost = Blogpost.find(params[:id])

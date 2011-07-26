@@ -1,9 +1,9 @@
 <% if !@people.blank? %>
   <ul>
     <% for person in @people %>
-      <li><%= image_tag person.headshot.url(:thumb), :width => "80px" %>
-          <%= "#{person.email} | " %> <%= "Admin | " if person.admin %> <%= link_to "Edit", edit_person_path(person) %> | 
-          <%= link_to "Destroy", person, :confirm => 'Are you sure?', :method => :delete %>
+      <li><%= (image_tag person.headshot.url(:thumb), :width => "80px") if person.headshot.present? %>
+          <%= "#{person.name} | " %> <%= "Admin | " if person.admin %> <%= link_to "Edit", edit_person_path(person) %> | 
+          <%= link_to "Remove", person, :confirm => 'Are you sure?', :method => :delete %>
       </li>
     <% end %>
   </ul>

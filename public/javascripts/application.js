@@ -39,10 +39,12 @@ $('.slide')
 	$('.slidebutton').click(function() {
       if($(this).parent().hasClass('active')){
 		$('#slide-7').trigger('open');
+		$('#slides').css('width', '1080px')
 		$('.menu_trigger').parent().removeClass('active');
 		$('html,body').animate({scrollLeft: 0},2000);
       }
       else {
+	     $('#slides').css('width', '2160px')
 	     var menu_id = "#"+$(this).attr('id').substr(0,1);
 	     $('.menu_trigger').parent().removeClass('active');
 	     $(menu_id).parent().addClass('active');

@@ -1,4 +1,6 @@
 Road04::Application.routes.draw do
+  resources :words
+
   get "categories/index"
 
   get "login" => "sessions#new", :as => "login"
@@ -8,6 +10,7 @@ Road04::Application.routes.draw do
   
   get "people_list"  => "people#listing", :as => "people_list"
   get "articles_list"  => "articles#listing", :as => "articles_list"
+  get "blogposts_list"  => "blogposts#listing", :as => "blogposts_list"
   
   match "people/display_box/:id"  => "people#display_box"
   get "article_select" => "articles#select", :as => "article_select"

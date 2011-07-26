@@ -3,6 +3,8 @@ class Blogpost < ActiveRecord::Base
     :tags, :keywords, :description, :publish_at, :remove_at, :enable_comments, :image
   
   has_attached_file :image, :styles => { :thumb => "270x180#", :display => "720x360#" }
+  
+  validates_presence_of :title, :author, :content
 end
 
 # == Schema Information

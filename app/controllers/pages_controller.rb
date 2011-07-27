@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :authenticate, :only => [:accordion, :test]
+  
   def home
     @title = "Home"
     @body_class = "home"
@@ -29,14 +31,6 @@ class PagesController < ApplicationController
   end
   
   def test
-    @ua = request.env['HTTP_USER_AGENT']
-    @ul = request.env['HTTP_ACCEPT_LANGUAGE']
-    @ra = request.env['REMOTE_ADDR']
-    uri = URI.parse("http://api.hostip.info/country.php")
-    http = Net::HTTP.new(uri.host, uri.port)
-    request = Net::HTTP::Get.new(uri.request_uri)
-    @response = http.request(request)
-    
   end
   
 end

@@ -5,7 +5,6 @@ Road04::Application.routes.draw do
 
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
-
   get "sign_up" => "users#new", :as => "sign_up"
   
   get "people_list"  => "people#listing", :as => "people_list"
@@ -35,7 +34,7 @@ Road04::Application.routes.draw do
   match 'contact-us' => 'pages#contact'
   match 'privacy' => 'pages#privacy'
   match 'our-dna' => 'pages#dna'
-  match 'what-we-do' => 'pages#what_we_do'
+  match 'what-we-do' => 'pages#what_we_do', :as => "what_we_do"
   
   match 'our-community' => 'people#index'
   

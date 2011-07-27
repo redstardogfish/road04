@@ -18,7 +18,7 @@
   <%= javascript_include_tag "jquery.rails" %>
 
   <script type="text/javascript">!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>')</script>
-  <%= javascript_include_tag "/js/modernizr-1.5.min.js" %>
+  <%= javascript_include_tag "modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
   <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages' %>
 
@@ -74,13 +74,13 @@
 </fieldset>
 </footer>
 <% end %>
-<script type="text/javascript" src="/js/scripts.js"></script>
 
-<script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
+<%= javascript_include_tag "scripts" %>
+<%= javascript_include_tag "jquery.mousewheel.min" %>
 
 <%= yield(:footer) %>
 
-<script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+<!-- <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script> -->
 
 
 

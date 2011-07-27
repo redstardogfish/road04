@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   helper_method :admin?
   
   before_filter :fetch_logged_user
-  
-  # after_filter :render_spelling  
+
+  after_filter :render_spelling
   
   private
   def current_user
@@ -34,15 +34,34 @@ class ApplicationController < ActionController::Base
   end
 
 
-  # def render_spelling
-  #   @words = Word.all
-  #   @words.each do |word|
-  #     response.body = response.body.gsub!(word.us, word.uk)
-  #     response.body = response.body.gsub!(word.us.capitalize, word.uk.capitalize)
-  #     response.body = response.body.gsub!(word.us.upcase, word.uk.upcase)
-  #   end  
-  # 
-  # end
+  def render_spelling
+    @words = Word.all
+    if user_country == "XX"
+      @words.each do |word| 
+          response.body  = response.body.gsub((/#{Regexp.escape(word.us)}[^_A-Z]/)) {|w| word.uk+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.us.capitalize)}[^_A-Z]/){|w| word.uk.capitalize+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.us.upcase)}[^_A-Z]/){|w| word.uk.upcase+w[-1,1]} 
+      end  
+    end
+    if user_country != "XX"
+      @words.each do |word| 
+          response.body  = response.body.gsub((/#{Regexp.escape(word.uk)}[^_A-Z]/)) {|w| word.us+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.uk.capitalize)}[^_A-Z]/){|w| word.us.capitalize+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.uk.upcase)}[^_A-Z]/){|w| word.us.upcase+w[-1,1]} 
+      end  
+    end
+
+
+  end
+  
+  def user_country
+    @location ||= begin
+      ip = request.env['REMOTE_ADDR']
+      location = GeoLocation.find(ip)  
+    end
+    @location[:country_code]
+  end
+  
 
 end
 

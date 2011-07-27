@@ -1,8 +1,12 @@
 class WordsController < ApplicationController
+  before_filter :authenticate
+  skip_after_filter :render_spelling
+  
   # GET /words
   # GET /words.xml
   def index
-    @words = Word.all
+    @words = Word.order("uk")
+    @word = Word.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +48,7 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.save
-        format.html { redirect_to(@word, :notice => 'Word was successfully created.') }
+        format.html { redirect_to(words_path, :notice => 'Word was successfully created.') }
         format.xml  { render :xml => @word, :status => :created, :location => @word }
       else
         format.html { render :action => "new" }

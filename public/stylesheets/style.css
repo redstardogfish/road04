@@ -329,8 +329,24 @@ TOC - SECOND ROAD CSS
 		min-width: 1080px;
 	}
 	.home #content h1 {
-		font-size: 36px;
-		margin-top: 50px;
+		font-family: 'Palatino', 'Times New Roman', 'Times', 'serif';
+		font-size: 44px;
+		font-weight: 600;
+		width: 360px;
+		text-align: center;
+		color: #3b3b3b;
+		margin-top: 66px;
+		margin-left: 0;
+	}
+	.home p {
+		margin: 40px 20px;
+	}
+	.plain_bk {
+		color: #3b3b3b;
+	}
+	.rhomb {
+		padding-top: 60px;
+		color: #3b3b3b;
 	}
 
 	.bloc {
@@ -342,6 +358,7 @@ TOC - SECOND ROAD CSS
 	}
 		.bloc-bordered {
 			border-bottom: solid 1px #eceae5;
+			border-left: solid 1px #eceae5;
 			height: 179px;
 		}
 		.bloc-2 {
@@ -398,10 +415,11 @@ TOC - SECOND ROAD CSS
 			left: -28px;
 			width: 236px;
 		}
+
 		.rhombus-orange {
 			background-image: url(../images/home/rhombus-orange.png);
 			height: 216px;
-			top: -17px;
+			top: -67px;
 		}
 	
 
@@ -2087,6 +2105,20 @@ h3 {
 /* Admin sections */
 .admin #wrapper {
 
+}
+
+#wordlist {
+	width: 400px;
+}
+#word_index {
+	clear:both;
+	margin: 40px 0;
+}
+
+#new_word .field {
+
+	width: 300px; 
+	float:left;
 }
 
 

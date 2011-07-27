@@ -14,6 +14,8 @@ Road04::Application.routes.draw do
   
   match "people/display_box/:id"  => "people#display_box"
   get "article_select" => "articles#select", :as => "article_select"
+  
+  match "test"  => "pages#test"
 
 
   get "pages/home"

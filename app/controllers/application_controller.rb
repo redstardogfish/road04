@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   before_filter :fetch_logged_user
   
-  after_filter :render_spelling
+  # after_filter :render_spelling  
   
   private
   def current_user
@@ -34,11 +34,15 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def render_spelling
-    f = File.new(File.join(RAILS_ROOT, 'public', 'words.txt')) 
-    words = f.read
-    response.body = "<h1> '#{words}'</h1>"
-  end
+  # def render_spelling
+  #   @words = Word.all
+  #   @words.each do |word|
+  #     response.body = response.body.gsub!(word.us, word.uk)
+  #     response.body = response.body.gsub!(word.us.capitalize, word.uk.capitalize)
+  #     response.body = response.body.gsub!(word.us.upcase, word.uk.upcase)
+  #   end  
+  # 
+  # end
 
 end
 

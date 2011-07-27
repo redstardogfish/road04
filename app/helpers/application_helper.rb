@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def page_title
     (@title.present? && "#{@title} | Second Road") || 'Second Road'
   end
@@ -34,6 +35,15 @@ module ApplicationHelper
         end
 
       end
+  end
+    
+  def user_country
+    @location ||= begin
+      ip = request.env['REMOTE_ADDR']
+      location = GeoLocation.find(ip)  
+      location[:country_code]
     end
+  end
+
 
 end

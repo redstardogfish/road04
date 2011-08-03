@@ -1,0 +1,8 @@
+<% title "New Industry" %>
+<%= render 'form' %>
+
+<% for industry in @industries %>
+  <%= industry.name %> | <%= link_to "Edit", edit_industry_path(industry) %> |
+  <%= link_to "Destroy", industry, :confirm => 'Are you sure?', :method => :delete %> |
+  <br />
+<% end %>

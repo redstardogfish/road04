@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <title><%= page_title%></title>
+  <meta name="description" content='Second Road' />
+  <meta name="keywords" content='Second Road' />
+  <meta name="description" content="" />
+  <meta name="robots" content="noarchive" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "print", :media => "print"%>
+  <%= stylesheet_link_tag "thickbox", :media => "screen"%>
+
+
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" %>
+  <%= javascript_include_tag "jquery.rails" %>
+
+  <script type="text/javascript">!window.jQuery && document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
+  <%= javascript_include_tag "modernizr-1.5.min.js" %>
+  <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
+  <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages' %>
+
+  <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+
+  <%= yield(:head) %>
+  <%= csrf_meta_tag %>
+
+
+
+</head>
+<%= body_tag_with_class  %>
+<header>
+  <%= link_to (image_tag "logo2.png", :alt=>"Second Road", :size => "223x210", :title => "Second Road"), root_path, :id=> "logo" %>
+  <nav class = "mainNav">
+  	<ul>
+	  <li class = 'admin_link'><%= link_to "People list", people_list_path %></li>
+	  <li class = 'admin_link'><%= link_to "Article list", articles_list_path %></li>
+	  <li class = 'admin_link'><%= link_to "Blogpost list", blogposts_list_path %></li>
+	  <li class = 'admin_link'><%= link_to "Client list", clients_list_path %></li>
+	  <li class = 'admin_link'><%= link_to "Industry list", industries_path %></li>
+	  <li class = 'admin_link'><%= link_to "2r Timeline Stories", history_stories_path %></li>
+	  <li class = 'admin_link'><%= link_to "Main Navigation", "/what-we-do" %></li>
+  	</ul>
+  </nav>
+
+
+  <%= yield(:nav) %>
+
+<div id = "indicator"></div>
+<div id = "full-screen"></div>
+</header>
+
+<div id="wrapper">
+  
+  
+	
+	        <%= yield %>
+	
+
+</div>
+<% unless browser_name == 'iphone' %>
+<footer>
+<ul class="footerLinks">
+  <li><div id="user_nav">
+  	<% if current_user %>
+      <%= current_user.name %>.
+      <%= link_to "Log out", logout_path %>
+    <% else %>
+      <%= link_to image_tag("logo.png", :width  => "20px"), login_path%>
+    <% end %>
+  </div></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/contact-us/" rel="nofollow">Contact</a></li>
+  <li><a href="/privacy/" rel="nofollow">Privacy</a></li>
+</ul>
+
+<fieldset class="searchBox">
+    <label for="search">Search</label>
+
+    <input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$txt" type="text" id="ContentPlaceHolderDefault_SearchBox_2_txt" onfocus="this.value=&#39;&#39;" onkeydown="if ((event.which &amp;&amp; event.which == 13) || (event.keyCode &amp;&amp; event.keyCode == 13)) {__doPostBack(&#39;ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn&#39;,&#39;&#39;);return false;} else return true;" />
+    <input type="image" name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn" id="ContentPlaceHolderDefault_SearchBox_2_btn" class="search-submit" Text="" src="/images/sbutton.gif" />
+</fieldset>
+</footer>
+<% end %>
+
+<%= javascript_include_tag "scripts" %>
+<%= javascript_include_tag "jquery.mousewheel.min.js" %>
+
+<%= yield(:footer) %>
+
+<!-- <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-19521003-1']);_gaq.push(['_trackPageview']);(function () {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script> -->
+
+
+
+</body>
+
+</html>
+
+

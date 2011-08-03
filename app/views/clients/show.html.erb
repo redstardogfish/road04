@@ -1,0 +1,28 @@
+<% title "Client" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+<p>
+  <strong>Logo File Name:</strong>
+  <%= @client.logo_file_name %>
+</p>
+<p>
+  <strong>Logo Content Type:</strong>
+  <%= @client.logo_content_type %>
+</p>
+<p>
+  <strong>Logo File Size:</strong>
+  <%= @client.logo_file_size %>
+</p>
+<p>
+  <strong>Logo Updated At:</strong>
+  <%= @client.logo_updated_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_client_path(@client) %> |
+  <%= link_to "Destroy", @client, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", clients_path %>
+</p>

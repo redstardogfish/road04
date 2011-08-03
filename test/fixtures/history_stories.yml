@@ -1,0 +1,34 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start_year: 1
+  end_year: 1
+  client: MyString
+  alternative_title: MyString
+  text: MyText
+  display: false
+
+two:
+  start_year: 1
+  end_year: 1
+  client: MyString
+  alternative_title: MyString
+  text: MyText
+  display: false
+
+
+# == Schema Information
+#
+# Table name: history_stories
+#
+#  id                :integer         not null, primary key
+#  start_year        :integer
+#  end_year          :integer
+#  alternative_title :string(255)
+#  text              :text
+#  display           :boolean
+#  created_at        :datetime
+#  updated_at        :datetime
+#  client_id         :integer
+#
+

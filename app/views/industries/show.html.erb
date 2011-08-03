@@ -1,0 +1,12 @@
+<% title "Industry" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @industry.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_industry_path(@industry) %> |
+  <%= link_to "Destroy", @industry, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", industries_path %>
+</p>

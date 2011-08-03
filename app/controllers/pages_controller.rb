@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, :only => [:accordion, :test]
+  before_filter :authenticate, :only => [:admin, :accordion, :test]
   
   def home
     @title = "Home"
@@ -26,11 +26,19 @@ class PagesController < ApplicationController
     @body_class = "what"
   end
   
+  def admin
+    render :layout => 'admin'
+    
+  end
+  
   def accordion
   
   end
   
   def test
+  end
+  def test2
+    @stories = HistoryStory.order("start_year")
   end
   
 end

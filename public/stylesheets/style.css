@@ -326,7 +326,7 @@ TOC - SECOND ROAD CSS
 	}
 	.home #content {
 		background: none;
-		min-width: 1080px;
+		width: 1860px;
 	}
 	.home #content h1 {
 		font-family: 'Palatino', 'Times New Roman', 'Times', 'serif';
@@ -341,12 +341,28 @@ TOC - SECOND ROAD CSS
 	.home p {
 		margin: 40px 20px;
 	}
+	.home .detail_text{
+		margin: 60px 20px;
+	}
 	.plain_bk {
 		color: #3b3b3b;
+		font-size:20px;
 	}
-	.rhomb {
-		padding-top: 60px;
+	.small_key_word {
+		padding-top: 80px;
 		color: #3b3b3b;
+		text-align:center;
+		font-family: 'Palatino', 'Times New Roman', 'Times', 'serif';
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.bottom_key_word {
+		color: #3b3b3b;
+		text-align:center;
+		font-family: 'Palatino', 'Times New Roman', 'Times', 'serif';
+		font-size: 20px;
+		font-weight: 600;
+		padding-top: 35px;
 	}
 
 	.bloc {
@@ -414,12 +430,13 @@ TOC - SECOND ROAD CSS
 			background-image: url(../images/home/rhombus-dark.png);
 			left: -28px;
 			width: 236px;
+			top:-40px;
 		}
 
 		.rhombus-orange {
 			background-image: url(../images/home/rhombus-orange.png);
 			height: 216px;
-			top: -67px;
+			top: -37px;
 		}
 	
 
@@ -1874,6 +1891,7 @@ h3 {
 
 .admin_link a {
 	color: #437499;
+	font-size: 14px;
 }
 
 .person_edit {
@@ -2121,6 +2139,29 @@ h3 {
 	float:left;
 }
 
-
-
+.industry_li {
+	color: #314;
+	font-weight: 800;
+	margin: 4px 0 8px 0;
+}
+.client_indent {
+	margin-left: 8px;
+	margin-bottom: 8px;
+	color: #483D8B;
+    font-weight: 200;
+}
+.client_table {
+	width: 360px;
+	border-bottom: 1px solid #bbb;
+}
+.client_table_admin{
+	width: 40px;
+}
+/* for public display*/
+.client_industry_list {
+    background:none !important;	
+}
+.client_list {
+	
+}
 

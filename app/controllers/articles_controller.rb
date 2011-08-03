@@ -59,6 +59,7 @@ class ArticlesController < ApplicationController
   
   def listing
     @articles = Article.all
+    render :layout => "admin"
 
   end
 

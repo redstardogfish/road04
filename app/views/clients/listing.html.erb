@@ -1,0 +1,42 @@
+<% title "New Client" %>
+<h1>New Client:</h1>
+<%= render 'form' %>
+
+
+<h1>Clients</h1>
+<% if !@clients.blank? %>
+  <ul>
+	<% for industry in @industries %>
+	  <li><p class = "industry_li"><%= industry.name %></p>
+	  <table class = "client_indent">
+	    <% for client in industry.clients %>
+          <tr>
+          <td class = "client_table_admin"><%= image_tag client.logo.url, :width => "30px" if client.logo.exists?%></td>
+	      <td class = "client_table"><%= client.name %><%= client.display ? (image_tag "tick.png") : (image_tag "cross.png")%></td>
+	      <td class = "client_table_admin"><%= link_to "Edit", edit_client_path(client) %></td>
+		  <td class = "client_table_admin"><%= link_to "Destroy", client, :confirm => 'Are you sure?', :method => :delete %></td>
+	
+		  </tr>
+	    <% end %>
+	  </table>
+	  </ul>
+	  </li>
+	<% end %>
+	
+  </ul>
+
+  <br />
+
+  <br />
+
+  <br />
+  <% for client in @clients %>
+	<% unless client.industry %>
+      <%= "#{client.name} | " %><%= link_to "Edit", edit_client_path(client) %> | 
+      <%= link_to "Destroy", client, :confirm => 'Are you sure?', :method => :delete %><br />
+    <% end %>
+  <% end %>
+
+<% else %>
+  
+<% end %>

@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   
   before_filter :fetch_logged_user
 
-  after_filter :render_spelling
+  # turn off spelling
+  # after_filter :render_spelling
   
   private
   def current_user

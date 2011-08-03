@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110726041558) do
+ActiveRecord::Schema.define(:version => 20110801053256) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -90,8 +90,41 @@ ActiveRecord::Schema.define(:version => 20110726041558) do
     t.datetime "updated_at"
   end
 
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.integer  "industry_id"
+    t.string   "mark_file_name"
+    t.string   "mark_content_type"
+    t.integer  "mark_file_size"
+    t.datetime "mark_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.boolean  "display"
+  end
+
   create_table "headshots", :force => true do |t|
     t.boolean  "use"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "history_stories", :force => true do |t|
+    t.integer  "start_year"
+    t.integer  "end_year"
+    t.string   "alternative_title"
+    t.text     "text"
+    t.boolean  "display"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "client_id"
+  end
+
+  create_table "industries", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

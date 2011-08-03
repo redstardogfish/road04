@@ -37,6 +37,15 @@ class PeopleController < ApplicationController
       render :action => 'edit'
     end
   end
+  
+  def update_password
+    @person = Person.find(params[:id])
+    if @person.update_attributes(params[:person])
+      redirect_to root_path       
+    else
+      render :action => 'change_password'
+    end
+  end
 
   def destroy
     @person = Person.find(params[:id])
@@ -48,6 +57,7 @@ class PeopleController < ApplicationController
   def listing
     @people = Person.all
     @body_class = 'admin'
+    render :layout => "admin"
   end
   
   
@@ -59,7 +69,10 @@ class PeopleController < ApplicationController
   def display_box
     @person = Person.find(params[:id])
     render :layout => false
-    
+  end
+  
+  def change_password
+    @person = Person.find(session[:user_id])
   end
   
   

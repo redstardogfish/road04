@@ -19,6 +19,9 @@
 		  <%= content_tag :li, :class => (@title == "Our DNA"? "dna active" : "dna") do -%>
 		    <%= link_to "Our DNA", "/our-dna", :class => ("active" if @title == "Our DNA") %>
 		  <% end -%>
+		  <%= content_tag :li, :class => (@title == "Our Clients"? "dna active" : "dna") do -%>
+		    <%= link_to "Our Clients", clients_path, :class => ("active" if @title == "Our Clients") %>
+		  <% end -%>
         </ul>
       </li>
       <li><a class="whatsNew parent">What's New</a>
@@ -36,9 +39,7 @@
       </li>
 
 	  <% if admin? %>
-      <li class = 'admin_link'><%= link_to "People list", people_list_path %></li>
-      <li class = 'admin_link'><%= link_to "Article list", articles_list_path %></li>
-      <li class = 'admin_link'><%= link_to "Blogpost list", blogposts_list_path %></li>
+      <li class = 'admin_link'><%= link_to "Admin", admin_path %></li>
 	  <% end %>  
 
 

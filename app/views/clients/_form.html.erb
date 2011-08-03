@@ -1,0 +1,25 @@
+<%= form_for @client , :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :industry_id %><br />
+    <%= collection_select(:client, :industry_id, @industries, :id, :name, {:prompt => false, :include_blank => true}) %>
+  </p>
+  
+  <p>
+	<%= image_tag @client.logo.url(:thumb), :width => "60px" if @client.logo.exists? %>
+	<%= f.label :logo %><br />
+  	<%= f.file_field :logo %>
+  </p>
+
+  <p>
+  	<%= f.label :display? %>
+    <%= f.check_box :display %>
+  </p>
+
+
+  <p><%= f.submit %></p>
+<% end %>

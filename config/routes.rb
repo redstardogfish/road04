@@ -1,4 +1,10 @@
 Road04::Application.routes.draw do
+  resources :history_stories
+
+  resources :clients
+
+  resources :industries
+
   resources :words
 
   get "categories/index"
@@ -6,15 +12,23 @@ Road04::Application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "sign_up" => "users#new", :as => "sign_up"
+  get "change_password"  => "people#change_password"
+  match "update_password"  => "people#update_password", :as => "update_password" 
+  
+  
+  get "admin"  => "pages#admin", :as => "admin" 
   
   get "people_list"  => "people#listing", :as => "people_list"
   get "articles_list"  => "articles#listing", :as => "articles_list"
   get "blogposts_list"  => "blogposts#listing", :as => "blogposts_list"
+  get "clients_list"  => "clients#listing", :as => "clients_list"
+  
   
   match "people/display_box/:id"  => "people#display_box"
   get "article_select" => "articles#select", :as => "article_select"
   
   match "test"  => "pages#test"
+  match "test2"  => "pages#test2"
 
 
   get "pages/home"

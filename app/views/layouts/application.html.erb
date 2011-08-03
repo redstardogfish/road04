@@ -17,10 +17,11 @@
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" %>
   <%= javascript_include_tag "jquery.rails" %>
 
-  <script type="text/javascript">!window.jQuery && document.write('<script src="js/jquery.min.js"><\/script>')</script>
+  <script type="text/javascript">!window.jQuery && document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
   <%= javascript_include_tag "modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
-  <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages' %>
+  <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages'%>
+  <%= javascript_include_tag "test" %>
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 
@@ -66,17 +67,17 @@
   <li><a href="/privacy/" rel="nofollow">Privacy</a></li>
 </ul>
 
-<fieldset class="searchBox">
+<!-- <fieldset class="searchBox">
     <label for="search">Search</label>
 
     <input name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$txt" type="text" id="ContentPlaceHolderDefault_SearchBox_2_txt" onfocus="this.value=&#39;&#39;" onkeydown="if ((event.which &amp;&amp; event.which == 13) || (event.keyCode &amp;&amp; event.keyCode == 13)) {__doPostBack(&#39;ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn&#39;,&#39;&#39;);return false;} else return true;" />
     <input type="image" name="ctl00$ctl00$ctl00$ContentPlaceHolderDefault$SearchBox_2$btn" id="ContentPlaceHolderDefault_SearchBox_2_btn" class="search-submit" Text="" src="/images/sbutton.gif" />
-</fieldset>
+</fieldset> -->
 </footer>
 <% end %>
 
 <%= javascript_include_tag "scripts" %>
-<%= javascript_include_tag "jquery.mousewheel.min" %>
+<%= javascript_include_tag "jquery.mousewheel.min.js" %>
 
 <%= yield(:footer) %>
 

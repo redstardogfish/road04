@@ -47,6 +47,8 @@ class BlogpostsController < ApplicationController
   end
   def listing
     @blogposts = Blogpost.all
+    render :layout => "admin"
+    
   end
   
   def display

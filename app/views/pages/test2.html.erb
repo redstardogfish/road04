@@ -1,0 +1,98 @@
+<style type="text/css" media="screen">
+	.test2 {
+		
+	}
+	.test2 #backbone {
+		position:absolute;
+		margin-top: 200px; margin-left: 50px;; width: 2000px;
+		border-top: 4px solid dodgerblue;
+	}
+	.test2 #y1980 {
+		position:absolute;
+		margin-top: 200px; margin-left: 50px;; width: 10px;
+		border-top: 4px solid black;		
+	}
+	.test2 #y1990 {
+		position:absolute;
+		margin-top: 200px; margin-left: 550px;; width: 10px;
+		border-top: 4px solid black;		
+	}
+	.test2 #y2000 {
+		position:absolute;
+		margin-top: 200px; margin-left: 1050px;; width: 10px;
+		border-top: 4px solid black;		
+	}
+	.test2 #y2010 {
+		position:absolute;
+		margin-top: 200px; margin-left: 1550px;; width: 10px;
+		border-top: 4px solid black;		
+	}
+	.test2 .case{
+		position:absolute;
+		width:45px;
+		height:30px;
+
+	}
+	.test2 .case_text {
+		width:300px; min-height: 50px;
+		background:#ddd;
+		display:none;
+		position:relative;
+		left:80px; top:-60px;
+		padding:6px;
+		border: 1px solid black;
+		z-index: 1000;
+	}
+	.test2 .case_text > p {
+		margin-bottom: 10px;
+		
+	}
+
+</style>
+
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+	  $('.case').hover(function() {
+		var target_id = '#text_'+ $(this).attr('id')
+		$(target_id).toggle();
+	  });
+	});
+</script>
+
+<div class = "test2">
+  <div id = "backbone">
+	<% year = 0 %>
+	  <!-- This routine is to start from the inner spine each time there is a new year -->
+	  <!-- The array values are the offsets from the spine - it is a simple way of doing it, but will break if there are more than this many in a year -->
+	  <!-- There is an equation to shift the x-axis measurements like fishbones - the final integer is the shift in pixels -->
+	
+	<% @stories.each do |story| %>
+	  <% if story.start_year > year %>
+	    <% year = story.start_year %>
+		<% @y_axis_array = [190,-190,155,-155,120,-120,85,-85,50,-50] %>
+	  <% end %>
+	
+	  <% y_ref = @y_axis_array.pop unless @y_axis_array.nil? %>
+	  <% x_adjust =  ((y_ref-50).abs/35)*10%>
+
+	  <%= content_tag :div, :class => "case",:id  => "history#{story.id}", :style => (("left:"+(story.x_ref+x_adjust).to_s.html_safe)+"px; top:"+y_ref.to_s.html_safe+"px") do -%>   
+	    <% if (story.client && story.client.logo.file?) %>
+	      <%= image_tag story.client.logo.url(:thumb), :height => 30 %>
+	    <% else %>
+	      <%= image_tag "logo.png", :height => 30 %>
+	    <% end %>
+	    <%= content_tag :div, :class  => "case_text", :id => "text_history#{story.id}" do %>
+	      <%= image_tag story.client.logo.url(:listing), :height => 70 if (story.client && story.client.logo.file?) %>
+	      <h1><%=story.client.name unless story.client.nil?  %></h1>
+	      <h1><%= story.start_year %><%= " - #{story.end_year}" if story.end_year %></h1>
+
+	      <%= simple_format story.text %>
+	    <% end %>
+	  <% end -%>
+	<% end %>
+  </div>
+  <div id = "y1980">1980</div>
+  <div id = "y1990">1990</div>
+  <div id = "y2000">2000</div>
+  <div id = "y2010">2010</div>
+</div>

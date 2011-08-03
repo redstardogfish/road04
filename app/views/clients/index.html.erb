@@ -1,0 +1,30 @@
+
+<div id="content">
+  <h1>Our Clients</h1>
+
+  <div class="wysiwyg">   
+    <p class="introPara">We have had the pleasure of working with clients from almost every industry. Some of those clients include:</p>
+	  <ul>
+		<% for industry in @industries %>
+		  <% if industry.clients.length >0 %>
+		  <li class = "client_industry_list"><p class = "industry_li"><%= industry.name %></p>
+		    <ul class = "client_indent">
+		      <% for client in industry.clients %>
+		        <% if client.display %>
+		          <li class = "client_list"><%= client.name %></td>
+			    <% end %>
+		      <% end %>
+		    </ul>
+		  </li>
+		  <% end %>
+		<% end %>
+	  </ul>
+  </div>
+</div>
+
+<% content_for :footer do %>
+<script type="text/javascript">$(function () {var wrapperWidth = parseInt($('#content').width()) + parseInt($('#extras').width()) + parseInt($('#promos').width());$('#wrapper').css('width', wrapperWidth);});</script>
+
+
+<% end %>
+

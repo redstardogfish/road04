@@ -50,7 +50,7 @@ class PeopleController < ApplicationController
   def destroy
     @person = Person.find(params[:id])
     @person.destroy
-    redirect_to people_url, :notice => "Successfully destroyed person."
+    redirect_to people_list_url, :notice => "Successfully destroyed person."
   end
   
   

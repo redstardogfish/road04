@@ -60,6 +60,7 @@ Road04::Application.routes.draw do
   match 'blog/display/:id' => 'blogposts#display'  
   match 'casestudies/display/:id' => 'casestudies#display'  
   
+  
   resources :users
   resources :sessions
   resources :casestudies

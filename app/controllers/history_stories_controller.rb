@@ -44,7 +44,7 @@ class HistoryStoriesController < ApplicationController
   # POST /history_stories.xml
   def create
     @history_story = HistoryStory.new(params[:history_story])
-
+    @clients = Client.all
     respond_to do |format|
       if @history_story.save
         format.html { redirect_to(history_stories_url, :notice => 'History story was successfully created.') }
@@ -60,7 +60,7 @@ class HistoryStoriesController < ApplicationController
   # PUT /history_stories/1.xml
   def update
     @history_story = HistoryStory.find(params[:id])
-
+    @clients = Client.all
     respond_to do |format|
       if @history_story.update_attributes(params[:history_story])
         format.html { redirect_to(history_stories_url, :notice => 'History story was successfully updated.') }

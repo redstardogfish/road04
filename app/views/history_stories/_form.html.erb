@@ -1,15 +1,6 @@
 <%= form_for(@history_story) do |f| %>
-  <% if @history_story.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@history_story.errors.count, "error") %> prohibited this history_story from being saved:</h2>
+<%= f.error_messages %>
 
-      <ul>
-      <% @history_story.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :start_year %><br />

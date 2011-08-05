@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
   helper_method :current_user 
   helper_method :admin?
   
   before_filter :fetch_logged_user
-
-  # turn off spelling
-  # after_filter :render_spelling
+  # to turn off local spelling, comment out the following line
+  after_filter :render_spelling
+  
   
   private
   def current_user
@@ -37,20 +38,21 @@ class ApplicationController < ActionController::Base
 
   def render_spelling
     @words = Word.all
-    if user_country == "XX"
+    @loc = cookies[:country_code]
+    if @loc == "US"
+      @words.each do |word| 
+          response.body  = response.body.gsub((/#{Regexp.escape(word.uk)}[^_A-Z]/)) {|w| word.us+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.uk.capitalize)}[^_A-Z]/){|w| word.us.capitalize+w[-1,1]} 
+          response.body = response.body.gsub(/#{Regexp.escape(word.uk.upcase)}[^_A-Z]/){|w| word.us.upcase+w[-1,1]} 
+      end  
+    else
       @words.each do |word| 
           response.body  = response.body.gsub((/#{Regexp.escape(word.us)}[^_A-Z]/)) {|w| word.uk+w[-1,1]} 
           response.body = response.body.gsub(/#{Regexp.escape(word.us.capitalize)}[^_A-Z]/){|w| word.uk.capitalize+w[-1,1]} 
           response.body = response.body.gsub(/#{Regexp.escape(word.us.upcase)}[^_A-Z]/){|w| word.uk.upcase+w[-1,1]} 
       end  
     end
-    if user_country != "XX"
-      @words.each do |word| 
-          response.body  = response.body.gsub((/#{Regexp.escape(word.uk)}[^_A-Z]/)) {|w| word.us+w[-1,1]} 
-          response.body = response.body.gsub(/#{Regexp.escape(word.uk.capitalize)}[^_A-Z]/){|w| word.us.capitalize+w[-1,1]} 
-          response.body = response.body.gsub(/#{Regexp.escape(word.uk.upcase)}[^_A-Z]/){|w| word.us.upcase+w[-1,1]} 
-      end  
-    end
+    
 
 
   end

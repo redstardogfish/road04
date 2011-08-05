@@ -1,6 +1,10 @@
 class Industry < ActiveRecord::Base
   attr_accessible :name
   has_many :clients
+  
+  validates_presence_of :name
+  
+  
 end
 
 # == Schema Information

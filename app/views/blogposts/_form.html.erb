@@ -1,7 +1,7 @@
 <%= form_for @blogpost, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
-  <div class = "blog_form">
+  <div class = "two_col_form">
     <p>
       <%= f.label "Post Title" %><br />
       <%= f.text_field :title %>
@@ -24,7 +24,7 @@
       <%= f.text_area :content %>
     </p>
   </div>
-  <div class = "blog_form">
+  <div class = "two_col_form">
     <p>
    	  <%= f.label "Image (for the listing page 270x180px)" %><br />
   	  <%= f.file_field :image %>

@@ -1148,11 +1148,11 @@ TOC - SECOND ROAD CSS
 	}
 	
 /* 9.5 Blog posting form and admin	*/
-	.blog_form {
+	.two_col_form {
 		width: 400px; height: 750px;
 		float:left;
 	}
-	.blog_form select, textarea, input {
+	.two_col_form select, textarea, input {
 	    margin-bottom: 4px;
 	}
 	#blogpost_submit {margin-top: 10px;}
@@ -1987,7 +1987,7 @@ h3 {
 	left: 45px;
 	padding: 22px 0 10px;
 	position: absolute;
-	top: 328px;
+	top: 340px;
 	width: 300px;	
 }
 .display_box .contact-info ul {
@@ -2164,4 +2164,39 @@ h3 {
 .client_list {
 	
 }
+
+#history_stories_list {
+	border: 1px solid #aaa;
+}
+#history_stories_list th {
+	padding:4px; 
+	text-align:left;
+}
+
+#history_stories_list td {
+	font-size:11px;
+	color: #444;
+	padding:4px;
+	border: 1px dotted #aaa; 
+}
+
+/* error messages */
+.error_messages {
+	color: #CD4F39;
+	margin-bottom: 10px;
+}
+.error_messages ul{
+	list-style-type:disc;
+	margin-left: 14px;
+}
+.field_with_errors {
+  padding: 2px;
+  color: #CD4F39;
+  display: table;
+}
+.field_with_errors input, .field_with_errors textarea {
+  background: #FFE4E1;
+}
+
+
 

@@ -21,14 +21,23 @@
   <%= javascript_include_tag "modernizr-1.5.min.js" %>
   <%= javascript_include_tag "http://use.typekit.com/aox0xcu.js" %>
   <%= javascript_include_tag 'scripts', 'people', 'application', 'thickbox-compressed', 'jquery.preloadImages'%>
-  <%= javascript_include_tag "test" %>
+  <%= javascript_include_tag 'jquery.cookie' %>
+  <%= javascript_include_tag 'http://j.maxmind.com/app/country.js' %>
+
 
   <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 
   <%= yield(:head) %>
   <%= csrf_meta_tag %>
+  <script type="text/javascript" charset="utf-8"> 
+    // Send country to a cookie
+    var loc = geoip_country_code();
+    if ($.cookie('country_code')!=loc) {
+    $.cookie('country_code', loc)
+    location.reload(true);	
+    };
 
-
+  </script>
 
 </head>
 <%= body_tag_with_class  %>

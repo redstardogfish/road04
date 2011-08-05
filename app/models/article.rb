@@ -11,8 +11,14 @@ class Article < ActiveRecord::Base
   has_attached_file :article_image, :styles => {:display => "360x360#"}
   has_attached_file :promo_image, :styles => {:display => "180x180#"}
   has_attached_file :pdf
+  validates_attachment_content_type :pdf, :content_type => [ 'application/pdf' ],
+                                      :message => 'Sorry, only .pdf attachments for now.'
 
 
+
+  validates_presence_of :title, :author, :intro_para, :body
+
+  validates_length_of :intro_para, :maximum => 100, :too_long => "Keep the intro to 100 words", :tokenizer => lambda {|str| str.scan(/\w+/) }
 
 private
 

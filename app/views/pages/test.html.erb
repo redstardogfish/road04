@@ -1,4 +1,4 @@
-
+<h1>Window dimensions:</h1>
 <script type="text/javascript" charset="utf-8">
 	var winW = 630, winH = 460;
 	if (document.body && document.body.offsetWidth) {
@@ -19,3 +19,23 @@
 	document.writeln('Window width = '+winW);
 	document.writeln('Window height = '+winH);
 </script>
+<br />
+<br />
+<h1>Geo Location from javascript:</h1>
+<br>Country Code:
+<script language="JavaScript">document.write(geoip_country_code());</script>
+<br>Country Name:
+<script language="JavaScript">document.write(geoip_country_name());</script>
+<br />
+<br />
+<h1>Geo Location from GeoKit:</h1>
+<br>Provider:
+<p><%= Geokit::Geocoders::IpGeocoder.geocode(request.env['REMOTE_ADDR']).provider %></p>
+<br>Country Code:
+<p><%= Geokit::Geocoders::IpGeocoder.geocode(request.env['REMOTE_ADDR']).country_code %></p>
+<br />
+<br />
+
+<h1>Geo Location from cookie:</h1>
+<br>Country Code:
+<p><%= cookies[:country_code] %></p>

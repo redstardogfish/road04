@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, :only => [:admin, :accordion, :test]
+  before_filter :authenticate, :only => [:admin, :accordion, :test2]
+  before_filter :user_country, :only  => [:test]
   
   def home
     @title = "Home"
@@ -36,6 +37,7 @@ class PagesController < ApplicationController
   end
   
   def test
+    @loc = cookies[:country_code]
   end
   def test2
     @stories = HistoryStory.order("start_year")

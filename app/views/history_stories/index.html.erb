@@ -1,14 +1,13 @@
 <h1>Listing history_stories</h1>
 
-<table>
+<table id = "history_stories_list">
   <tr>
-    <th>Start year</th>
-    <th>End year</th>
+    <th>Start</th>
+    <th>End</th>
     <th>Client</th>
     <th>Alternative title</th>
     <th>Text</th>
     <th>Display</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -17,13 +16,12 @@
   <tr>
     <td><%= history_story.start_year %></td>
     <td><%= history_story.end_year %></td>
-    <td><%= history_story.client.name if history_story.client %></td>
-    <td><%= history_story.alternative_title %></td>
-    <td><%= history_story.text %></td>
+    <td style= "width:180px;align:left"><%= history_story.client.name if history_story.client %></td>
+    <td style= "width:180px;align:left"><%= history_story.alternative_title %></td>
+    <td style= "width: 600px; align:left"><%= history_story.text %></td>
     <td><%= history_story.display == false ? (image_tag "cross.png", :width => 10 ) : (image_tag "tick.png", :width => 10) %></td>
-    <td><%= link_to 'Show', history_story %></td>
     <td><%= link_to 'Edit', edit_history_story_path(history_story) %></td>
-    <td><%= link_to 'Destroy', history_story, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', history_story, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

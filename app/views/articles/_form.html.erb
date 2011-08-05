@@ -1,5 +1,8 @@
 <%= form_for @article, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
+
+ <div class = "two_col_form">
+
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -26,22 +29,27 @@
 
 
   <p>
-    <%= f.label "Introduction teaser" %><br />
-    <%= f.text_area :intro_para %>
+    <%= f.label "Introduction teaser" %> 
+	<%= " (cut out #{(100-@article.intro_para.scan(/\w+/).length).abs if @article.intro_para.present? &&@article.intro_para.scan(/\w+/).length > 100} words)"  %><br />
+    <%= f.text_area :intro_para, :rows => 5  %>
   </p>
   <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
+
   <p>
 	<%= f.label :front_page_thumbnail %><br />
   	<%= f.file_field :image_thumb %>
   </p>
+ </div>
+ <div class = "two_col_form">
+
 
 
   <p>
     <%= f.label "Pull out quote" %><br />
-    <%= f.text_area :para_quote %>
+    <%= f.text_area :para_quote, :rows  => 5 %>
   </p>
   <p>
     <%= f.label :para_quote_author %><br />
@@ -79,20 +87,25 @@
     <%= f.label "Date of publication" %><br />
     <%= f.date_select :published_date %>
   </p>
-  <p>
+  <!-- <p>
     <%= f.label "Publish this article from..." %><br />
     <%= f.date_select :publish_at %>
   </p>
   <p>
     <%= f.label "... and until..." %><br />
     <%= f.date_select :remove_at %>
-  </p>
+  </p> -->
 
   <p>
 	<%= f.label "Attach a pdf:" %><br />
   	<%= f.file_field :pdf %>
   </p>
-
-
+  <br />
+  <br />
+  <br />
   <p><%= f.submit %></p>
+
+  <p><%= link_to "Back to List", articles_list_path %></p>
+ </div>
+
 <% end %>

@@ -1,5 +1,6 @@
 $(function() {
 	
+	
   // menu open/close 
   $('.parent').click(function(){
 
@@ -44,7 +45,7 @@ $('.slide')
 		$('html,body').animate({scrollLeft: 0},2000);
       }
       else {
-	     $('#slides').css('width', '2160px')
+	     $('#slides').css('width', '2160px');
 	     var menu_id = "#"+$(this).attr('id').substr(0,1);
 	     $('.menu_trigger').parent().removeClass('active');
 	     $(menu_id).parent().addClass('active');
@@ -75,6 +76,5 @@ $.fn.scrollMenu = function() {
 		{scrollLeft: (open_slides*180 )},
 		 1000);
 };
-
 
 

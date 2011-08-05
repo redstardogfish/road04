@@ -13,7 +13,8 @@ class Person < ActiveRecord::Base
   
   attr_accessor :password
   before_save :encrypt_password
-  
+ 
+  validates_presence_of :first_name, :last_name  
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
   validates_presence_of :email
@@ -35,6 +36,8 @@ class Person < ActiveRecord::Base
     end
   end  
   
+  
+
   
   
   

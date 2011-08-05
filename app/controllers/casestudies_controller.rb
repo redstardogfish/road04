@@ -14,7 +14,7 @@ class CasestudiesController < ApplicationController
   def create
     @casestudy = Casestudy.new(params[:casestudy])
     if @casestudy.save
-      redirect_to @casestudy, :notice => "Successfully created casestudy."
+      redirect_to casestudies_url, :notice => "Successfully created casestudy."
     else
       render :action => 'new'
     end
@@ -27,7 +27,7 @@ class CasestudiesController < ApplicationController
   def update
     @casestudy = Casestudy.find(params[:id])
     if @casestudy.update_attributes(params[:casestudy])
-      redirect_to @casestudy, :notice  => "Successfully updated casestudy."
+      redirect_to casestudies_url, :notice  => "Successfully updated casestudy."
     else
       render :action => 'edit'
     end

@@ -13,7 +13,11 @@ class SessionsController < ApplicationController
         redirect_to root_url, :notice  => "Logged in"
       end
     else
-      flash.now.alert = "Invalid email or password"
+      unless Person.find_by_email(params[:email])
+        flash.now[:alert] = "Can't find that email"
+      else
+        flash.now[:alert]= "Invalid email or password"
+      end
       render "new"
     end
   end
@@ -21,6 +25,11 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice  => "Logged out"
+  end
+
+
+  def set_geolocation
+    session[:location] = {:country_code=> params[:country_code]}
   end
 
 end

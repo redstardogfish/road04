@@ -9,12 +9,20 @@
 	<% for industry in @industries %>
 	  <li><p class = "industry_li"><%= industry.name %></p>
 	  <table class = "client_indent">
+		  <tr>
+		  	<th>Logo</th>
+		  	<th>Name</th>
+		  	<th>Show?</th>
+		  	<th></th>
+		  	<th></th>
+		  </tr>
 	    <% for client in industry.clients %>
           <tr>
           <td class = "client_table_admin"><%= image_tag client.logo.url, :width => "30px" if client.logo.exists?%></td>
-	      <td class = "client_table"><%= client.name %><%= client.display ? (image_tag "tick.png") : (image_tag "cross.png")%></td>
+	      <td class = "client_table"><%= client.name %></td>
+	      <td><%= client.display ? (image_tag "tick.png") : (image_tag "cross.png")%></td>
 	      <td class = "client_table_admin"><%= link_to "Edit", edit_client_path(client) %></td>
-		  <td class = "client_table_admin"><%= link_to "Destroy", client, :confirm => 'Are you sure?', :method => :delete %></td>
+		  <td class = "client_table_admin"><%= link_to "Delete", client, :confirm => 'Are you sure?', :method => :delete %></td>
 	
 		  </tr>
 	    <% end %>
@@ -30,8 +38,11 @@
   <br />
 
   <br />
+
+  <h1>Clients that haven't got an industry chosen.</h1>
   <% for client in @clients %>
 	<% unless client.industry %>
+	  <%= image_tag client.logo.url, :width => "30px" if client.logo.exists?%>
       <%= "#{client.name} | " %><%= link_to "Edit", edit_client_path(client) %> | 
       <%= link_to "Destroy", client, :confirm => 'Are you sure?', :method => :delete %><br />
     <% end %>

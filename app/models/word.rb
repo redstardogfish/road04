@@ -1,4 +1,7 @@
 class Word < ActiveRecord::Base
+  
+  
+  validates_presence_of :uk, :us
 end
 
 # == Schema Information

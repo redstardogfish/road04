@@ -28,13 +28,6 @@
 <script language="JavaScript">document.write(geoip_country_name());</script>
 <br />
 <br />
-<h1>Geo Location from GeoKit:</h1>
-<br>Provider:
-<p><%= Geokit::Geocoders::IpGeocoder.geocode(request.env['REMOTE_ADDR']).provider %></p>
-<br>Country Code:
-<p><%= Geokit::Geocoders::IpGeocoder.geocode(request.env['REMOTE_ADDR']).country_code %></p>
-<br />
-<br />
 
 <h1>Geo Location from cookie:</h1>
 <br>Country Code:

@@ -321,6 +321,24 @@ TOC - SECOND ROAD CSS
 
 /* 2.0: HOME
 ****************************************/
+
+	.home_collage {color: #DA5923;}
+	#home_1{position:absolute;width: 360px;top:30px; left:80px}
+	#home_2{position:absolute;width: 450px;top:430px; left:40px}
+	#home_3{position:absolute;width: 270px;top:60px; left:730px; z-index:50;}
+	#home_4{position:absolute;width: 540px;top:120px; left:840px}
+	#home_5{position:absolute;width: 180px;top:480px; left:540px}
+	#home_think{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 60px;font-weight: 500;color: #000;
+	             position:absolute; top:100px; left:100px;z-index:110;}
+	#home_engage{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 60px;font-weight: 500;
+				 position:absolute; top:100px; left:100px;z-index:110;}
+	#home_create{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 80px;font-weight: 100;
+				 position:absolute; top:100px; left:100px;z-index:110;}
+	#home_transform{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 100px;font-weight: 100;color: #000;
+				  position:absolute; top:100px; left:100px;z-index:110;}
+
+/* Old Home styles... Remove soon...*/
+
 	.home {
 		overflow-x: hidden;
 	}
@@ -2197,6 +2215,9 @@ h3 {
 .field_with_errors input, .field_with_errors textarea {
   background: #FFE4E1;
 }
+
+
+
 
 
 

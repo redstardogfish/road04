@@ -65,6 +65,7 @@ $('.slide')
   });
 
 
+// Rotating home page text
 
 });
 

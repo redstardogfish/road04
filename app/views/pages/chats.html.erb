@@ -1,0 +1,226 @@
+<style type="text/css" media="screen">
+    .chat_table { 
+    }
+	.chat_name{
+		width: 150px;
+		padding: 14px 4px;
+		text-align:right;
+	}
+	.chat_body{
+		width: 600px;
+		padding: 14px;
+	}
+	.chat_datetime{
+		font-size: 10px;
+		font-style: italic;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	.tabContainer{
+		/* The UL */
+		float:right;
+		padding-right:13px;
+	}
+
+	#contentHolder{
+		background-color:#EEEEEE;
+		border:2px solid #FFFFFF;
+		height:300px;
+		margin:20px;
+
+		color:#444444;
+		padding:15px;
+	}
+
+	#tabContent{
+		background-color:#333;
+		border:1px solid #444;
+		margin-top:-15px;
+		width:100%;
+	}
+
+	#tabContent, .tabContainer li a,#contentHolder{
+		-webkit-box-shadow:0 0 2px black;
+		-moz-box-shadow:0 0 2px black;
+		box-shadow:0 0 2px black;
+	}
+
+	.tabContainer li{
+		/* This will arrange the LI-s next to each other */
+		display:inline;
+	}
+
+	.tabContainer li a,.tabContainer li a:visited{
+		/* Styling the hyperlinks of the tabs as colorful buttons */
+
+		float:left;
+		font-size:18px;
+
+		/* display:block allows for additinal CSS rules to take effect, such as paddings: */
+		display:block;
+
+		padding:7px 16px 1px;
+		margin:4px 5px;
+		height:29px;
+
+		/* Giving positioning */
+		position:relative;
+
+		/* CSS3 text-shadow */
+		text-shadow:1px 1px 1px #CCCCCC;
+	}
+	
+	
+	
+	
+	#overLine{
+		/* The line above the active button. */
+		position:absolute;
+
+		height:1px;
+		background-color:white;
+		width:90px;
+
+		float:left;
+		left:1px;
+		top:-5px;
+		overflow:hidden;
+	}
+
+	#main{
+		margin:0 auto;
+		position:relative;
+		width:700px;
+	}
+
+	ul .left{
+		/* The left span in the hyperlink */
+
+		height:37px;
+		left:0;
+		position:absolute;
+		top:0;
+		width:10px;
+	}
+
+	ul .right{
+		/* The right span in the hyperlink */
+
+		height:37px;
+		right:0;
+		position:absolute;
+		top:0;
+		width:10px;
+	}
+
+	/* Styling the colors individually: */
+
+	ul a.green{	background:url(../images/img/green_mid.png) repeat-x top center;	color:#24570f;}
+	ul a.green span.left{ background:url(../images/img/green_left.png) no-repeat left top;}
+	ul a.green span.right{ background:url(../images/img/green_right.png) no-repeat right top;}
+
+	ul a.red{	background:url(../images/img/red_mid.png) repeat-x top center;	color:#24570f;}
+	ul a.red span.left{ background:url(../images/img/red_left.png) no-repeat left top;}
+	ul a.red span.right{ background:url(../images/img/red_right.png) no-repeat right top;}
+
+	ul a.blue{	background:url(../images/img/blue_mid.png) repeat-x top center;	color:#24570f;}
+	ul a.blue span.left{ background:url(../images/img/blue_left.png) no-repeat left top;}
+	ul a.blue span.right{ background:url(../images/img/blue_right.png) no-repeat right top;}
+
+	ul a.orange{	background:url(../images/img/orange_mid.png) repeat-x top center;	color:#24570f;}
+	ul a.orange span.left{ background:url(../images/img/orange_left.png) no-repeat left top;}
+	ul a.orange span.right{ background:url(../images/img/orange_right.png) no-repeat right top;}
+
+	/* .. Analogical styles for the red, blue and orange color .. */
+
+	/* The hover states: */
+	ul a:hover{	background-position:bottom center; text-decoration:none;}
+	ul a:hover span.left{ background-position:left bottom;}
+	ul a:hover span.right{ background-position:right bottom;}
+
+	.preloader{
+		display:block;
+		margin:120px auto;
+	}
+	
+	
+	
+</style>
+<%= javascript_include_tag "temp" %>
+
+<ul class="tabContainer">
+	<!-- The jQuery generated tabs go here -->
+	<li>
+		<a href="#" class="tab green">Tab two
+			<span class="left"></span>
+			<span class="right"></span>
+		</a>
+	</li>
+	
+</ul>
+
+<div class="clear"></div>
+
+<div id="tabContent">
+	<div id="contentHolder">
+		<table class = "chat_table">
+		  <tr>
+			<td class = "chat_name"><h1>Abe Lincoln</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+			<td class = "chat_body"><p>What kinds of conversation do we have expertise in?</p></td>	
+		  </tr>	
+		  <tr>
+			<td class = "chat_name"><h1>Bart Watson</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+			<td class = "chat_body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Strategic conversation is the main one that we do, but we should be able to nominate more.</p></td>	
+		  </tr>	
+		  <tr>
+			<td class = "chat_name"><h1>Cary Grant</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+			<td class = "chat_body"><p>We need a kind of guiding principle.</p></td>	
+		  </tr>	
+		  <tr>
+			<td class = "chat_name"><h1>Dorothy Dicks</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+			<td class = "chat_body"><p>old carrots in some chopped almonds in the fire, cover it, stir this sauce over the bananas. Make some soup. Let it a hotel in the spoon, work across mashed potato already placed to soak for an egg in a pile on the rinds of salt. To two medium pie dish pour all for two eggs when boiling, pour on stirring, and serve it is like it, and salted water, and separate yolks of six months before you use that, place on to mix them through the first covered pan in some breadcrumbs, and Liebig, two or a ring of</p></td>	
+		  </tr>	
+		  <tr>
+			<td class = "chat_name"><h1>Eli Gock</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+			<td class = "chat_body"><p>Some kind of feedback, some kind of rolling out communication...</p></td>	
+		  </tr>	
+		</table>
+		<!-- The AJAX fetched content goes here -->
+	</div>
+</div>
+
+
+
+
+<table class = "chat_table">
+  <tr>
+	<td class = "chat_name"><h1>Abe Lincoln</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+	<td class = "chat_body"><p>What kinds of conversation do we have expertise in?</p></td>	
+  </tr>	
+  <tr>
+	<td class = "chat_name"><h1>Bart Watson</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+	<td class = "chat_body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Strategic conversation is the main one that we do, but we should be able to nominate more.</p></td>	
+  </tr>	
+  <tr>
+	<td class = "chat_name"><h1>Cary Grant</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+	<td class = "chat_body"><p>We need a kind of guiding principle.</p></td>	
+  </tr>	
+  <tr>
+	<td class = "chat_name"><h1>Dorothy Dicks</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+	<td class = "chat_body"><p>old carrots in some chopped almonds in the fire, cover it, stir this sauce over the bananas. Make some soup. Let it a hotel in the spoon, work across mashed potato already placed to soak for an egg in a pile on the rinds of salt. To two medium pie dish pour all for two eggs when boiling, pour on stirring, and serve it is like it, and salted water, and separate yolks of six months before you use that, place on to mix them through the first covered pan in some breadcrumbs, and Liebig, two or a ring of</p></td>	
+  </tr>	
+  <tr>
+	<td class = "chat_name"><h1>Eli Gock</h1><p class = "chat_datetime">12.11.11 12:08pm</p></td>
+	<td class = "chat_body"><p>Some kind of feedback, some kind of rolling out communication...</p></td>	
+  </tr>	
+</table>
+
+
+
+

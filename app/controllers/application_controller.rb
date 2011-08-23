@@ -56,15 +56,17 @@ class ApplicationController < ActionController::Base
 
 
   end
-  
-  def user_country
-    @location ||= begin
-      ip = request.env['REMOTE_ADDR']
-      location = GeoLocation.find(ip)  
-    end
-    @location[:country_code]
-  end
-  
+
+
+#   no longer used:
+  # def user_country
+  #   @location ||= begin
+  #     ip = request.env['REMOTE_ADDR']
+  #     location = GeoLocation.find(ip)  
+  #   end
+  #   @location[:country_code]
+  # end
+  #   
 
 end
 

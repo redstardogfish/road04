@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
-  before_filter :authenticate, :only => [:admin, :accordion, :test2]
-  before_filter :user_country, :only  => [:test]
+  before_filter :authenticate, :only => [:admin, :accordion, :test2, :chats]
+
   
   def home
     @title = "Home"
-    @body_class = "home"
+
   end
 
   def privacy
@@ -41,6 +41,13 @@ class PagesController < ApplicationController
   end
   def test2
     @stories = HistoryStory.order("start_year")
+  end
+  
+  def home2
+    
+  end
+  def chats
+    
   end
   
 end

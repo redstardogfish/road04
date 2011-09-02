@@ -40,39 +40,51 @@ $('.slide')
 	$('.slidebutton').click(function() {
       if($(this).parent().hasClass('active')){
 		$('#slide-7').trigger('open');
-		$('#slides').css('width', '1080px')
+		$('#slides').css('width', '1080px');
 		$('.menu_trigger').parent().removeClass('active');
 		$('html,body').animate({scrollLeft: 0},2000);
       }
       else {
-	     $('#slides').css('width', '2160px');
-	     var menu_id = "#"+$(this).attr('id').substr(0,1);
-	     $('.menu_trigger').parent().removeClass('active');
-	     $(menu_id).parent().addClass('active');
-	     $(this).parent().trigger('open');
-		 $(this).scrollMenu();	
+	    $('#slides').css('width', '2160px');
+	    var menu_id = "#"+$(this).attr('id').substr(0,1);
+	    $('.menu_trigger').parent().removeClass('active');
+	    $(menu_id).parent().addClass('active');
+	    $(this).parent().trigger('open');
+		$(this).scrollMenu();	
       };
 
 	});
 
 // Triggering from the menu
   $('.menu_trigger').click(function() {
-	var target_id = '#slide-'+ $(this).attr('id')
-	$('#slides').find(target_id).trigger('open');
-	$('.menu_trigger').parent().removeClass('active');
-	$(this).parent().addClass('active');
-	$(this).scrollMenu();
+	var target_id = '#slide-'+ $(this).attr('id');
+	var target = $('#slides').find(target_id);
+	if(target.parent().hasClass('active')){
+	  	$('#slide-7').trigger('open');
+		$('#slides').css('width', '1080px');
+		$('.menu_trigger').parent().removeClass('active');
+		$('html,body').animate({scrollLeft: 0},2000);
+	}
+	else {
+	    $('#slides').css('width', '2160px');
+	    $('.menu_trigger').parent().removeClass('active');
+	    $(this).parent().addClass('active');
+	    $(target).trigger('open');
+		$(target).scrollMenu();	
+	
+	};
+
   });
 
+// What we do page to left on reload
 
-// Rotating home page text
 
 });
 
 
 $.fn.scrollMenu = function() {
 	//all slides left of the open slide also have class 'open'. this was the easiest way to locate the proper opening place
-    var open_slides = ($('#slides').find('.open').length)
+    var open_slides = ($('#slides').find('.open').length);
 	$('html,body').animate(
 		{scrollLeft: (open_slides*180 )},
 		 1000);

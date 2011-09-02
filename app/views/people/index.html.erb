@@ -43,28 +43,21 @@
 	 <% end %>
   </div>
 
-  <% members = @people.reverse %>
-  <% while members.length > 0 %>
+  <% @people.in_groups_of(6) do |members| %>
     <div class = "membersBox">
-      <% 6.times do %>
-        <% if members.length > 0 %>
-          <% member = members.pop %>
-		  <% unless member.name == "Tony Golsby-Smith" %>
+      <% members.each do |person| %>
+        <% unless person == nil || person.name == "Tony Golsby-Smith" %>
           <div class = "member">
-            <%= image_tag member.headshot.url(:listing), :alt=> member.name, :size => "180x180" %>
-			<%= link_to "people/display_box/#{member.id}?KeepThis=true&TB_iframe=true&height=600&width=800", :class => "thickbox overlay"  do%>
-	          <span class= 'memberName'><%= member.name %></span>
+            <%= image_tag person.headshot.url(:listing), :alt=> person.name, :size => "180x180" %>
+			  <%= link_to "people/display_box/#{person.id}?KeepThis=true&TB_iframe=true&height=540&width=800", :class => "thickbox overlay"  do%>
+	            <span class= 'memberName'><%= person.name %></span>
             <% end %>
 		  </div>
-          <% end %>
-        <% end %>
+        <% end %> 
       <% end %>
     </div>
   <% end %>
-
-
-
-    <div id="promos"></div>
+  <div id="promos"></div>
 </div>
 
 <% unless browser_name == "ipad" || browser_name == "iphone" %>  

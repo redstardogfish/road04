@@ -13,25 +13,17 @@
 
 
 
-	<h1><%= @person.name %></h1>
+	<h1><%= @person.name %> <span> e: <a '#'><%= mail_to @person.email, nil, :encode => "javascript" %></a></span></h1>
 
 	  	<% if @logged_user && (@person.id == @logged_user.id || @logged_user.admin) %>
 	      <div class = "hidden_edit">	
-		    <%= link_to "Edit profile", edit_person_path(@person) %>  
+		    <%= link_to "Edit profile", edit_person_path(@person), :target => "_top" %>  
 	      </div>
 		<% end %>
 
 	<div id="content">
 	  <p class="intro"><%= @person.role %></p>
-	  <p><%= simple_format @person.bio %></p>
-	  <section id="ContentPlaceHolderDefault_BodyContent_contactinfo" class="contact-info">
-	    <ul>
-	      <li id="ContentPlaceHolderDefault_BodyContent_liEmail">
-		    e: <a '#'><%= mail_to @person.email, nil, :encode => "javascript" %></a>
-		  </li>
-		</ul>
-	  </section>
-
+	  <p><%= format @person.bio %></p>
 	</div>
 
 

@@ -1,9 +1,12 @@
+<!-- Note: this is the template from the old site. There is no link to it. consider deleting it -->
+
+
 <%= render :partial => "person_display_header", :locals => {:person => @person}  %>
 
 <h1><%= @person.name %></h1>
 <div class = "hidden_edit">
   	<% if @person.id == @logged_user.id || @logged_user.admin %>
-	  <%= link_to "Edit profile", edit_person_path(@person) %>  
+	  <%= link_to "Edit profile", edit_person_path(@person)%>  
 	<% end %>
 </div>
 

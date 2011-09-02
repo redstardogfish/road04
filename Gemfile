@@ -6,8 +6,12 @@ gem 'annotate'
 gem "paperclip", "~> 2.3"
 gem "bcrypt-ruby", :require => "bcrypt"
 
+gem "RedCloth"
+gem 'disqus'
+gem 'bluecloth'
 
-gem "nokogiri"
+gem 'geo_location'
+gem 'nokogiri'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

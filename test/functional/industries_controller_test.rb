@@ -3,6 +3,7 @@ require 'test_helper'
 class IndustriesControllerTest < ActionController::TestCase
   def test_index
     get :index
+    assert_response :success
     assert_template 'index'
   end
 
@@ -25,7 +26,7 @@ class IndustriesControllerTest < ActionController::TestCase
   def test_create_valid
     Industry.any_instance.stubs(:valid?).returns(true)
     post :create
-    assert_redirected_to industry_url(assigns(:industry))
+    assert_redirected_to industries_url
   end
 
   def test_edit

@@ -7,7 +7,13 @@
 <div id="content">
   <h1>Blog</h1>
   <a class="filter">FILTER</a>
-  <a class="rss" href="blog-rss-feed/" target="_blank">SUBSCRIBE TO RSS</a>
+  <%= link_to "RSS FEED", blogposts_url(:rss), :class => "rss", :target => "_blank" %>
+  <% if @logged_user  %>
+    <div class = "hidden_edit">	
+	  <%= link_to "NEW POST", new_blogpost_path, :class => "newpost"%>  
+    </div>
+  <% end %>
+
   <div class="filterBox">
     <section class="topics">
       
@@ -31,16 +37,21 @@
     <a class="closeIt">CLOSE</a>
   </div>
   <div class="blogListItems">
-    <% for blogpost in @blogposts %>
-      <%= link_to "blog/display/#{blogpost.id}", :class => "blogItem"  do %>
-        <h2><%= blogpost.title %></h2>
-        <p class = "postDetails">By <span class = "postAuthor"><%= blogpost.author %></span>, <span class = "postDate"><%= display_date(blogpost.date) %></span></p>
-        <%= image_tag blogpost.image.url(:thumb), :alt => blogpost.title %>
-        <p class = "postSummary"><%= blogpost.teaser %></p>
-        <p class = "postTags"><%= blogpost.tags %></p>
-	    <p class="readMore">read more</p>
+    <% for blogpost in @blogposts %>  
+      <% if blogpost.publish || @logged_user%>
+        <% postclass = "blogItem" %>
+        <% postclass += " unpublished" unless blogpost.publish %>
+        <%= link_to "blog/display/#{blogpost.id}", :class => postclass  do %>
+          <h2><%= blogpost.title %></h2>
+          <p class = "postDetails">By <span class = "postAuthor"><%= blogpost.author %></span>, <span class = "postDate"><%= display_date(blogpost.date) %></span></p>
+          <%= image_tag blogpost.image.url(:thumb), :alt => blogpost.title %>
+          <p class = "postSummary"><%= blogpost.teaser %></p>
+          <p class = "postTags"><%= blogpost.tags %></p>
+	      <p class="readMore">read more</p>
+        <% end %>
       <% end %>
     <% end %>
+
     <!-- following is from helper method to pull from rss     -->
 	<!-- <%= raw blog_feed %> -->
 

@@ -6,7 +6,6 @@
     <p class="introPara">We have had the pleasure of working with clients from almost every industry. Some of those clients include:</p>
 	  <ul>
 		<% for industry in @industries %>
-		  <% if industry.clients.length >0 %>
 		  <li class = "client_industry_list"><p class = "industry_li"><%= industry.name %></p>
 		    <ul class = "client_indent">
 		      <% for client in industry.clients %>
@@ -16,7 +15,6 @@
 		      <% end %>
 		    </ul>
 		  </li>
-		  <% end %>
 		<% end %>
 	  </ul>
   </div>

@@ -30,6 +30,7 @@ Road04::Application.routes.draw do
   match "test"  => "pages#test"
   match "test2"  => "pages#test2"
   get   "home2" =>  "pages#home2"
+  get   "home3" => "pages#home3"
 
   get "pages/home"
 
@@ -42,6 +43,8 @@ Road04::Application.routes.draw do
   get "pages/what_we_do"
   
   get "pages/accordion"
+  
+  get "pages/intro_video"
   
 
   get "pages/chats"

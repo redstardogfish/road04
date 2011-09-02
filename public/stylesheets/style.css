@@ -131,7 +131,7 @@ TOC - SECOND ROAD CSS
 			padding: 0 10px 0 19px !important;
 		}
 		.mainNav ul li ul li.active a {
-			cursor: default;
+			
 		}
 		.mainNav li {
 			display: block;
@@ -323,19 +323,23 @@ TOC - SECOND ROAD CSS
 ****************************************/
 
 	.home_collage {color: #DA5923;}
-	#home_1{position:absolute;width: 360px;top:30px; left:80px}
-	#home_2{position:absolute;width: 450px;top:430px; left:40px}
-	#home_3{position:absolute;width: 270px;top:60px; left:730px; z-index:50;}
-	#home_4{position:absolute;width: 540px;top:120px; left:840px}
-	#home_5{position:absolute;width: 180px;top:480px; left:540px}
-	#home_think{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 60px;font-weight: 500;color: #000;
-	             position:absolute; top:100px; left:100px;z-index:110;}
-	#home_engage{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 60px;font-weight: 500;
-				 position:absolute; top:100px; left:100px;z-index:110;}
-	#home_create{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 80px;font-weight: 100;
-				 position:absolute; top:100px; left:100px;z-index:110;}
-	#home_transform{font-family: 'Publico','Georgia', 'Times New Roman', 'Times', 'serif';font-size: 100px;font-weight: 100;color: #000;
-				  position:absolute; top:100px; left:100px;z-index:110;}
+	#home_postits{position:absolute;width: 140px;top:0px; left:0px}
+	#home_pencils{position:absolute;width: 130px;top:280px; left:40px}
+	#home_library{position:absolute;width: 200px;top:140px; left:260px; z-index:50;}
+	#home_board{position:absolute;width: 180px;top:0px; left:500px}
+	#home_strategy{position:absolute;width: 90px;top:120px; left:120px}
+	#home_notes{position:absolute;width: 100px;top:240px; left:578px}
+	#home_think{position:absolute; width: 270px; top:-18px; left:160px;z-index:110;}
+	#home_engage{position:absolute; width: 460px; top:32px; left:200px;z-index:110;}
+	#home_create{position:absolute; width: 420px; top: 230px;  left:230px;z-index:110;}
+	#home_transform{position:absolute; width: 540px; top:354px; left:400px;z-index:110;}
+	
+	#home_tagline{position:absolute;width: 300px;top:100px; left:20px}
+	#home_library_polaroid{position:absolute;width: 310px;top:-20px; left:140px}
+	#home_video{position:absolute;width: 240px;top:280px; left:260px}
+	#home_strategy_frame{position:absolute;width: 230px;top:5px; left:360px}
+	
+	
 
 /* Old Home styles... Remove soon...*/
 
@@ -986,16 +990,13 @@ TOC - SECOND ROAD CSS
 		width: 702px;
 	}
 	.blogDetail .blogArticle {
-		-moz-column-width: 293px;
-		-webkit-column-width: 293px;
-		-moz-column-gap: 20px;
-		-webkit-column-gap: 20px;
 		float: left;
 		line-height: 18px;
 		padding: 39px 45px;
 		width: 630px;
 	}
 		.blogDetail .blogArticle p {
+		font-size: 15px;
 		margin-bottom: 10px;
 	}
 	.blogDetail h1.title {
@@ -1194,7 +1195,7 @@ TOC - SECOND ROAD CSS
 		position: fixed;
 		top: -43px;
 	}
-	.blogListing a.filter, .blogListing .rss, .eventListing a.filter {
+	.blogListing a.filter, .blogListing .rss, .eventListing a.filter, .blogListing .newpost{
 		background: url(../images/orangeArrow.png) no-repeat;
 		color:#5a5958;
 		cursor: pointer;
@@ -1212,7 +1213,10 @@ TOC - SECOND ROAD CSS
 		color: #4b4a48;
 	}
 	.blogListing .rss {
-		left: 553px;
+		left: 503px;
+	}
+	.blogListing .newpost {
+		left: 653px;
 	}
 	.blogListing .filterBox, .eventListing .filterBox {
 		background: #dbdad3;
@@ -1344,6 +1348,10 @@ TOC - SECOND ROAD CSS
 	.blogListing .postAuthor {
 		text-transform: uppercase;
 	}
+
+    .unpublished {
+	    background: url(../images/unpublished.gif) no-repeat 180px 3px #FFEC8B !important;
+    }
 
 /* 11.0: ARTICLE LISTING
 ****************************************/
@@ -1648,7 +1656,7 @@ TOC - SECOND ROAD CSS
   }
 
 
-  .panelText {width:540px;height: 540px;background:#E2DFD8;float:left;
+  .panelText {width:540px;height: 540px;background:#F7F6F2;float:left;
 	
   }
   .panelCase{width:540px;height: 540px;background:#E2DFD8;float:left;
@@ -1901,6 +1909,10 @@ h3 {
 	color: #437499;
 	font-size: 12px;
 }
+#user_nav img{
+	width:20px;
+	margin:0;
+}
 #user_nav a {
 	color: #437499;	
 	cursor:default;
@@ -1972,6 +1984,15 @@ h3 {
     top: 34px;
     width: 600px;
 }
+.display_box h1>span{
+	float:right;
+    background: none;
+	font-family: Georgia;
+	font-size: 14px;
+	font-style: italic;
+	list-style: none;
+	padding-left: 0;
+    }
 
 .display_box #content {
 	position:absolute;
@@ -2083,8 +2104,8 @@ h3 {
 
 .case_study_display_box #content p {
 	font-family: 'proxima-nova-1', 'proxima-nova-2', 'Arial', 'Helvetica', 'sans-serif';
-	font-size: 10px;
-	line-height: 12px;
+	font-size: 12px;
+	line-height: 16px;
 	margin: 20px;
 }
 

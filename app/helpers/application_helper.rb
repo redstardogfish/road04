@@ -10,6 +10,17 @@ module ApplicationHelper
     return date.strftime("%d/%m/%Y")
   end
   
+  # Format text for display.                                                                    
+  def format(text)
+    sanitize(markdown(text))
+  end
+
+  # Process text with Markdown.                                                                 
+  def markdown(text)
+    BlueCloth::new(text).to_html
+  end
+  
+  
   
   def browser_name
       @browser_name ||= begin

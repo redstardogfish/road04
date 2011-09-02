@@ -1,82 +1,16 @@
-<script type="text/javascript" charset="utf-8">
-
-$(function() {
-	var winW = 630, winH = 460;
-	if (document.body && document.body.offsetWidth) {
-	 winW = document.body.offsetWidth;
-	 winH = document.body.offsetHeight;
-	}
-	if (document.compatMode=='CSS1Compat' &&
-	    document.documentElement &&
-	    document.documentElement.offsetWidth ) {
-	 winW = document.documentElement.offsetWidth;
-	 winH = document.documentElement.offsetHeight;
-	}
-	if (window.innerWidth && window.innerHeight) {
-	 winW = window.innerWidth;
-	 winH = window.innerHeight;
-	};
-
-	$("#home_1").css({
-	    'width': ((winW-233)*0.15), 
-	    'left': ((winW-233)*0.05),
-		'top': (winH*0.02)
-	});
-	$("#home_2").css({
-	    'width': ((winW-233)*0.22), 
-	    'left': ((winW-233)*0),
-		'top': (winH*0.4)
-	});
-	$("#home_3").css({
-	    'width': ((winW-233)*0.2), 
-	    'left': ((winW-233)*0.3),
-		'top': (winH*0.07)
-	});
-	$("#home_4").css({
-	    'width': ((winW-233)*0.3), 
-	    'left': ((winW-233)*0.57),
-		'top': (winH*0.2)
-	});
-	$("#home_5").css({
-	    'width': ((winW-233)*0.1), 
-	    'left': ((winW-233)*0.28),
-		'top': (winH*0.5)
-	});
-	$("#home_think").css({
-		'font-size': ((winH*0.04)+"px"),
-	    'left': ((winW-233)*0.03),
-		'top': (winH*0.26)
-	});
-	$("#home_engage").css({
-		'font-size': ((winH*0.05)+"px"),
-	    'left': ((winW-233)*0.56),
-		'top': (winH*0.07)
-	});
-	$("#home_create").css({
-		'font-size': ((winH*0.07)+"px"),
-	    'left': ((winW-233)*0.26),
-		'top': (winH*0.35)
-	});
-	$("#home_transform").css({
-		'font-size': ((winH*0.05)+"px"),
-	    'left': ((winW-233)*0.4),
-		'top': (winH*0.6)
-	});
-    
-});
-
-	
-
-</script>
-
 <div class = "home_collage">
-<%= image_tag "home/postits.jpg", :id => "home_1"%>
-<%= image_tag "home/pencils.jpg", :id => "home_2"%>
-<%= image_tag "home/library.jpg", :id => "home_3"%>
-<%= image_tag "home/board.jpg", :id => "home_4"%>
-<%= image_tag "home/strategy.jpg", :id => "home_5"%>
-<div id = "home_think">THINK</div>
-<div id = "home_engage">ENGAGE</div>
-<div id = "home_create">CREATE</div>
-<div id = "home_transform">TRANSFORM</div>
+	
+	<%= link_to "#TB_inline?height=355&width=560&inlineId=hidden_video", :class => "thickbox"  do%>
+      <%= image_tag "home/video_placeholder.jpg", :alt => "", :id => "home_video"%>
+    <% end %>
+    <%= link_to people_path do %>
+	  <%= image_tag "home/strategy_frame.png", :alt => "",  :id => "home_strategy_frame"%>
+    <% end %>
+	<%= image_tag "home/2r_tagline.png", :alt => "A STRATEGY + INNOVATION firm, unlocking and empowering imagination and intelligence",  :id => "home_tagline"%>
+    <%= link_to blogposts_path do %>
+	  <%= image_tag "home/library_polaroid.png", :alt => "",  :id => "home_library_polaroid"%>
+	<% end %>
+    <div id = "hidden_video" style= "display:none">
+        <iframe width="560" height="345" src="http://www.youtube.com/embed/P5o4TYW70Wc?autoplay=1&rel=0&controls=0&border=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>

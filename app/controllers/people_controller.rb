@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_filter :authenticate, :except => [:index, :display, :display_box]
+  before_filter :authenticate, :except => [:index, :display_box]
   
   def index
     @people = Person.order(:last_name).where(:display => true)
@@ -32,7 +32,11 @@ class PeopleController < ApplicationController
   def update
     @person = Person.find(params[:id])
     if @person.update_attributes(params[:person])
-      redirect_to people_list_path, :notice  => "Successfully updated person."
+      if @logged_user && @logged_user.admin
+        redirect_to people_list_path, :notice  => "Successfully updated person."
+      else
+        redirect_to people_url
+      end
     else
       render :action => 'edit'
     end

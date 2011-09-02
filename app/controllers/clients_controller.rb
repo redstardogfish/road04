@@ -1,6 +1,14 @@
 class ClientsController < ApplicationController
   def index
-    @industries = Industry.order("name")
+    @full_industries = Industry.order("name")
+    @industries = []
+    @full_industries.each do |industry|
+      addIndustry = false
+      for client in industry.clients
+        addIndustry = true if client.display
+      end
+      @industries << industry if addIndustry
+    end
     @client = Client.new
     @title = "Our Clients"
     @body_class = "content"

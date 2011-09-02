@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Road04
   class Application < Rails::Application
+    
+    Disqus::defaults[:account] = '2rtest'
+    Disqus::defaults[:developer] = true 
+    
+    
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

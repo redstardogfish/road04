@@ -50,6 +50,13 @@
       <%= f.label "Enable comments (uncheck to disable)" %><br />
       <%= f.check_box :enable_comments %>
     </p>
-    <p><%= f.submit %></p>
+    <p>
+      <%= f.label "Publish? (Leave unchecked to save as draft)" %><br />
+      <%= f.check_box :publish %>
+    </p>
+    <p><%= f.submit "Save" %></p>
+    <p><%= submit_tag "Cancel" %></p>
+
   </div>
 <% end %>
+

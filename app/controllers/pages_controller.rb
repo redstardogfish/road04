@@ -46,6 +46,10 @@ class PagesController < ApplicationController
   def home2
     
   end
+  
+  def intro_video
+    render  :layout => false
+  end
   def chats
     
   end

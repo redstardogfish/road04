@@ -1,12 +1,15 @@
 <div class = "home_collage">
-	<%= image_tag "home/strategy_frame.png", :id => "home_strategy_frame"%>
-
 	
 	<%= link_to "#TB_inline?height=355&width=560&inlineId=hidden_video", :class => "thickbox"  do%>
-      <%= image_tag "home/video_placeholder.jpg", :id => "home_video"%>
+      <%= image_tag "home/video_placeholder.jpg", :alt => "", :id => "home_video"%>
     <% end %>
-	<%= image_tag "home/2r_tagline.png", :id => "home_tagline"%>
-	<%= image_tag "home/library_polaroid.png", :id => "home_library_polaroid"%>
+    <%= link_to people_path do %>
+	  <%= image_tag "home/strategy_frame.png", :alt => "",  :id => "home_strategy_frame"%>
+    <% end %>
+	<%= image_tag "home/2r_tagline.png", :alt => "A STRATEGY + INNOVATION firm, unlocking and empowering imagination and intelligence",  :id => "home_tagline"%>
+    <%= link_to blogposts_path do %>
+	  <%= image_tag "home/library_polaroid.png", :alt => "",  :id => "home_library_polaroid"%>
+	<% end %>
     <div id = "hidden_video" style= "display:none">
         <iframe width="560" height="345" src="http://www.youtube.com/embed/P5o4TYW70Wc?autoplay=1&rel=0&controls=0&border=0&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
     </div>

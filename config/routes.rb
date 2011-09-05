@@ -30,8 +30,9 @@ Road04::Application.routes.draw do
   match "test"  => "pages#test"
   match "test2"  => "pages#test2"
   get   "home2" =>  "pages#home2"
-  get   "home3" => "pages#home3"
-
+  get   "home3" => "pages#home3"  
+  get   "home4" => "pages#home4"
+  
   get "pages/home"
 
   get "pages/privacy"

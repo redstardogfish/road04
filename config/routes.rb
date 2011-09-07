@@ -39,8 +39,6 @@ Road04::Application.routes.draw do
 
   get "pages/contact"
   
-  get "pages/dna"
-  
   get "pages/what_we_do"
   
   get "pages/accordion"
@@ -54,7 +52,7 @@ Road04::Application.routes.draw do
 
   match 'contact-us' => 'pages#contact'
   match 'privacy' => 'pages#privacy'
-  match 'our-dna' => 'pages#dna'
+  match 'our-story' => 'pages#story'
   match 'what-we-do' => 'pages#what_we_do', :as => "what_we_do"
   
   match 'our-community' => 'people#index'

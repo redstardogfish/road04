@@ -339,7 +339,35 @@ TOC - SECOND ROAD CSS
 	#home_video{position:absolute;width: 240px;top:280px; left:260px}
 	#home_strategy_frame{position:absolute;width: 230px;top:5px; left:360px}
 	
-	
+	#home_text {
+		width: 700px;
+		height: 500px;
+		background: #F7F6F2;
+	}
+	#home_text h1 {
+		clear: both;
+		display: block;
+		color: #E4701E;
+		float: left;
+		font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+		font-size: 46px;
+		font-weight: normal;
+		letter-spacing: -0.7px;
+		margin: 0 40px 20px 40px;
+		min-width: 180px;
+	}
+	#home_text p{
+		clear: both;
+		color: #3B3B3B;
+		font-size: 14px;
+		line-height: 18px;
+		margin: 0 40px 17px 40px;
+	}
+	#home_text #domains {
+		font-size: 20px;
+		font-weight: 600;
+		text-align:center;
+	}
 
 /* Old Home styles... Remove soon...*/
 

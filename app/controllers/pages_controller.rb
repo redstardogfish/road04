@@ -16,9 +16,9 @@ class PagesController < ApplicationController
     @title = "Contact Us"
     @body_class = "contact-us"
   end
-
-  def dna
-    @title = "Our DNA"
+  
+  def story
+    @title = "Our Story"
     @body_class = "contentWhatWeDo"
   end
   

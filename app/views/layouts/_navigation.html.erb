@@ -16,8 +16,8 @@
 		  <%= content_tag :li, :class => ("active" if @title == "Our Community") do -%>
 		    <%= link_to "Our Community", "/our-community", :class => ("active" if @title == "Our Community")%>
 		  <% end -%>
-		  <%= content_tag :li, :class => (@title == "Our DNA"? "dna active" : "dna") do -%>
-		    <%= link_to "Our DNA", "/our-dna", :class => ("active" if @title == "Our DNA") %>
+		  <%= content_tag :li, :class => (@title == "Our Story"? "story active" : "story") do -%>
+		    <%= link_to "Our Story", "/our-story", :class => ("active" if @title == "Our Story") %>
 		  <% end -%>
 		  <%= content_tag :li, :class => (@title == "Our Clients"? "dna active" : "dna") do -%>
 		    <%= link_to "Our Clients", clients_path, :class => ("active" if @title == "Our Clients") %>
